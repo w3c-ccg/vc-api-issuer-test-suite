@@ -1,5 +1,6 @@
 const implementations = require('../implementations');
 const validVC = require('./validVC.json');
+const {issue} = require('issuer');
 
 for(const implementation of implementations) {
   describe(implementation.name, function() {
@@ -41,7 +42,7 @@ for(const implementation of implementations) {
     });
     it('credential MUST have property "issuer"', async function() {
       const credential = {...validVC};
-      delete credentials.issuer;
+      delete credential.issuer;
       const body = {credential};
     });
     //FIXME this test might need an issuer that implementation specific
@@ -73,7 +74,7 @@ for(const implementation of implementations) {
     });
     it('credential MAY have property "issuanceDate"', async function() {
       const credential = {...validVC};
-      credential.issuanceDate = new Date().toISOTime();
+      credential.issuanceDate = new Date().toISOString().replace('.000Z', 'Z');
       const body = {credential};
     });
     it('credential MAY have property "expirationDate"', async function() {
