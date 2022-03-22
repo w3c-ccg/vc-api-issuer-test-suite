@@ -1,4 +1,4 @@
-const httpClient = require('@digitalbazaar/http-client');
+const {httpClient} = require('@digitalbazaar/http-client');
 const https = require('https');
 
 const agent = new https.Agent({rejectUnauthorized: false});
@@ -18,7 +18,7 @@ const issue = async ({body, headers = {}, endpoint}) => {
   let error;
     try {
       result = await httpClient.post(
-        `${endpoint}/credentials/issue`,
+        endpoint,
           {
             json: body,
             agent,
@@ -29,3 +29,5 @@ const issue = async ({body, headers = {}, endpoint}) => {
     }
   return {result, error};
 }
+
+module.exports = {issue};
