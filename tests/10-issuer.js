@@ -1,6 +1,6 @@
 const implementations = require('../implementations');
 const validVC = require('./validVC.json');
-const {issue} = require('issuer');
+const {issue} = require('./issuer');
 
 for(const implementation of implementations) {
   describe(implementation.name, function() {
