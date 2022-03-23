@@ -16,17 +16,18 @@ const agent = new https.Agent({rejectUnauthorized: false});
 const issue = async ({body, headers = {}, endpoint}) => {
   let result;
   let error;
-    try {
-      result = await httpClient.post(
-        endpoint,
-          {
-            json: body,
-            agent,
-            headers: {...headers}
-          });
-    } catch(e) {
-      error = e;
-    }
+  try {
+    result = await httpClient.post(
+      endpoint,
+      {
+        json: body,
+        agent,
+        headers: {...headers}
+      });
+  } catch(e) {
+    error = e;
+  }
+console.log({result, error});
   return {result, error};
 }
 

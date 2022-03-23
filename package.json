@@ -33,5 +33,10 @@
     "mocha": "^9.2.2",
     "mocha-w3c-interop-reporter": "github:digitalbazaar/mocha-w3c-interop-reporter#extend-helpers",
     "require-dir": "^1.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.11.0",
+    "eslint-config-digitalbazaar": "^2.8.0",
+    "eslint-plugin-jsdoc": "^38.0.6"
   }
 }
