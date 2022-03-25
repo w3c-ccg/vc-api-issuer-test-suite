@@ -63,7 +63,6 @@ const _getZcapClient = async ({secretKeySeed}) => {
 };
 
 async function _zcapClientRequest({endpoint, zcap, json}) {
-console.log({endpoint, zcap, json});
   let result;
   let error;
   let capability = zcap.capability;
