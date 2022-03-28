@@ -1,3 +1,7 @@
+/*!
+ * Copyright (c) 2022 Digital Bazaar, Inc. All rights reserved.
+ */
+
 const chai = require('chai');
 const implementations = require('../implementations');
 const validVC = require('./validVC.json');
