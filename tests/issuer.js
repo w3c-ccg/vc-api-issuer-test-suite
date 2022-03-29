@@ -33,6 +33,7 @@ const issue = async ({body, issuer}) => {
   });
 };
 
+//FIXME add oauth2 support
 async function _httpRequest({endpoint, oauth2, json, headers = {}}) {
   let result;
   let error;
@@ -47,7 +48,6 @@ async function _httpRequest({endpoint, oauth2, json, headers = {}}) {
   } catch(e) {
     error = e;
   }
-console.log({result, error});
   return {result, error};
 }
 
@@ -83,7 +83,6 @@ async function _zcapClientRequest({endpoint, zcap, json}) {
   } catch(e) {
     error = e;
   }
-console.log({result, error});
   return {result, error};
 }
 
