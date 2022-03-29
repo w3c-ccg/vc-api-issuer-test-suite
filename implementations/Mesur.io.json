@@ -3,7 +3,13 @@
   "implementation": "mesur",
   "issuer": {
     "id": "did:key:z6Mki93tJ2rwrDaWTMZcdMShk4xLWf75Fu559dAapKe8pdmX",
-    "endpoint": "https://vc.mesur.io/next/credentials/issue"
+    "endpoint": "https://vc.mesur.io/next/credentials/issue",
+    "oauth2": {
+      "clientId": "5SiSCaj8rkfbahG2xrg6nOhxVPKwDwnv",
+      "clientSecret": "CLIENT_SECRET_VC_MESUR_IO",
+      "tokenAudience": "https://vc.mesur.io/",
+      "tokenEndpoint": "https://mesur.auth0.com/oauth/token"
+    }
   },
   "verifier": "https://vc.mesur.io/next/credentials/verify"
 }
