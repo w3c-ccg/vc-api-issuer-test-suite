@@ -3,7 +3,13 @@
   "implementation": "neo-flow",
   "issuer": {
     "id": "did:key:z6MkiTsvjrrPNDZ1rrg9QDEYCFWCmEswT6U2cEkScb7edQ9b",
-    "endpoint": "https://api.neo-flow.com/credentials/issueCredential"
+    "endpoint": "https://api.neo-flow.com/credentials/issueCredential",
+    "oauth2": {
+      "clientId": "49c4bkk6a4soinkk3eru6le50j",
+      "clientSecret": "CLIENT_SECRET_MAVENNET",
+      "tokenAudience": "https://api-staging.producer.neoflow.energy/v1/credentials",
+      "tokenEndpoint": "https://api-staging.producer.neoflow.energy/v1/auth"
+    }
   },
   "verifier": "https://api.neo-flow.com/verifier/credentials"
 }
