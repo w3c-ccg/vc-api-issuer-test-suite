@@ -43,7 +43,7 @@ describe('Verifiable Credentials Issuer API', function() {
         error.status.should.equal(400,
           'Expected status code 400 invalid input!');
       });
-      it('credential MUST have property "@context"".', async function() {
+      it('credential MUST have property "@context".', async function() {
         this.test.cell = {
           columnId: implementation.name,
           rowId: this.test.title
@@ -223,6 +223,7 @@ describe('Verifiable Credentials Issuer API', function() {
         const {result, error} = await issue({body, issuer});
         should.exist(result, 'Expected result from issuer.');
         should.not.exist(error, 'Expected issuer to Error.');
+        result.status.should.equal(201, 'Expected statusCode 201.');
       });
       it('credential MAY have property "expirationDate"', async function() {
         this.test.cell = {
@@ -231,12 +232,14 @@ describe('Verifiable Credentials Issuer API', function() {
         };
         const credential = {...validVC};
         // expires in a year
-        credential.expirationDate = new Date(
-          Date.now() + 365 * 24 * 60 * 60 * 1000);
+        const oneYear = Date.now() + 365 * 24 * 60 * 60 * 1000;
+        credential.expirationDate = new Date(oneYear).toISOString()
+          .replace('.000Z', 'Z');
         const body = {credential};
         const {result, error} = await issue({body, issuer});
         should.exist(result, 'Expected result from issuer.');
         should.not.exist(error, 'Expected issuer to not Error.');
+        result.status.should.equal(201, 'Expected statusCode 201.');
       });
     });
   }
