@@ -29,17 +29,25 @@ describe('Verifiable Credentials Issuer API', function() {
     describe(implementation.name, function() {
       const {issuer} = implementation;
       it('Request body MUST have property "credential".', async function() {
-        this.test.cell = {columnId: implementation.name, rowId: this.test.title};
+        this.test.cell = {
+          columnId: implementation.name,
+          rowId: this.test.title
+        };
         const body = {verifiableCredential: {...validVC}};
         const {result, error} = await issue({body, issuer});
         should.not.exist(result, 'Expected no result from issuer.');
         should.exist(error, 'Expected issuer to Error');
         should.exist(error.status, 'Expected an HTTP error response code.');
-        error.status.should.not.equal(401, 'Should not get an Authorization Error.');
-        error.status.should.equal(400, 'Expected status code 400 invalid input!');
+        error.status.should.not.equal(401,
+          'Should not get an Authorization Error.');
+        error.status.should.equal(400,
+          'Expected status code 400 invalid input!');
       });
       it('credential MUST have property "@context"".', async function() {
-        this.test.cell = {columnId: implementation.name, rowId: this.test.title};
+        this.test.cell = {
+          columnId: implementation.name,
+          rowId: this.test.title
+        };
         const credential = {...validVC};
         delete credential['@context'];
         const body = {credential};
@@ -47,23 +55,33 @@ describe('Verifiable Credentials Issuer API', function() {
         should.not.exist(result, 'Expected no result from issuer.');
         should.exist(error, 'Expected issuer to Error.');
         should.exist(error.status, 'Expected an HTTP error response code.');
-        error.status.should.not.equal(401, 'Should not get an Authorization Error.');
-        error.status.should.equal(400, 'Expected status code 400 invalid input!');
+        error.status.should.not.equal(401,
+          'Should not get an Authorization Error.');
+        error.status.should.equal(400,
+          'Expected status code 400 invalid input!');
       });
       it('credential "@context" MUST be an array.', async function() {
-        this.test.cell = {columnId: implementation.name, rowId: this.test.title};
+        this.test.cell = {
+          columnId: implementation.name,
+          rowId: this.test.title
+        };
         const credential = {...validVC};
         credential['@context'] = 4;
-        const body = {credential}
+        const body = {credential};
         const {result, error} = await issue({body, issuer});
         should.not.exist(result, 'Expected no result from issuer.');
         should.exist(error, 'Expected issuer to Error.');
         should.exist(error.status, 'Expected an HTTP error response code.');
-        error.status.should.not.equal(401, 'Should not get an Authorization Error.');
-        error.status.should.equal(400, 'Expected status code 400 invalid input!');
+        error.status.should.not.equal(401,
+          'Should not get an Authorization Error.');
+        error.status.should.equal(400,
+          'Expected status code 400 invalid input!');
       });
       it('credential "@context" items MUST be strings.', async function() {
-        this.test.cell = {columnId: implementation.name, rowId: this.test.title};
+        this.test.cell = {
+          columnId: implementation.name,
+          rowId: this.test.title
+        };
         const credential = {...validVC};
         credential['@context'] = [{foo: true}, 4, false, null];
         const body = {credential};
@@ -71,11 +89,16 @@ describe('Verifiable Credentials Issuer API', function() {
         should.not.exist(result, 'Expected no result from issuer.');
         should.exist(error, 'Expected issuer to Error.');
         should.exist(error.status, 'Expected an HTTP error response code.');
-        error.status.should.not.equal(401, 'Should not get an Authorization Error.');
-        error.status.should.equal(400, 'Expected status code 400 invalid input!');
+        error.status.should.not.equal(401,
+          'Should not get an Authorization Error.');
+        error.status.should.equal(400,
+          'Expected status code 400 invalid input!');
       });
       it('"credential.type" MUST be an array.', async function() {
-        this.test.cell = {columnId: implementation.name, rowId: this.test.title};
+        this.test.cell = {
+          columnId: implementation.name,
+          rowId: this.test.title
+        };
         const credential = {...validVC};
         credential.type = 4;
         const body = {credential};
@@ -83,11 +106,16 @@ describe('Verifiable Credentials Issuer API', function() {
         should.not.exist(result, 'Expected no result from issuer.');
         should.exist(error, 'Expected issuer to Error.');
         should.exist(error.status, 'Expected an HTTP error response code.');
-        error.status.should.not.equal(401, 'Should not get an Authorization Error.');
-        error.status.should.equal(400, 'Expected status code 400 invalid input!');
+        error.status.should.not.equal(401,
+          'Should not get an Authorization Error.');
+        error.status.should.equal(400,
+          'Expected status code 400 invalid input!');
       });
       it('credential MUST have property "type"', async function() {
-        this.test.cell = {columnId: implementation.name, rowId: this.test.title};
+        this.test.cell = {
+          columnId: implementation.name,
+          rowId: this.test.title
+        };
         const credential = {...validVC};
         delete credential.type;
         const body = {credential};
@@ -95,11 +123,16 @@ describe('Verifiable Credentials Issuer API', function() {
         should.not.exist(result, 'Expected no result from issuer.');
         should.exist(error, 'Expected issuer to Error.');
         should.exist(error.status, 'Expected an HTTP error response code.');
-        error.status.should.not.equal(401, 'Should not get an Authorization Error.');
-        error.status.should.equal(400, 'Expected status code 400 invalid input!');
+        error.status.should.not.equal(401,
+          'Should not get an Authorization Error.');
+        error.status.should.equal(400,
+          'Expected status code 400 invalid input!');
       });
       it('"credential.type" items MUST be strings', async function() {
-        this.test.cell = {columnId: implementation.name, rowId: this.test.title};
+        this.test.cell = {
+          columnId: implementation.name,
+          rowId: this.test.title
+        };
         const credential = {...validVC};
         credential.type = [2, null, {foo: true}, false];
         const body = {credential};
@@ -107,21 +140,31 @@ describe('Verifiable Credentials Issuer API', function() {
         should.not.exist(result, 'Expected no result from issuer.');
         should.exist(error, 'Expected issuer to Error.');
         should.exist(error.status, 'Expected an HTTP error response code.');
-        error.status.should.not.equal(401, 'Should not get an Authorization Error.');
-        error.status.should.equal(400, 'Expected status code 400 invalid input!');
+        error.status.should.not.equal(401,
+          'Should not get an Authorization Error.');
+        error.status.should.equal(400,
+          'Expected status code 400 invalid input!');
       });
-      //FIXME this might be added by the issuer
       it('credential MUST have property "issuer"', async function() {
-        this.test.cell = {columnId: implementation.name, rowId: this.test.title};
+        this.test.cell = {
+          columnId: implementation.name,
+          rowId: this.test.title
+        };
         const credential = {...validVC};
         delete credential.issuer;
         const body = {credential};
         const {result, error} = await issue({body, issuer});
-        should.not.exist(result, 'Expected no result from issuer.');
-        should.exist(error, 'Expected issuer to Error.');
-        should.exist(error.status, 'Expected an HTTP error response code.');
-        error.status.should.not.equal(401, 'Should not get an Authorization Error.');
-        error.status.should.equal(400, 'Expected status code 400 invalid input!');
+        should.exist(result, 'Expected result from issuer.');
+        should.not.exist(error, 'Expected issuer to not Error.');
+        should.exist(result.status, 'Ezxpected an HTTP status code.');
+        result.status.should.equal(201, 'Expected response 201.');
+        should.exist(result.data, 'Expected result to have data.');
+        result.data.should.be.an('object');
+        should.exist(result.data.verifiableCredential,
+          'Expected verifiableCredential in response.');
+        result.data.verifiableCredential.should.be.an(
+          'object', 'Expected verifiableCredential to be an object.');
+        console.log('data', result.data);
       });
       //FIXME this test might need an issuer that is implementation specific
       it('"credential.issuer" MAY be an object with property id', async function() {
@@ -156,7 +199,10 @@ describe('Verifiable Credentials Issuer API', function() {
         error.status.should.equal(400, 'Expected status code 400 invalid input!');
       });
       it('credential MUST have property "credentialSubject"', async function() {
-        this.test.cell = {columnId: implementation.name, rowId: this.test.title};
+        this.test.cell = {
+          columnId: implementation.name,
+          rowId: this.test.title
+        };
         const credential = {...validVC};
         delete credential.credentialSubject;
         const body = {credential};
@@ -164,11 +210,16 @@ describe('Verifiable Credentials Issuer API', function() {
         should.not.exist(result, 'Expected no result from issuer.');
         should.exist(error, 'Expected issuer to Error.');
         should.exist(error.status, 'Expected an HTTP error response code.');
-        error.status.should.not.equal(401, 'Should not get an Authorization Error.');
-        error.status.should.equal(400, 'Expected status code 400 invalid input!');
+        error.status.should.not.equal(401,
+          'Should not get an Authorization Error.');
+        error.status.should.equal(400,
+          'Expected status code 400 invalid input!');
       });
       it('"credential.credentialSubject" MUST be an object', async function() {
-        this.test.cell = {columnId: implementation.name, rowId: this.test.title};
+        this.test.cell = {
+          columnId: implementation.name,
+          rowId: this.test.title
+        };
         const credential = {...validVC};
         credential.credentialSubject = [null, true, 4];
         const body = {credential};
@@ -176,30 +227,38 @@ describe('Verifiable Credentials Issuer API', function() {
         should.not.exist(result, 'Expected no result from issuer.');
         should.exist(error, 'Expected issuer to Error.');
         should.exist(error.status, 'Expected an HTTP error response code.');
-        error.status.should.not.equal(401, 'Should not get an Authorization Error.');
-        error.status.should.equal(400, 'Expected status code 400 invalid input!');
+        error.status.should.not.equal(401,
+          'Should not get an Authorization Error.');
+        error.status.should.equal(400,
+          'Expected status code 400 invalid input!');
       });
       it('credential MAY have property "issuanceDate"', async function() {
-        this.test.cell = {columnId: implementation.name, rowId: this.test.title};
+        this.test.cell = {
+          columnId: implementation.name,
+          rowId: this.test.title
+        };
         const credential = {...validVC};
-        credential.issuanceDate = new Date().toISOString().replace('.000Z', 'Z');
+        credential.issuanceDate = new Date().toISOString()
+          .replace('.000Z', 'Z');
         const body = {credential};
         const {result, error} = await issue({body, issuer});
         should.exist(result, 'Expected result from issuer.');
         should.not.exist(error, 'Expected issuer to Error.');
       });
       it('credential MAY have property "expirationDate"', async function() {
-        this.test.cell = {columnId: implementation.name, rowId: this.test.title};
+        this.test.cell = {
+          columnId: implementation.name,
+          rowId: this.test.title
+        };
         const credential = {...validVC};
         // expires in a year
-        credential.expirationDate = new Date(Date.now() + 365 * 24 * 60 * 60 * 1000)
+        credential.expirationDate = new Date(
+          Date.now() + 365 * 24 * 60 * 60 * 1000);
         const body = {credential};
         const {result, error} = await issue({body, issuer});
         should.exist(result, 'Expected result from issuer.');
         should.not.exist(error, 'Expected issuer to not Error.');
       });
-    })
+    });
   }
-})
-
-
+});
