@@ -29,14 +29,15 @@ const issue = async ({body, issuer}) => {
   }
   return _httpRequest({
     ...issuer,
-    json: body,
+    json: body
   });
 };
 
-//FIXME add oauth2 support
-async function _httpRequest({endpoint, oauth2, json, headers = {}}) {
+async function _httpRequest({endpoint, json, headers = {} /* oath2 */}) {
   let result;
   let error;
+  //FIXME add oauth2 support
+  /* const clientSecret = process.env[oath2?.clientSecret]; */
   try {
     result = await httpClient.post(
       endpoint,
