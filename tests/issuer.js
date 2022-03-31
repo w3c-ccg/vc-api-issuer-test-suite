@@ -11,33 +11,41 @@ const {Ed25519Signature2020} = require('@digitalbazaar/ed25519-signature-2020');
 const agent = new https.Agent({rejectUnauthorized: false});
 const didKeyDriver = didKey.driver();
 
-/**
- * Issues a VC from an endpoint.
- *
- * @param {object} options - Options to use.
- * @param {object} options.body - The body for the request.
- * @param {string} options.issuer - The issuer object.
- *
- * @returns {Promise<object>} Contains the result and error.
- */
-const issue = async ({body, issuer}) => {
-  if(issuer.zcap) {
-    return _zcapClientRequest({
+class Issuer {
+  constructor({oath2, issuer}) {
+    this.oath2 = oath2;
+    this.issuer = issuer;
+  }
+  /**
+   * Issues a VC from an endpoint.
+   *
+   * @param {object} options - Options to use.
+   * @param {object} options.body - The body for the request.
+   *
+   * @returns {Promise<object>} Contains the result and error.
+   */
+  async issue({body}) {
+    const {issuer, oath2} = this;
+    if(issuer.zcap) {
+      return _zcapClientRequest({
+        ...issuer,
+        json: body
+      });
+    }
+    return _httpRequest({
       ...issuer,
+      oath2,
       json: body
     });
   }
-  return _httpRequest({
-    ...issuer,
-    json: body
-  });
-};
+}
 
 async function _httpRequest({endpoint, json, headers = {}, oath2}) {
   let result;
   let error;
   if(oath2) {
     headers.Authorization = await constructOAuthHeader({...oath2});
+    console.log(headers);
   }
   try {
     result = await httpClient.post(
@@ -98,7 +106,7 @@ async function constructOAuthHeader({
   if(!client_secret) {
     throw new Error(`Env variable ${clientSecret} not set.`);
   }
-  const accessToken = await _getNewAccessToken({
+  const {accessToken} = await _getNewAccessToken({
     client_id: clientId,
     client_secret,
     token_endpoint: tokenEndpoint,
@@ -160,4 +168,4 @@ async function _requestAccessToken({url, body}) {
   return false;
 }
 
-module.exports = {issue};
+module.exports = {Issuer};
