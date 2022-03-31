@@ -5,7 +5,7 @@
 const chai = require('chai');
 const implementations = require('../implementations');
 const validVC = require('./validVC.json');
-const {issue} = require('./issuer');
+const {Issuer} = require('./issuer');
 
 const should = chai.should();
 
@@ -26,15 +26,15 @@ describe('Verifiable Credentials Issuer API', function() {
   this.reportData = reportData;
   for(const implementation of implementations) {
     columnNames.push(implementation.name);
+    const issuer = new Issuer(implementation);
     describe(implementation.name, function() {
-      const {issuer} = implementation;
       it('Request body MUST have property "credential".', async function() {
         this.test.cell = {
           columnId: implementation.name,
           rowId: this.test.title
         };
         const body = {verifiableCredential: {...validVC}};
-        const {result, error} = await issue({body, issuer});
+        const {result, error} = await issuer.issue({body});
         should.not.exist(result, 'Expected no result from issuer.');
         should.exist(error, 'Expected issuer to Error');
         should.exist(error.status, 'Expected an HTTP error response code.');
@@ -51,7 +51,7 @@ describe('Verifiable Credentials Issuer API', function() {
         const credential = {...validVC};
         delete credential['@context'];
         const body = {credential};
-        const {result, error} = await issue({body, issuer});
+        const {result, error} = await issuer.issue({body});
         should.not.exist(result, 'Expected no result from issuer.');
         should.exist(error, 'Expected issuer to Error.');
         should.exist(error.status, 'Expected an HTTP error response code.');
@@ -68,7 +68,7 @@ describe('Verifiable Credentials Issuer API', function() {
         const credential = {...validVC};
         credential['@context'] = 4;
         const body = {credential};
-        const {result, error} = await issue({body, issuer});
+        const {result, error} = await issuer.issue({body});
         should.not.exist(result, 'Expected no result from issuer.');
         should.exist(error, 'Expected issuer to Error.');
         should.exist(error.status, 'Expected an HTTP error response code.');
@@ -85,7 +85,7 @@ describe('Verifiable Credentials Issuer API', function() {
         const credential = {...validVC};
         credential['@context'] = [{foo: true}, 4, false, null];
         const body = {credential};
-        const {result, error} = await issue({body, issuer});
+        const {result, error} = await issuer.issue({body});
         should.not.exist(result, 'Expected no result from issuer.');
         should.exist(error, 'Expected issuer to Error.');
         should.exist(error.status, 'Expected an HTTP error response code.');
@@ -102,7 +102,7 @@ describe('Verifiable Credentials Issuer API', function() {
         const credential = {...validVC};
         credential.type = 4;
         const body = {credential};
-        const {result, error} = await issue({body, issuer});
+        const {result, error} = await issuer.issue({body});
         should.not.exist(result, 'Expected no result from issuer.');
         should.exist(error, 'Expected issuer to Error.');
         should.exist(error.status, 'Expected an HTTP error response code.');
@@ -119,7 +119,7 @@ describe('Verifiable Credentials Issuer API', function() {
         const credential = {...validVC};
         delete credential.type;
         const body = {credential};
-        const {result, error} = await issue({body, issuer});
+        const {result, error} = await issuer.issue({body});
         should.not.exist(result, 'Expected no result from issuer.');
         should.exist(error, 'Expected issuer to Error.');
         should.exist(error.status, 'Expected an HTTP error response code.');
@@ -136,7 +136,7 @@ describe('Verifiable Credentials Issuer API', function() {
         const credential = {...validVC};
         credential.type = [2, null, {foo: true}, false];
         const body = {credential};
-        const {result, error} = await issue({body, issuer});
+        const {result, error} = await issuer.issue({body});
         should.not.exist(result, 'Expected no result from issuer.');
         should.exist(error, 'Expected issuer to Error.');
         should.exist(error.status, 'Expected an HTTP error response code.');
@@ -153,7 +153,7 @@ describe('Verifiable Credentials Issuer API', function() {
         const credential = {...validVC};
         delete credential.issuer;
         const body = {credential};
-        const {result, error} = await issue({body, issuer});
+        const {result, error} = await issuer.issue({body});
         should.exist(result, 'Expected result from issuer.');
         should.not.exist(error, 'Expected issuer to not Error.');
         should.exist(result.status, 'Ezxpected an HTTP status code.');
@@ -185,7 +185,7 @@ describe('Verifiable Credentials Issuer API', function() {
         const credential = {...validVC};
         delete credential.credentialSubject;
         const body = {credential};
-        const {result, error} = await issue({body, issuer});
+        const {result, error} = await issuer.issue({body});
         should.not.exist(result, 'Expected no result from issuer.');
         should.exist(error, 'Expected issuer to Error.');
         should.exist(error.status, 'Expected an HTTP error response code.');
@@ -202,7 +202,7 @@ describe('Verifiable Credentials Issuer API', function() {
         const credential = {...validVC};
         credential.credentialSubject = [null, true, 4];
         const body = {credential};
-        const {result, error} = await issue({body, issuer});
+        const {result, error} = await issuer.issue({body});
         should.not.exist(result, 'Expected no result from issuer.');
         should.exist(error, 'Expected issuer to Error.');
         should.exist(error.status, 'Expected an HTTP error response code.');
@@ -220,7 +220,7 @@ describe('Verifiable Credentials Issuer API', function() {
         credential.issuanceDate = new Date().toISOString()
           .replace('.000Z', 'Z');
         const body = {credential};
-        const {result, error} = await issue({body, issuer});
+        const {result, error} = await issuer.issue({body});
         should.exist(result, 'Expected result from issuer.');
         should.not.exist(error, 'Expected issuer to Error.');
         result.status.should.equal(201, 'Expected statusCode 201.');
@@ -236,7 +236,7 @@ describe('Verifiable Credentials Issuer API', function() {
         credential.expirationDate = new Date(oneYear).toISOString()
           .replace('.000Z', 'Z');
         const body = {credential};
-        const {result, error} = await issue({body, issuer});
+        const {result, error} = await issuer.issue({body});
         should.exist(result, 'Expected result from issuer.');
         should.not.exist(error, 'Expected issuer to not Error.');
         result.status.should.equal(201, 'Expected statusCode 201.');
