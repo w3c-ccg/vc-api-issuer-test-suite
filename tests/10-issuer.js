@@ -4,10 +4,9 @@
 
 const chai = require('chai');
 const implementations = require('../implementations');
-const validVC = require('./validVC.json');
 const {Issuer} = require('./issuer');
 const {shouldThrowInvalidInput} = require('./assertions');
-
+const {createValidVC} = require('./mock.data');
 const should = chai.should();
 
 describe('Verifiable Credentials Issuer API', function() {
@@ -34,7 +33,8 @@ describe('Verifiable Credentials Issuer API', function() {
           columnId: implementation.name,
           rowId: this.test.title
         };
-        const body = {verifiableCredential: {...validVC}};
+        const credential = createValidVC();
+        const body = {verifiableCredential: credential};
         const {result, error} = await issuer.issue({body});
         shouldThrowInvalidInput({result, error});
       });
@@ -43,7 +43,7 @@ describe('Verifiable Credentials Issuer API', function() {
           columnId: implementation.name,
           rowId: this.test.title
         };
-        const credential = {...validVC};
+        const credential = createValidVC();
         delete credential['@context'];
         const body = {credential};
         const {result, error} = await issuer.issue({body});
@@ -54,7 +54,7 @@ describe('Verifiable Credentials Issuer API', function() {
           columnId: implementation.name,
           rowId: this.test.title
         };
-        const credential = {...validVC};
+        const credential = createValidVC();
         credential['@context'] = 4;
         const body = {credential};
         const {result, error} = await issuer.issue({body});
@@ -65,7 +65,7 @@ describe('Verifiable Credentials Issuer API', function() {
           columnId: implementation.name,
           rowId: this.test.title
         };
-        const credential = {...validVC};
+        const credential = createValidVC();
         credential['@context'] = [{foo: true}, 4, false, null];
         const body = {credential};
         const {result, error} = await issuer.issue({body});
@@ -76,7 +76,7 @@ describe('Verifiable Credentials Issuer API', function() {
           columnId: implementation.name,
           rowId: this.test.title
         };
-        const credential = {...validVC};
+        const credential = createValidVC();
         credential.type = 4;
         const body = {credential};
         const {result, error} = await issuer.issue({body});
@@ -87,7 +87,7 @@ describe('Verifiable Credentials Issuer API', function() {
           columnId: implementation.name,
           rowId: this.test.title
         };
-        const credential = {...validVC};
+        const credential = createValidVC();
         delete credential.type;
         const body = {credential};
         const {result, error} = await issuer.issue({body});
@@ -98,7 +98,7 @@ describe('Verifiable Credentials Issuer API', function() {
           columnId: implementation.name,
           rowId: this.test.title
         };
-        const credential = {...validVC};
+        const credential = createValidVC();
         credential.type = [2, null, {foo: true}, false];
         const body = {credential};
         const {result, error} = await issuer.issue({body});
@@ -109,7 +109,7 @@ describe('Verifiable Credentials Issuer API', function() {
           columnId: implementation.name,
           rowId: this.test.title
         };
-        const credential = {...validVC};
+        const credential = createValidVC();
         delete credential.issuer;
         const body = {credential};
         const {result, error} = await issuer.issue({body});
@@ -141,7 +141,7 @@ describe('Verifiable Credentials Issuer API', function() {
           columnId: implementation.name,
           rowId: this.test.title
         };
-        const credential = {...validVC};
+        const credential = createValidVC();
         delete credential.credentialSubject;
         const body = {credential};
         const {result, error} = await issuer.issue({body});
@@ -152,7 +152,7 @@ describe('Verifiable Credentials Issuer API', function() {
           columnId: implementation.name,
           rowId: this.test.title
         };
-        const credential = {...validVC};
+        const credential = createValidVC();
         credential.credentialSubject = [null, true, 4];
         const body = {credential};
         const {result, error} = await issuer.issue({body});
@@ -163,7 +163,7 @@ describe('Verifiable Credentials Issuer API', function() {
           columnId: implementation.name,
           rowId: this.test.title
         };
-        const credential = {...validVC};
+        const credential = createValidVC();
         credential.issuanceDate = new Date().toISOString()
           .replace('.000Z', 'Z');
         const body = {credential};
@@ -177,7 +177,7 @@ describe('Verifiable Credentials Issuer API', function() {
           columnId: implementation.name,
           rowId: this.test.title
         };
-        const credential = {...validVC};
+        const credential = createValidVC();
         // expires in a year
         const oneYear = Date.now() + 365 * 24 * 60 * 60 * 1000;
         credential.expirationDate = new Date(oneYear).toISOString()
