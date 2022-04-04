@@ -14,4 +14,4 @@ function shouldThrowInvalidInput({result, error}) {
 
 module.exports = {
   shouldThrowInvalidInput
-}
+};
