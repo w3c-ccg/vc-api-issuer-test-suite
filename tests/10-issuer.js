@@ -4,7 +4,6 @@
 
 const chai = require('chai');
 const {implementations} = require('vc-api-test-suite-implementations');
-const {Issuer} = require('./issuer');
 const {shouldThrowInvalidInput} = require('./assertions');
 const {createValidVC} = require('./mock.data');
 const should = chai.should();
