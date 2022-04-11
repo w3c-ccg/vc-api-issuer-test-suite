@@ -3,13 +3,13 @@
  */
 
 const chai = require('chai');
-const implementations = require('../implementations');
+const {implementations} = require('vc-api-test-suite-implementations');
 const {Issuer} = require('./issuer');
 const {shouldThrowInvalidInput} = require('./assertions');
 const {createValidVC} = require('./mock.data');
 const should = chai.should();
 
-describe('JWT', function() {
+describe.skip('JWT', function() {
   const summaries = new Set();
   this.summary = summaries;
   // column names for the matrix go here
@@ -24,13 +24,14 @@ describe('JWT', function() {
   this.columnLabel = 'Issuer';
   // the reportData will be displayed under the test title
   this.reportData = reportData;
-  for(const implementation of implementations) {
-    columnNames.push(implementation.name);
-    const issuer = new Issuer(implementation);
-    describe(implementation.name, function() {
+  for(const [name, implementation] of implementations) {
+    columnNames.push(name);
+    const issuer = implementation.issuers.find(issuer =>
+      issuer.tags.has('VC-HTTP-API') && issuer.tags.has('JWT'));
+    describe(name, function() {
       it('Request body MUST have property "credential".', async function() {
         this.test.cell = {
-          columnId: implementation.name,
+          columnId: name,
           rowId: this.test.title
         };
         const credential = createValidVC();
@@ -40,7 +41,7 @@ describe('JWT', function() {
       });
       it('credential MUST have property "@context".', async function() {
         this.test.cell = {
-          columnId: implementation.name,
+          columnId: name,
           rowId: this.test.title
         };
         const credential = createValidVC();
@@ -51,7 +52,7 @@ describe('JWT', function() {
       });
       it('credential "@context" MUST be an array.', async function() {
         this.test.cell = {
-          columnId: implementation.name,
+          columnId: name,
           rowId: this.test.title
         };
         const credential = createValidVC();
@@ -62,7 +63,7 @@ describe('JWT', function() {
       });
       it('credential "@context" items MUST be strings.', async function() {
         this.test.cell = {
-          columnId: implementation.name,
+          columnId: name,
           rowId: this.test.title
         };
         const credential = createValidVC();
@@ -73,7 +74,7 @@ describe('JWT', function() {
       });
       it('"credential.type" MUST be an array.', async function() {
         this.test.cell = {
-          columnId: implementation.name,
+          columnId: name,
           rowId: this.test.title
         };
         const credential = createValidVC();
@@ -84,7 +85,7 @@ describe('JWT', function() {
       });
       it('credential MUST have property "type"', async function() {
         this.test.cell = {
-          columnId: implementation.name,
+          columnId: name,
           rowId: this.test.title
         };
         const credential = createValidVC();
@@ -95,7 +96,7 @@ describe('JWT', function() {
       });
       it('"credential.type" items MUST be strings', async function() {
         this.test.cell = {
-          columnId: implementation.name,
+          columnId: name,
           rowId: this.test.title
         };
         const credential = createValidVC();
@@ -106,7 +107,7 @@ describe('JWT', function() {
       });
       it('credential MUST have property "issuer"', async function() {
         this.test.cell = {
-          columnId: implementation.name,
+          columnId: name,
           rowId: this.test.title
         };
         const credential = createValidVC();
@@ -138,7 +139,7 @@ describe('JWT', function() {
       });
       it('credential MUST have property "credentialSubject"', async function() {
         this.test.cell = {
-          columnId: implementation.name,
+          columnId: name,
           rowId: this.test.title
         };
         const credential = createValidVC();
@@ -149,7 +150,7 @@ describe('JWT', function() {
       });
       it('"credential.credentialSubject" MUST be an object', async function() {
         this.test.cell = {
-          columnId: implementation.name,
+          columnId: name,
           rowId: this.test.title
         };
         const credential = createValidVC();
@@ -160,7 +161,7 @@ describe('JWT', function() {
       });
       it('credential MAY have property "issuanceDate"', async function() {
         this.test.cell = {
-          columnId: implementation.name,
+          columnId: name,
           rowId: this.test.title
         };
         const credential = createValidVC();
@@ -174,7 +175,7 @@ describe('JWT', function() {
       });
       it('credential MAY have property "expirationDate"', async function() {
         this.test.cell = {
-          columnId: implementation.name,
+          columnId: name,
           rowId: this.test.title
         };
         const credential = createValidVC();
