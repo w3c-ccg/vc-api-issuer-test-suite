@@ -38,7 +38,8 @@
     "mocha": "^9.2.2",
     "mocha-w3c-interop-reporter": "github:digitalbazaar/mocha-w3c-interop-reporter",
     "require-dir": "^1.2.0",
-    "uuid": "^8.3.2"
+    "uuid": "^8.3.2",
+    "vc-api-test-suite-implementations": "github:digitalbazaar/vc-api-test-suite-implementations#initial"
   },
   "devDependencies": {
     "eslint": "^8.11.0",
