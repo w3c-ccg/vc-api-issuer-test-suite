@@ -10,7 +10,7 @@ const should = chai.should();
 
 const {match, nonMatch} = filterByTag({issuerTags: ['JWT']});
 
-describe('JWT', function() {
+describe('Issue Credential - JWT', function() {
   const summaries = new Set();
   this.summary = summaries;
   // column names for the matrix go here

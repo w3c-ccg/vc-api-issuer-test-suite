@@ -10,7 +10,7 @@ const should = chai.should();
 
 const {match, nonMatch} = filterByTag({issuerTags: ['VC-API']});
 
-describe('Verifiable Credentials Issuer API', function() {
+describe('Issue Credential - Data Integrity', function() {
   const summaries = new Set();
   this.summary = summaries;
   // column names for the matrix go here
