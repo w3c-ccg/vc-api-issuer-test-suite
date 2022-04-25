@@ -3,10 +3,12 @@
  */
 
 const chai = require('chai');
-const {implementations} = require('vc-api-test-suite-implementations');
+const {filterByTag} = require('vc-api-test-suite-implementations');
 const {shouldThrowInvalidInput} = require('./assertions');
 const {createValidVC} = require('./mock.data');
 const should = chai.should();
+
+const {match, nonMatch} = filterByTag({issuerTags: ['VC-API']});
 
 describe('Verifiable Credentials Issuer API', function() {
   const summaries = new Set();
@@ -19,14 +21,15 @@ describe('Verifiable Credentials Issuer API', function() {
   this.matrix = true;
   this.report = true;
   this.columns = columnNames;
+  this.notImplemented = [...nonMatch.keys()];
   this.rowLabel = 'Test Name';
   this.columnLabel = 'Issuer';
   // the reportData will be displayed under the test title
   this.reportData = reportData;
-  for(const [name, implementation] of implementations) {
+  for(const [name, implementation] of match) {
     columnNames.push(name);
     const issuer = implementation.issuers.find(
-      issuer => issuer.tags.has('VC-HTTP-API'));
+      issuer => issuer.tags.has('VC-API'));
     describe(name, function() {
       it('Request body MUST have property "credential".', async function() {
         this.test.cell = {
