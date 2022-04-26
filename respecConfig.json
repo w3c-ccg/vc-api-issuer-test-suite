@@ -2,7 +2,7 @@
   "specStatus": "unofficial",
   "shortName": "vc-api-issuer-test-suite",
   "subtitle": "Test Interoperability Report for Verifiable Credentials API Issuer",
-  "github": "https://github.com/digitalbazaar/vc-api-issuer-test-suite",
+  "github": "https://github.com/w3c-ccg/vc-api-issuer-test-suite",
   "edDraftURI": "https://w3c-ccg.github.io/vc-api/#issue-credential",
   "doJsonLd": true,
   "includePermalinks": false,
