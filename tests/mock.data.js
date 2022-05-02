@@ -1,15 +1,15 @@
 /*!
  * Copyright (c) 2022 Digital Bazaar, Inc. All rights reserved.
  */
-const validVC = require('./validVC.json');
+const validVc = require('./validVc.json');
 const {v4: uuidv4} = require('uuid');
 
-// copies a validVC and adds an id.
-const createValidVC = () => ({
-  ...validVC,
+// copies a validVc and adds an id.
+const createValidVc = () => ({
+  ...validVc,
   id: `urn:uuid:${uuidv4()}`
 });
 
 module.exports = {
-  createValidVC
+  createValidVc
 };

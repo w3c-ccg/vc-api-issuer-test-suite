@@ -5,7 +5,7 @@
 const chai = require('chai');
 const {filterByTag} = require('vc-api-test-suite-implementations');
 const {shouldThrowInvalidInput} = require('./assertions');
-const {createValidVC} = require('./mock.data');
+const {createValidVc} = require('./mock.data');
 const should = chai.should();
 
 const {match, nonMatch} = filterByTag({issuerTags: ['JWT']});
@@ -36,7 +36,7 @@ describe('Issue Credential - JWT', function() {
           columnId: name,
           rowId: this.test.title
         };
-        const credential = createValidVC();
+        const credential = createValidVc();
         const body = {verifiableCredential: credential};
         const {result, error} = await issuer.issue({body});
         shouldThrowInvalidInput({result, error});
@@ -46,7 +46,7 @@ describe('Issue Credential - JWT', function() {
           columnId: name,
           rowId: this.test.title
         };
-        const credential = createValidVC();
+        const credential = createValidVc();
         delete credential['@context'];
         const body = {credential};
         const {result, error} = await issuer.issue({body});
@@ -57,7 +57,7 @@ describe('Issue Credential - JWT', function() {
           columnId: name,
           rowId: this.test.title
         };
-        const credential = createValidVC();
+        const credential = createValidVc();
         credential['@context'] = 4;
         const body = {credential};
         const {result, error} = await issuer.issue({body});
@@ -68,7 +68,7 @@ describe('Issue Credential - JWT', function() {
           columnId: name,
           rowId: this.test.title
         };
-        const credential = createValidVC();
+        const credential = createValidVc();
         credential['@context'] = [{foo: true}, 4, false, null];
         const body = {credential};
         const {result, error} = await issuer.issue({body});
@@ -79,7 +79,7 @@ describe('Issue Credential - JWT', function() {
           columnId: name,
           rowId: this.test.title
         };
-        const credential = createValidVC();
+        const credential = createValidVc();
         credential.type = 4;
         const body = {credential};
         const {result, error} = await issuer.issue({body});
@@ -90,7 +90,7 @@ describe('Issue Credential - JWT', function() {
           columnId: name,
           rowId: this.test.title
         };
-        const credential = createValidVC();
+        const credential = createValidVc();
         delete credential.type;
         const body = {credential};
         const {result, error} = await issuer.issue({body});
@@ -101,7 +101,7 @@ describe('Issue Credential - JWT', function() {
           columnId: name,
           rowId: this.test.title
         };
-        const credential = createValidVC();
+        const credential = createValidVc();
         credential.type = [2, null, {foo: true}, false];
         const body = {credential};
         const {result, error} = await issuer.issue({body});
@@ -112,7 +112,7 @@ describe('Issue Credential - JWT', function() {
           columnId: name,
           rowId: this.test.title
         };
-        const credential = createValidVC();
+        const credential = createValidVc();
         delete credential.issuer;
         const body = {credential};
         const {result, error} = await issuer.issue({body});
@@ -144,7 +144,7 @@ describe('Issue Credential - JWT', function() {
           columnId: name,
           rowId: this.test.title
         };
-        const credential = createValidVC();
+        const credential = createValidVc();
         delete credential.credentialSubject;
         const body = {credential};
         const {result, error} = await issuer.issue({body});
@@ -155,7 +155,7 @@ describe('Issue Credential - JWT', function() {
           columnId: name,
           rowId: this.test.title
         };
-        const credential = createValidVC();
+        const credential = createValidVc();
         credential.credentialSubject = [null, true, 4];
         const body = {credential};
         const {result, error} = await issuer.issue({body});
@@ -166,7 +166,7 @@ describe('Issue Credential - JWT', function() {
           columnId: name,
           rowId: this.test.title
         };
-        const credential = createValidVC();
+        const credential = createValidVc();
         credential.issuanceDate = new Date().toISOString()
           .replace('.000Z', 'Z');
         const body = {credential};
@@ -180,7 +180,7 @@ describe('Issue Credential - JWT', function() {
           columnId: name,
           rowId: this.test.title
         };
-        const credential = createValidVC();
+        const credential = createValidVc();
         // expires in a year
         const oneYear = Date.now() + 365 * 24 * 60 * 60 * 1000;
         credential.expirationDate = new Date(oneYear).toISOString()
