@@ -142,14 +142,7 @@ describe('Issue Credential - Data Integrity', function() {
         delete credential.issuer;
         const body = {credential};
         const {result, error} = await issuer.issue({body});
-        should.not.exist(result, 'Expected result from issuer to not exist.');
-        should.exist(error, 'Expected issuer to Error.');
-        should.exist(result.status, 'Expected an HTTP status code.');
-        result.data.verifiableCredential.should.be.an(
-          'object', 'Expected verifiableCredential to be an object.');
-        should.exist(
-          result.data.verifiableCredential.issuer,
-          'Expected verifiableCredential to have property issuer.');
+        shouldThrowInvalidInput({result, error});
       });
       it('credential MUST have property "credentialSubject"', async function() {
         this.test.cell = {
