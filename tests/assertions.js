@@ -13,7 +13,6 @@ function shouldThrowInvalidInput({result, error}) {
 }
 
 function testIssuedVc({issuedVc}) {
-  console.log(issuedVc, 'issuedVc');
   issuedVc.should.be.an('object');
   issuedVc.should.have.property('@context');
   issuedVc.should.have.property('type');
