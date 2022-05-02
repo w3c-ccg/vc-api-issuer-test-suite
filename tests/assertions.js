@@ -12,6 +12,27 @@ function shouldThrowInvalidInput({result, error}) {
     'Expected status code 400 invalid input!');
 }
 
+function testIssuedVc({issuedVc}) {
+  console.log(issuedVc, 'issuedVc');
+  issuedVc.should.be.an('object');
+  issuedVc.should.have.property('@context');
+  issuedVc.should.have.property('type');
+  issuedVc.type.should.eql(['VerifiableCredential']);
+  issuedVc.should.have.property('id');
+  issuedVc.id.should.be.a('string');
+  issuedVc.should.have.property('credentialSubject');
+  issuedVc.credentialSubject.should.be.an('object');
+  issuedVc.should.have.property('issuer');
+  const issuerType = typeof(issuedVc.issuer);
+  issuerType.should.be.oneOf(['string', 'object']),
+  issuedVc.should.have.property('proof');
+  issuedVc.proof.should.be.an('object');
+  if(issuerType === 'object') {
+    should.exist(issuedVc.issuer.id,
+      'Expected issuer object to have property id');
+  }
+}
 module.exports = {
-  shouldThrowInvalidInput
+  shouldThrowInvalidInput,
+  testIssuedVc
 };
