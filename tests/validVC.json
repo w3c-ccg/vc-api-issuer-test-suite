@@ -1,14 +1,9 @@
 {
   "@context": [
-    "https://www.w3.org/2018/credentials/v1",
-    "https://www.w3.org/2018/credentials/examples/v1"
+    "https://www.w3.org/2018/credentials/v1"
   ],
-  "type": ["VerifiableCredential", "UniversityDegreeCredential"],
+  "type": ["VerifiableCredential"],
   "credentialSubject": {
-    "id": "did:key:z6MktKwz7Ge1Yxzr4JHavN33wiwa8y81QdcMRLXQsrH9T53b",
-    "degree": {
-      "degreeType": "BachelorDegree",
-      "name": "Bachelor of Science and Arts"
-    }
+    "id": "did:key:z6MkhTNL7i2etLerDK8Acz5t528giE5KA4p75T6ka1E1D74r"
   }
 }
