@@ -1,3 +1,8 @@
+/*!
+ * Copyright (c) 2022 Digital Bazaar, Inc. All rights reserved.
+ */
+'use strict';
+
 const chai = require('chai');
 
 const should = chai.should();
@@ -31,6 +36,7 @@ function testIssuedVc({issuedVc}) {
       'Expected issuer object to have property id');
   }
 }
+
 module.exports = {
   shouldThrowInvalidInput,
   testIssuedVc
