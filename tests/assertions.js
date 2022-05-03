@@ -21,7 +21,7 @@ function testIssuedVc({issuedVc}) {
   issuedVc.should.be.an('object');
   issuedVc.should.have.property('@context');
   issuedVc.should.have.property('type');
-  issuedVc.type.should.eql(['VerifiableCredential']);
+  issuedVc.type.should.contain('VerifiableCredential');
   issuedVc.should.have.property('id');
   issuedVc.id.should.be.a('string');
   issuedVc.should.have.property('credentialSubject');
