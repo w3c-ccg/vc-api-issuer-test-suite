@@ -206,7 +206,7 @@ describe('Issue Credential - Data Integrity', function() {
         const body = {credential};
         const {result, error} = await issuer.issue({body});
         should.exist(result, 'Expected result from issuer.');
-        should.not.exist(error, 'Expected issuer to Error.');
+        should.not.exist(error, 'Expected issuer to not Error.');
         result.status.should.equal(201, 'Expected statusCode 201.');
       });
       it('credential MAY have property "expirationDate"', async function() {
