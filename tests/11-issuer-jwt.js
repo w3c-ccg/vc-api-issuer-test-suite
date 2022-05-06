@@ -14,21 +14,18 @@ const {match, nonMatch} = filterByTag({issuerTags: ['JWT']});
 describe('Issue Credential - JWT', function() {
   const summaries = new Set();
   this.summary = summaries;
-  // column names for the matrix go here
-  const columnNames = [];
   const reportData = [];
   // this will tell the report
   // to make an interop matrix with this suite
   this.matrix = true;
   this.report = true;
-  this.columns = columnNames;
+  this.implemented = [match.keys()];
   this.notImplemented = [...nonMatch.keys()];
   this.rowLabel = 'Test Name';
   this.columnLabel = 'Issuer';
   // the reportData will be displayed under the test title
   this.reportData = reportData;
   for(const [name, implementation] of match) {
-    columnNames.push(name);
     const issuer = implementation.issuers.find(issuer =>
       issuer.tags.has('VC-API') && issuer.tags.has('JWT'));
     describe(name, function() {
