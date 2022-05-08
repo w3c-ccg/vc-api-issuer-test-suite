@@ -65,16 +65,16 @@
     </section>
     <section id="sotd">
       <p>
-      Tests passed 22/36 61%
+      Tests passed 32/42 76%
       </p>
       <p>
-      Tests failed 14/36 39%
+      Tests failed 10/42 24%
       </p>
       <p>
       Tests skipped 0
       </p>
       <p>
-      Total tests 36
+      Total tests 42
       </p>
     
        <p>
@@ -165,6 +165,18 @@
               <tbody>
               <tr>
                 <!--This is the name of the test-->
+                <td class="subtest">MUST successfully issue a credential.</td>
+                <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+                  <td class="failed not-optional">❌</td>
+                  <td class="notImplemented not-optional">—</td>
+                  <td class="notImplemented not-optional">—</td>
+                  <td class="notImplemented not-optional">—</td>
+                  <td class="notImplemented not-optional">—</td>
+              </tr>
+              <tr>
+                <!--This is the name of the test-->
                 <td class="subtest">Request body MUST have property &quot;credential&quot;.</td>
                 <!--These contain if the test passed, failed, or was skipped-->
                   <td class="passed not-optional">✓</td>
@@ -213,7 +225,7 @@
               </tr>
               <tr>
                 <!--This is the name of the test-->
-                <td class="subtest">&quot;credential.type&quot; MUST be an array.</td>
+                <td class="subtest">credential MUST have property &quot;type&quot;</td>
                 <!--These contain if the test passed, failed, or was skipped-->
                   <td class="passed not-optional">✓</td>
                   <td class="failed not-optional">❌</td>
@@ -225,7 +237,7 @@
               </tr>
               <tr>
                 <!--This is the name of the test-->
-                <td class="subtest">credential MUST have property &quot;type&quot;</td>
+                <td class="subtest">&quot;credential.type&quot; MUST be an array.</td>
                 <!--These contain if the test passed, failed, or was skipped-->
                   <td class="passed not-optional">✓</td>
                   <td class="failed not-optional">❌</td>
@@ -251,9 +263,21 @@
                 <!--This is the name of the test-->
                 <td class="subtest">credential MUST have property &quot;issuer&quot;</td>
                 <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="passed not-optional">✓</td>
+                  <td class="failed not-optional">❌</td>
+                  <td class="passed not-optional">✓</td>
+                  <td class="notImplemented not-optional">—</td>
+                  <td class="notImplemented not-optional">—</td>
+                  <td class="notImplemented not-optional">—</td>
+                  <td class="notImplemented not-optional">—</td>
+              </tr>
+              <tr>
+                <!--This is the name of the test-->
+                <td class="subtest">&quot;credential.issuer&quot; MUST be a string or an object</td>
+                <!--These contain if the test passed, failed, or was skipped-->
                   <td class="failed not-optional">❌</td>
                   <td class="failed not-optional">❌</td>
-                  <td class="failed not-optional">❌</td>
+                  <td class="passed not-optional">✓</td>
                   <td class="notImplemented not-optional">—</td>
                   <td class="notImplemented not-optional">—</td>
                   <td class="notImplemented not-optional">—</td>
@@ -287,9 +311,9 @@
                 <!--This is the name of the test-->
                 <td class="subtest">credential MAY have property &quot;issuanceDate&quot;</td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="failed not-optional">❌</td>
-                  <td class="failed not-optional">❌</td>
-                  <td class="failed not-optional">❌</td>
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
                   <td class="notImplemented not-optional">—</td>
                   <td class="notImplemented not-optional">—</td>
                   <td class="notImplemented not-optional">—</td>
@@ -299,8 +323,8 @@
                 <!--This is the name of the test-->
                 <td class="subtest">credential MAY have property &quot;expirationDate&quot;</td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="failed not-optional">❌</td>
-                  <td class="failed not-optional">❌</td>
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
                   <td class="failed not-optional">❌</td>
                   <td class="notImplemented not-optional">—</td>
                   <td class="notImplemented not-optional">—</td>
