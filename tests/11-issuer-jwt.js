@@ -19,7 +19,7 @@ describe('Issue Credential - JWT', function() {
   // to make an interop matrix with this suite
   this.matrix = true;
   this.report = true;
-  this.implemented = [match.keys()];
+  this.implemented = [...match.keys()];
   this.notImplemented = [...nonMatch.keys()];
   this.rowLabel = 'Test Name';
   this.columnLabel = 'Issuer';
