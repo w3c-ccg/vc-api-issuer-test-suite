@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "mocha tests/ --require esm --reporter ./node_modules/mocha-w3c-interop-reporter --reporter-options reportDir=\"$PWD/reports\",respec=\"$PWD/respecConfig.json\",title=\"VC API Issuer Interoperability Report 1.0\",body=\"$PWD/body.hbs\",suiteLog='./suite.log' --timeout 15000 --preserve-symlinks",
+    "test": "mocha tests/ --reporter @digitalbazaar/mocha-w3c-interop-reporter --reporter-options reportDir=\"$PWD/reports\",respec=\"$PWD/respecConfig.json\",title=\"VC API Issuer Interoperability Report 1.0\",body=\"$PWD/body.hbs\",suiteLog='./suite.log' --timeout 15000 --preserve-symlinks",
     "lint": "eslint ."
   },
   "repository": {
@@ -33,10 +33,10 @@
     "@digitalbazaar/ed25519-signature-2020": "^3.0.0",
     "@digitalbazaar/ezcap": "^2.0.4",
     "@digitalbazaar/http-client": "^2.0.1",
+    "@digitalbazaar/mocha-w3c-interop-reporter": "^1.0.0",
     "bnid": "^2.1.0",
     "chai": "^4.3.6",
     "mocha": "^9.2.2",
-    "mocha-w3c-interop-reporter": "github:digitalbazaar/mocha-w3c-interop-reporter#use-implemented-not-implemented",
     "require-dir": "^1.2.0",
     "uuid": "^8.3.2",
     "vc-api-test-suite-implementations": "github:w3c-ccg/vc-api-test-suite-implementations"
