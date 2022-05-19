@@ -6,7 +6,7 @@
 const chai = require('chai');
 const {filterByTag} = require('vc-api-test-suite-implementations');
 const {shouldThrowInvalidInput, testIssuedVc} = require('./assertions');
-const {createValidVc} = require('./mock.data');
+const {createRequestBody} = require('./mock.data');
 
 const should = chai.should();
 const {match, nonMatch} = filterByTag({issuerTags: ['VC-API']});
@@ -34,9 +34,7 @@ describe('Issue Credential - Data Integrity', function() {
           columnId: name,
           rowId: this.test.title
         };
-        const {issuer: {id: issuerId}} = issuer;
-        const credential = createValidVc({issuerId});
-        const body = {credential};
+        const body = createRequestBody({issuer});
         const {result, data: issuedVc, error} = await issuer.issue({body});
         should.exist(result, 'Expected result from issuer.');
         should.exist(issuedVc, 'Expected result to have data.');
@@ -49,9 +47,9 @@ describe('Issue Credential - Data Integrity', function() {
           columnId: name,
           rowId: this.test.title
         };
-        const {issuer: {id: issuerId}} = issuer;
-        const credential = createValidVc({issuerId});
-        const body = {verifiableCredential: credential};
+        const body = createRequestBody({issuer});
+        body.verifiableCredential = {...body.credential};
+        delete body.credential;
         const {result, error} = await issuer.issue({body});
         shouldThrowInvalidInput({result, error});
       });
@@ -60,10 +58,8 @@ describe('Issue Credential - Data Integrity', function() {
           columnId: name,
           rowId: this.test.title
         };
-        const {issuer: {id: issuerId}} = issuer;
-        const credential = createValidVc({issuerId});
-        delete credential['@context'];
-        const body = {credential};
+        const body = createRequestBody({issuer});
+        delete body.credential['@context'];
         const {result, error} = await issuer.issue({body});
         shouldThrowInvalidInput({result, error});
       });
@@ -72,10 +68,8 @@ describe('Issue Credential - Data Integrity', function() {
           columnId: name,
           rowId: this.test.title
         };
-        const {issuer: {id: issuerId}} = issuer;
-        const credential = createValidVc({issuerId});
-        credential['@context'] = 4;
-        const body = {credential};
+        const body = createRequestBody({issuer});
+        body.credential['@context'] = 4;
         const {result, error} = await issuer.issue({body});
         shouldThrowInvalidInput({result, error});
       });
@@ -84,12 +78,10 @@ describe('Issue Credential - Data Integrity', function() {
           columnId: name,
           rowId: this.test.title
         };
-        const {issuer: {id: issuerId}} = issuer;
-        const credential = createValidVc({issuerId});
+        const body = createRequestBody({issuer});
         const invalidContextTypes = [{foo: true}, 4, false, null];
         for(const invalidContextType of invalidContextTypes) {
-          credential['@context'] = invalidContextType;
-          const body = {credential};
+          body.credential['@context'] = invalidContextType;
           const {result, error} = await issuer.issue({body});
           shouldThrowInvalidInput({result, error});
         }
@@ -99,10 +91,8 @@ describe('Issue Credential - Data Integrity', function() {
           columnId: name,
           rowId: this.test.title
         };
-        const {issuer: {id: issuerId}} = issuer;
-        const credential = createValidVc({issuerId});
-        delete credential.type;
-        const body = {credential};
+        const body = createRequestBody({issuer});
+        delete body.credential.type;
         const {result, error} = await issuer.issue({body});
         shouldThrowInvalidInput({result, error});
       });
@@ -111,10 +101,8 @@ describe('Issue Credential - Data Integrity', function() {
           columnId: name,
           rowId: this.test.title
         };
-        const {issuer: {id: issuerId}} = issuer;
-        const credential = createValidVc({issuerId});
-        credential.type = 4;
-        const body = {credential};
+        const body = createRequestBody({issuer});
+        body.credential.type = 4;
         const {result, error} = await issuer.issue({body});
         shouldThrowInvalidInput({result, error});
       });
@@ -123,12 +111,10 @@ describe('Issue Credential - Data Integrity', function() {
           columnId: name,
           rowId: this.test.title
         };
-        const {issuer: {id: issuerId}} = issuer;
-        const credential = createValidVc({issuerId});
+        const body = createRequestBody({issuer});
         const invalidCredentialTypes = [null, true, 4, []];
         for(const invalidCredentialType of invalidCredentialTypes) {
-          credential.type = invalidCredentialType;
-          const body = {credential};
+          body.credential.type = invalidCredentialType;
           const {result, error} = await issuer.issue({body});
           shouldThrowInvalidInput({result, error});
         }
@@ -138,10 +124,8 @@ describe('Issue Credential - Data Integrity', function() {
           columnId: name,
           rowId: this.test.title
         };
-        const {issuer: {id: issuerId}} = issuer;
-        const credential = createValidVc({issuerId});
-        delete credential.issuer;
-        const body = {credential};
+        const body = createRequestBody({issuer});
+        delete body.credential.issuer;
         const {result, error} = await issuer.issue({body});
         shouldThrowInvalidInput({result, error});
       });
@@ -150,12 +134,10 @@ describe('Issue Credential - Data Integrity', function() {
           columnId: name,
           rowId: this.test.title
         };
-        const {issuer: {id: issuerId}} = issuer;
-        const credential = createValidVc({issuerId});
+        const body = createRequestBody({issuer});
         const invalidIssuerTypes = [null, true, 4, []];
         for(const invalidIssuerType of invalidIssuerTypes) {
-          credential.issuer = invalidIssuerType;
-          const body = {credential};
+          body.credential.issuer = invalidIssuerType;
           const {result, error} = await issuer.issue({body});
           shouldThrowInvalidInput({result, error});
         }
@@ -165,10 +147,8 @@ describe('Issue Credential - Data Integrity', function() {
           columnId: name,
           rowId: this.test.title
         };
-        const {issuer: {id: issuerId}} = issuer;
-        const credential = createValidVc({issuerId});
-        delete credential.credentialSubject;
-        const body = {credential};
+        const body = createRequestBody({issuer});
+        delete body.credential.credentialSubject;
         const {result, error} = await issuer.issue({body});
         shouldThrowInvalidInput({result, error});
       });
@@ -177,30 +157,23 @@ describe('Issue Credential - Data Integrity', function() {
           columnId: name,
           rowId: this.test.title
         };
-        const {issuer: {id: issuerId}} = issuer;
-        const credential = createValidVc({issuerId});
+        const body = createRequestBody({issuer});
         const invalidCredentialSubjectTypes = [null, true, 4, []];
         for(const invalidCredentialSubjectType of
           invalidCredentialSubjectTypes) {
-          credential.credentialSubject = invalidCredentialSubjectType;
-          const body = {credential};
+          body.credential.credentialSubject = invalidCredentialSubjectType;
           const {result, error} = await issuer.issue({body});
           shouldThrowInvalidInput({result, error});
         }
-        const body = {credential};
-        const {result, error} = await issuer.issue({body});
-        shouldThrowInvalidInput({result, error});
       });
       it('credential MAY have property "issuanceDate"', async function() {
         this.test.cell = {
           columnId: name,
           rowId: this.test.title
         };
-        const {issuer: {id: issuerId}} = issuer;
-        const credential = createValidVc({issuerId});
-        credential.issuanceDate = new Date().toISOString()
+        const body = createRequestBody({issuer});
+        body.credential.issuanceDate = new Date().toISOString()
           .replace('.000Z', 'Z');
-        const body = {credential};
         const {result, error} = await issuer.issue({body});
         should.exist(result, 'Expected result from issuer.');
         should.not.exist(error, 'Expected issuer to not Error.');
@@ -211,13 +184,11 @@ describe('Issue Credential - Data Integrity', function() {
           columnId: name,
           rowId: this.test.title
         };
-        const {issuer: {id: issuerId}} = issuer;
-        const credential = createValidVc({issuerId});
+        const body = createRequestBody({issuer});
         // expires in a year
         const oneYear = Date.now() + 365 * 24 * 60 * 60 * 1000;
-        credential.expirationDate = new Date(oneYear).toISOString()
+        body.credential.expirationDate = new Date(oneYear).toISOString()
           .replace('.000Z', 'Z');
-        const body = {credential};
         const {result, error} = await issuer.issue({body});
         should.exist(result, 'Expected result from issuer.');
         should.not.exist(error, 'Expected issuer to not Error.');

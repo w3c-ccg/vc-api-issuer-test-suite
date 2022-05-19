@@ -3,16 +3,20 @@
  */
 'use strict';
 
-const validVc = require('./validVc.json');
 const {v4: uuidv4} = require('uuid');
+const {klona} = require('klona');
+const validVc = require('./validVc.json');
 
 // copies a validVc and adds an id.
-const createValidVc = ({issuerId}) => ({
-  ...validVc,
-  id: `urn:uuid:${uuidv4()}`,
-  issuer: issuerId
-});
-
-module.exports = {
-  createValidVc
+const createRequestBody = ({issuer, vc = validVc}) => {
+  const {issuer: {id, options}} = issuer;
+  const credential = klona(vc);
+  credential.id = `urn:uuid:${uuidv4()}`;
+  credential.issuer = id;
+  return {
+    credential,
+    options
+  };
 };
+
+module.exports = {createRequestBody};
