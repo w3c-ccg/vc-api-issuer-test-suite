@@ -82,7 +82,7 @@ describe('Issue Credential - Data Integrity', function() {
         const invalidContextTypes = [{foo: true}, 4, false, null];
         for(const invalidContextType of invalidContextTypes) {
           body.credential['@context'] = invalidContextType;
-          const {result, error} = await issuer.issue({body});
+          const {result, error} = await issuer.issue({body: {...body}});
           shouldThrowInvalidInput({result, error});
         }
       });
@@ -115,7 +115,7 @@ describe('Issue Credential - Data Integrity', function() {
         const invalidCredentialTypes = [null, true, 4, []];
         for(const invalidCredentialType of invalidCredentialTypes) {
           body.credential.type = invalidCredentialType;
-          const {result, error} = await issuer.issue({body});
+          const {result, error} = await issuer.issue({body: {...body}});
           shouldThrowInvalidInput({result, error});
         }
       });
@@ -138,7 +138,7 @@ describe('Issue Credential - Data Integrity', function() {
         const invalidIssuerTypes = [null, true, 4, []];
         for(const invalidIssuerType of invalidIssuerTypes) {
           body.credential.issuer = invalidIssuerType;
-          const {result, error} = await issuer.issue({body});
+          const {result, error} = await issuer.issue({body: {...body}});
           shouldThrowInvalidInput({result, error});
         }
       });
@@ -162,7 +162,7 @@ describe('Issue Credential - Data Integrity', function() {
         for(const invalidCredentialSubjectType of
           invalidCredentialSubjectTypes) {
           body.credential.credentialSubject = invalidCredentialSubjectType;
-          const {result, error} = await issuer.issue({body});
+          const {result, error} = await issuer.issue({body: {...body}});
           shouldThrowInvalidInput({result, error});
         }
       });
