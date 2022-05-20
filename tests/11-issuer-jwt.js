@@ -147,10 +147,8 @@ describe('Issue Credential - JWT', function() {
           columnId: name,
           rowId: this.test.title
         };
-        const {issuer: {id: issuerId}} = issuer;
-        const credential = createValidVc({issuerId});
-        delete credential.credentialSubject;
-        const body = {credential};
+        const body = createRequestBody({issuer});
+        delete body.credential.credentialSubject;
         const {result, error} = await issuer.issue({body});
         shouldThrowInvalidInput({result, error});
       });
@@ -159,33 +157,26 @@ describe('Issue Credential - JWT', function() {
           columnId: name,
           rowId: this.test.title
         };
-        const {issuer: {id: issuerId}} = issuer;
-        const credential = createValidVc({issuerId});
+        const body = createRequestBody({issuer});
         const invalidCredentialSubjectTypes = [null, true, 4, []];
         for(const invalidCredentialSubjectType of
           invalidCredentialSubjectTypes) {
-          credential.credentialSubject = invalidCredentialSubjectType;
-          const body = {credential};
-          const {result, error} = await issuer.issue({body});
+          body.credential.credentialSubject = invalidCredentialSubjectType;
+          const {result, error} = await issuer.issue({body: {...body}});
           shouldThrowInvalidInput({result, error});
         }
-        const body = {credential};
-        const {result, error} = await issuer.issue({body});
-        shouldThrowInvalidInput({result, error});
       });
       it('credential MAY have property "issuanceDate"', async function() {
         this.test.cell = {
           columnId: name,
           rowId: this.test.title
         };
-        const {issuer: {id: issuerId}} = issuer;
-        const credential = createValidVc({issuerId});
-        credential.issuanceDate = new Date().toISOString()
+        const body = createRequestBody({issuer});
+        body.credential.issuanceDate = new Date().toISOString()
           .replace('.000Z', 'Z');
-        const body = {credential};
         const {result, error} = await issuer.issue({body});
         should.exist(result, 'Expected result from issuer.');
-        should.not.exist(error, 'Expected issuer to Error.');
+        should.not.exist(error, 'Expected issuer to not Error.');
         result.status.should.equal(201, 'Expected statusCode 201.');
       });
       it('credential MAY have property "expirationDate"', async function() {
@@ -193,13 +184,11 @@ describe('Issue Credential - JWT', function() {
           columnId: name,
           rowId: this.test.title
         };
-        const {issuer: {id: issuerId}} = issuer;
-        const credential = createValidVc({issuerId});
+        const body = createRequestBody({issuer});
         // expires in a year
         const oneYear = Date.now() + 365 * 24 * 60 * 60 * 1000;
-        credential.expirationDate = new Date(oneYear).toISOString()
+        body.credential.expirationDate = new Date(oneYear).toISOString()
           .replace('.000Z', 'Z');
-        const body = {credential};
         const {result, error} = await issuer.issue({body});
         should.exist(result, 'Expected result from issuer.');
         should.not.exist(error, 'Expected issuer to not Error.');
