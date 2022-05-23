@@ -33,7 +33,7 @@
     "@digitalbazaar/ed25519-signature-2020": "^3.0.0",
     "@digitalbazaar/ezcap": "^2.0.4",
     "@digitalbazaar/http-client": "^2.0.1",
-    "@digitalbazaar/mocha-w3c-interop-reporter": "^1.0.0",
+    "@digitalbazaar/mocha-w3c-interop-reporter": "github:digitalbazaar/mocha-w3c-interop-reporter#add-today-helper",
     "bnid": "^2.1.0",
     "chai": "^4.3.6",
     "klona": "^2.0.5",
