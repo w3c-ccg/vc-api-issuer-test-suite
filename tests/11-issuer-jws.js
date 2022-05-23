@@ -9,9 +9,9 @@ const {shouldThrowInvalidInput, testIssuedVc} = require('./assertions');
 const {createRequestBody} = require('./mock.data');
 const should = chai.should();
 
-const {match, nonMatch} = filterByTag({issuerTags: ['JWT']});
+const {match, nonMatch} = filterByTag({issuerTags: ['JsonWebSignature2020']});
 
-describe('Issue Credential - JWT', function() {
+describe('Issue Credential - JsonWebSignature2020', function() {
   const summaries = new Set();
   this.summary = summaries;
   const reportData = [];
@@ -27,7 +27,7 @@ describe('Issue Credential - JWT', function() {
   this.reportData = reportData;
   for(const [name, implementation] of match) {
     const issuer = implementation.issuers.find(issuer =>
-      issuer.tags.has('VC-API') && issuer.tags.has('JWT'));
+      issuer.tags.has('VC-API') && issuer.tags.has('JsonWebSignature2020'));
     describe(name, function() {
       it('MUST successfully issue a credential.', async function() {
         this.test.cell = {
