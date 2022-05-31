@@ -1,14 +1,14 @@
 /*!
  * Copyright (c) 2022 Digital Bazaar, Inc. All rights reserved.
  */
-'use strict';
-
-const {v4: uuidv4} = require('uuid');
-const {klona} = require('klona');
+import {createRequire} from 'node:module';
+import {klona} from 'klona';
+import {v4 as uuidv4} from 'uuid';
+const require = createRequire(import.meta.url);
 const validVc = require('./validVc.json');
 
 // copies a validVc and adds an id.
-const createRequestBody = ({issuer, vc = validVc}) => {
+export const createRequestBody = ({issuer, vc = validVc}) => {
   const {settings: {id, options}} = issuer;
   const credential = klona(vc);
   credential.id = `urn:uuid:${uuidv4()}`;
@@ -18,5 +18,3 @@ const createRequestBody = ({issuer, vc = validVc}) => {
     options
   };
 };
-
-module.exports = {createRequestBody};
