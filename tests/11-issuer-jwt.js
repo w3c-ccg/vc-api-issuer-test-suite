@@ -1,12 +1,11 @@
 /*!
  * Copyright (c) 2022 Digital Bazaar, Inc. All rights reserved.
  */
-'use strict';
+import {shouldThrowInvalidInput, testIssuedVc} from './assertions.js';
+import chai from 'chai';
+import {createRequestBody} from './mock.data.js';
+import {filterByTag} from 'vc-api-test-suite-implementations';
 
-const chai = require('chai');
-const {filterByTag} = require('vc-api-test-suite-implementations');
-const {shouldThrowInvalidInput, testIssuedVc} = require('./assertions');
-const {createRequestBody} = require('./mock.data');
 const should = chai.should();
 
 const {match, nonMatch} = filterByTag({property: 'issuers', tags: ['JWT']});

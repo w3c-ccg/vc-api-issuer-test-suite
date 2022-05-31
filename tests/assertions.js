@@ -1,13 +1,11 @@
 /*!
  * Copyright (c) 2022 Digital Bazaar, Inc. All rights reserved.
  */
-'use strict';
-
-const chai = require('chai');
+import chai from 'chai';
 
 const should = chai.should();
 
-function shouldThrowInvalidInput({result, error}) {
+export function shouldThrowInvalidInput({result, error}) {
   should.not.exist(result, 'Expected no result from issuer.');
   should.exist(error, 'Expected issuer to Error.');
   should.exist(error.status, 'Expected an HTTP error response code.');
@@ -17,7 +15,7 @@ function shouldThrowInvalidInput({result, error}) {
     'Expected status code 400 invalid input!');
 }
 
-function testIssuedVc({issuedVc}) {
+export function testIssuedVc({issuedVc}) {
   issuedVc.should.be.an('object');
   issuedVc.should.have.property('@context');
   issuedVc.should.have.property('type');
@@ -36,8 +34,3 @@ function testIssuedVc({issuedVc}) {
       'Expected issuer object to have property id');
   }
 }
-
-module.exports = {
-  shouldThrowInvalidInput,
-  testIssuedVc
-};

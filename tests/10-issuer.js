@@ -1,12 +1,10 @@
 /*!
  * Copyright (c) 2022 Digital Bazaar, Inc. All rights reserved.
  */
-'use strict';
-
-const chai = require('chai');
-const {filterByTag} = require('vc-api-test-suite-implementations');
-const {shouldThrowInvalidInput, testIssuedVc} = require('./assertions');
-const {createRequestBody} = require('./mock.data');
+import chai from 'chai';
+import {filterByTag} from 'vc-api-test-suite-implementations';
+import {shouldThrowInvalidInput, testIssuedVc} from './assertions.js';
+import {createRequestBody} from './mock.data.js';
 
 const should = chai.should();
 const {match, nonMatch} = filterByTag({property: 'issuers', tags: ['VC-API']});
