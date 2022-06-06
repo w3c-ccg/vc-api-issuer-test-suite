@@ -2,9 +2,9 @@
  * Copyright (c) 2022 Digital Bazaar, Inc. All rights reserved.
  */
 import chai from 'chai';
+import {createRequestBody} from './mock.data.js';
 import {filterByTag} from 'vc-api-test-suite-implementations';
 import {shouldThrowInvalidInput, testIssuedVc} from './assertions.js';
-import {createRequestBody} from './mock.data.js';
 
 const should = chai.should();
 const {match, nonMatch} = filterByTag({property: 'issuers', tags: ['VC-API']});
