@@ -9,7 +9,7 @@ const {shouldThrowInvalidInput, testIssuedVc} = require('./assertions');
 const {createRequestBody} = require('./mock.data');
 const should = chai.should();
 
-const {match, nonMatch} = filterByTag({issuerTags: ['JWT']});
+const {match, nonMatch} = filterByTag({property: 'issuers', tags: ['JWT']});
 
 describe('Issue Credential - JWT', function() {
   const summaries = new Set();

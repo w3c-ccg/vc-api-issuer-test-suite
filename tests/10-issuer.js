@@ -9,7 +9,7 @@ const {shouldThrowInvalidInput, testIssuedVc} = require('./assertions');
 const {createRequestBody} = require('./mock.data');
 
 const should = chai.should();
-const {match, nonMatch} = filterByTag({issuerTags: ['VC-API']});
+const {match, nonMatch} = filterByTag({property: 'issuers', tags: ['VC-API']});
 
 describe('Issue Credential - Data Integrity', function() {
   const summaries = new Set();
