@@ -35,7 +35,7 @@ describe('Issue Credential - Data Integrity', function() {
           rowId: this.test.title
         };
         const body = createRequestBody({issuer});
-        const {result, data: issuedVc, error} = await issuer.issue({body});
+        const {result, data: issuedVc, error} = await issuer.post({json: body});
         should.exist(result, 'Expected result from issuer.');
         should.exist(issuedVc, 'Expected result to have data.');
         should.not.exist(error, 'Expected issuer to not Error.');
@@ -50,7 +50,7 @@ describe('Issue Credential - Data Integrity', function() {
         const body = createRequestBody({issuer});
         body.verifiableCredential = {...body.credential};
         delete body.credential;
-        const {result, error} = await issuer.issue({body});
+        const {result, error} = await issuer.post({json: body});
         shouldThrowInvalidInput({result, error});
       });
       it('credential MUST have property "@context".', async function() {
@@ -60,7 +60,7 @@ describe('Issue Credential - Data Integrity', function() {
         };
         const body = createRequestBody({issuer});
         delete body.credential['@context'];
-        const {result, error} = await issuer.issue({body});
+        const {result, error} = await issuer.post({json: body});
         shouldThrowInvalidInput({result, error});
       });
       it('credential "@context" MUST be an array.', async function() {
@@ -70,7 +70,7 @@ describe('Issue Credential - Data Integrity', function() {
         };
         const body = createRequestBody({issuer});
         body.credential['@context'] = 4;
-        const {result, error} = await issuer.issue({body});
+        const {result, error} = await issuer.post({json: body});
         shouldThrowInvalidInput({result, error});
       });
       it('credential "@context" items MUST be strings.', async function() {
@@ -82,7 +82,7 @@ describe('Issue Credential - Data Integrity', function() {
         const invalidContextTypes = [{foo: true}, 4, false, null];
         for(const invalidContextType of invalidContextTypes) {
           body.credential['@context'] = invalidContextType;
-          const {result, error} = await issuer.issue({body: {...body}});
+          const {result, error} = await issuer.post({json: {...body}});
           shouldThrowInvalidInput({result, error});
         }
       });
@@ -93,7 +93,7 @@ describe('Issue Credential - Data Integrity', function() {
         };
         const body = createRequestBody({issuer});
         delete body.credential.type;
-        const {result, error} = await issuer.issue({body});
+        const {result, error} = await issuer.post({json: body});
         shouldThrowInvalidInput({result, error});
       });
       it('"credential.type" MUST be an array.', async function() {
@@ -103,7 +103,7 @@ describe('Issue Credential - Data Integrity', function() {
         };
         const body = createRequestBody({issuer});
         body.credential.type = 4;
-        const {result, error} = await issuer.issue({body});
+        const {result, error} = await issuer.post({json: body});
         shouldThrowInvalidInput({result, error});
       });
       it('"credential.type" items MUST be strings', async function() {
@@ -115,7 +115,7 @@ describe('Issue Credential - Data Integrity', function() {
         const invalidCredentialTypes = [null, true, 4, []];
         for(const invalidCredentialType of invalidCredentialTypes) {
           body.credential.type = invalidCredentialType;
-          const {result, error} = await issuer.issue({body: {...body}});
+          const {result, error} = await issuer.post({json: {...body}});
           shouldThrowInvalidInput({result, error});
         }
       });
@@ -126,7 +126,7 @@ describe('Issue Credential - Data Integrity', function() {
         };
         const body = createRequestBody({issuer});
         delete body.credential.issuer;
-        const {result, error} = await issuer.issue({body});
+        const {result, error} = await issuer.post({json: body});
         shouldThrowInvalidInput({result, error});
       });
       it('"credential.issuer" MUST be a string or an object', async function() {
@@ -138,7 +138,7 @@ describe('Issue Credential - Data Integrity', function() {
         const invalidIssuerTypes = [null, true, 4, []];
         for(const invalidIssuerType of invalidIssuerTypes) {
           body.credential.issuer = invalidIssuerType;
-          const {result, error} = await issuer.issue({body: {...body}});
+          const {result, error} = await issuer.post({json: {...body}});
           shouldThrowInvalidInput({result, error});
         }
       });
@@ -149,7 +149,7 @@ describe('Issue Credential - Data Integrity', function() {
         };
         const body = createRequestBody({issuer});
         delete body.credential.credentialSubject;
-        const {result, error} = await issuer.issue({body});
+        const {result, error} = await issuer.post({json: body});
         shouldThrowInvalidInput({result, error});
       });
       it('"credential.credentialSubject" MUST be an object', async function() {
@@ -162,7 +162,7 @@ describe('Issue Credential - Data Integrity', function() {
         for(const invalidCredentialSubjectType of
           invalidCredentialSubjectTypes) {
           body.credential.credentialSubject = invalidCredentialSubjectType;
-          const {result, error} = await issuer.issue({body: {...body}});
+          const {result, error} = await issuer.post({json: {...body}});
           shouldThrowInvalidInput({result, error});
         }
       });
@@ -174,7 +174,7 @@ describe('Issue Credential - Data Integrity', function() {
         const body = createRequestBody({issuer});
         body.credential.issuanceDate = new Date().toISOString()
           .replace('.000Z', 'Z');
-        const {result, error} = await issuer.issue({body});
+        const {result, error} = await issuer.post({json: body});
         should.exist(result, 'Expected result from issuer.');
         should.not.exist(error, 'Expected issuer to not Error.');
         result.status.should.equal(201, 'Expected statusCode 201.');
@@ -189,7 +189,7 @@ describe('Issue Credential - Data Integrity', function() {
         const oneYear = Date.now() + 365 * 24 * 60 * 60 * 1000;
         body.credential.expirationDate = new Date(oneYear).toISOString()
           .replace('.000Z', 'Z');
-        const {result, error} = await issuer.issue({body});
+        const {result, error} = await issuer.post({json: body});
         should.exist(result, 'Expected result from issuer.');
         should.not.exist(error, 'Expected issuer to not Error.');
         result.status.should.equal(201, 'Expected statusCode 201.');
