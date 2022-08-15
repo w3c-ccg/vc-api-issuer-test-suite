@@ -15,6 +15,11 @@ export function shouldThrowInvalidInput({result, error}) {
     'Expected status code 400 invalid input!');
 }
 
+export function shouldReturnResult({result, error}) {
+  should.not.exist(error, `Expected no error, got ${error?.message}`);
+  should.exist(result, 'Expected a result');
+}
+
 export function testIssuedVc({issuedVc}) {
   issuedVc.should.be.an('object');
   issuedVc.should.have.property('@context');

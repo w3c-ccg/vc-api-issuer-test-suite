@@ -1,7 +1,11 @@
 /*!
  * Copyright (c) 2022 Digital Bazaar, Inc. All rights reserved.
  */
-import {shouldThrowInvalidInput, testIssuedVc} from './assertions.js';
+import {
+  shouldReturnResult,
+  shouldThrowInvalidInput,
+  testIssuedVc
+} from './assertions.js';
 import chai from 'chai';
 import {createRequestBody} from './mock.data.js';
 import {filterByTag} from 'vc-api-test-suite-implementations';
@@ -34,9 +38,8 @@ describe('Issue Credential - Data Integrity', function() {
         };
         const body = createRequestBody({issuer});
         const {result, data: issuedVc, error} = await issuer.post({json: body});
-        should.exist(result, 'Expected result from issuer.');
+        shouldReturnResult({result, error});
         should.exist(issuedVc, 'Expected result to have data.');
-        should.not.exist(error, 'Expected issuer to not Error.');
         result.status.should.equal(201, 'Expected statusCode 201.');
         testIssuedVc({issuedVc});
       });
@@ -173,8 +176,7 @@ describe('Issue Credential - Data Integrity', function() {
         body.credential.issuanceDate = new Date().toISOString()
           .replace('.000Z', 'Z');
         const {result, error} = await issuer.post({json: body});
-        should.exist(result, 'Expected result from issuer.');
-        should.not.exist(error, 'Expected issuer to not Error.');
+        shouldReturnResult({result, error});
         result.status.should.equal(201, 'Expected statusCode 201.');
       });
       it('credential MAY have property "expirationDate"', async function() {
@@ -188,8 +190,7 @@ describe('Issue Credential - Data Integrity', function() {
         body.credential.expirationDate = new Date(oneYear).toISOString()
           .replace('.000Z', 'Z');
         const {result, error} = await issuer.post({json: body});
-        should.exist(result, 'Expected result from issuer.');
-        should.not.exist(error, 'Expected issuer to not Error.');
+        shouldReturnResult({result, error});
         result.status.should.equal(201, 'Expected statusCode 201.');
       });
     });
