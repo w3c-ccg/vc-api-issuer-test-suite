@@ -27,9 +27,8 @@ describe('Issue Credential - Data Integrity', function() {
   this.columnLabel = 'Issuer';
   // the reportData will be displayed under the test title
   this.reportData = reportData;
-  for(const [name, implementation] of match) {
-    const issuer = implementation.issuers.find(
-      issuer => issuer.tags.has('VC-API'));
+  for(const [name, {endpoints}] of match) {
+    const [issuer] = endpoints;
     describe(name, function() {
       it('MUST successfully issue a credential.', async function() {
         this.test.cell = {
