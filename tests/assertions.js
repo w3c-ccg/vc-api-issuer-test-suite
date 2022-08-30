@@ -20,7 +20,7 @@ export function shouldReturnResult({result, error}) {
   should.exist(result, 'Expected a result');
 }
 
-export function testIssuedVc({issuedVc}) {
+export function shouldBeIssuedVc({issuedVc}) {
   issuedVc.should.be.an(
     'object',
     'Expected the issued Vc to be an object.'
@@ -34,9 +34,9 @@ export function testIssuedVc({issuedVc}) {
     'Expected Vc id to be a string.'
   );
   issuedVc.should.have.property('credentialSubject');
-  issuedVc.credentialSubject.should.be.oneOf(
-    ['object', 'array'],
-    'Expected credentialSubject to be either an object or an array'
+  issuedVc.credentialSubject.should.be.an(
+    'object',
+    'Expected credentialSubject an object. '
   );
   issuedVc.should.have.property('issuer');
   const issuerType = typeof(issuedVc.issuer);

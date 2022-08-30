@@ -1,7 +1,7 @@
 /*!
  * Copyright (c) 2022 Digital Bazaar, Inc. All rights reserved.
  */
-import {shouldThrowInvalidInput, testIssuedVc} from './assertions.js';
+import {shouldThrowInvalidInput, shouldBeIssuedVc} from './assertions.js';
 import chai from 'chai';
 import {createRequestBody} from './mock.data.js';
 import {filterByTag} from 'vc-api-test-suite-implementations';
@@ -39,7 +39,7 @@ describe('Issue Credential - JWT', function() {
         should.exist(issuedVc, 'Expected result to have data.');
         should.not.exist(error, 'Expected issuer to not Error.');
         result.status.should.equal(201, 'Expected statusCode 201.');
-        testIssuedVc({issuedVc});
+        shouldBeIssuedVc({issuedVc});
       });
       it('Request body MUST have property "credential".', async function() {
         this.test.cell = {

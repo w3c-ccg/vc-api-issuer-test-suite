@@ -4,7 +4,7 @@
 import {
   shouldReturnResult,
   shouldThrowInvalidInput,
-  testIssuedVc
+  shouldBeIssuedVc
 } from './assertions.js';
 import chai from 'chai';
 import {createRequestBody} from './mock.data.js';
@@ -42,7 +42,7 @@ describe('Issue Credential - Data Integrity', function() {
         shouldReturnResult({result, error});
         should.exist(issuedVc, 'Expected result to have data.');
         result.status.should.equal(201, 'Expected statusCode 201.');
-        testIssuedVc({issuedVc});
+        shouldBeIssuedVc({issuedVc});
       });
       it('Request body MUST have property "credential".', async function() {
         this.test.cell = {
