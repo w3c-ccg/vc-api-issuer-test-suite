@@ -168,6 +168,8 @@ describe('Issue Credential - Data Integrity', function() {
           shouldThrowInvalidInput({result, error});
         }
       });
+      // this test is probably redudant as the vc-data-model spec
+      // requires issuanceDate
       it.skip('credential MAY have property "issuanceDate"', async function() {
         this.test.cell = {
           columnId: name,
