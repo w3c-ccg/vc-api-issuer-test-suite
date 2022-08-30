@@ -11,7 +11,8 @@ import {createRequestBody} from './mock.data.js';
 import {filterByTag} from 'vc-api-test-suite-implementations';
 
 const should = chai.should();
-const {match, nonMatch} = filterByTag({property: 'issuers', tags: ['VC-API']});
+const tag = 'mesur';
+const {match, nonMatch} = filterByTag({property: 'issuers', tags: [tag]});
 
 describe('Issue Credential - Data Integrity', function() {
   const summaries = new Set();
@@ -29,7 +30,7 @@ describe('Issue Credential - Data Integrity', function() {
   this.reportData = reportData;
   for(const [name, implementation] of match) {
     const issuer = implementation.issuers.find(
-      issuer => issuer.tags.has('VC-API'));
+      issuer => issuer.tags.has(tag));
     describe(name, function() {
       it('MUST successfully issue a credential.', async function() {
         this.test.cell = {
