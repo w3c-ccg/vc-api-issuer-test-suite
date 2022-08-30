@@ -11,7 +11,7 @@ import {createRequestBody} from './mock.data.js';
 import {filterByTag} from 'vc-api-test-suite-implementations';
 
 const should = chai.should();
-const tag = 'mesur';
+const tag = 'VC-API';
 const {match, nonMatch} = filterByTag({property: 'issuers', tags: [tag]});
 
 describe('Issue Credential - Data Integrity', function() {
@@ -168,14 +168,12 @@ describe('Issue Credential - Data Integrity', function() {
           shouldThrowInvalidInput({result, error});
         }
       });
-      it('credential MAY have property "issuanceDate"', async function() {
+      it.skip('credential MAY have property "issuanceDate"', async function() {
         this.test.cell = {
           columnId: name,
           rowId: this.test.title
         };
         const body = createRequestBody({issuer});
-        body.credential.issuanceDate = new Date().toISOString()
-          .replace('.000Z', 'Z');
         const {result, error} = await issuer.post({json: body});
         shouldReturnResult({result, error});
         result.status.should.equal(201, 'Expected statusCode 201.');
@@ -189,7 +187,7 @@ describe('Issue Credential - Data Integrity', function() {
         // expires in a year
         const oneYear = Date.now() + 365 * 24 * 60 * 60 * 1000;
         body.credential.expirationDate = new Date(oneYear).toISOString()
-          .replace('.000Z', 'Z');
+          .replace(/\.\d+Z$/, 'Z');
         const {result, error} = await issuer.post({json: body});
         shouldReturnResult({result, error});
         result.status.should.equal(201, 'Expected statusCode 201.');
