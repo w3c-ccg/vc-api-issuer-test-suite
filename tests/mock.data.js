@@ -12,7 +12,7 @@ export const createRequestBody = ({issuer, vc = validVc}) => {
   const {settings: {id, options}} = issuer;
   const credential = klona(vc);
   // convert from millisecond to seconds precision
-  credential.issuanceDate = new Date().toISOString().replace(/\.\d+Z$/, 'Z');
+  credential.issuanceDate = createISOTimeStamp();
   credential.id = `urn:uuid:${uuidv4()}`;
   credential.issuer = id;
   return {
@@ -20,3 +20,14 @@ export const createRequestBody = ({issuer, vc = validVc}) => {
     options
   };
 };
+
+/**
+ * Creates an ISO TimeStamp seconds precision.
+ *
+ * @param {number} [timeMs = Date.now()] - Milliseconds since epoch.
+ *
+ * @returns {string} An ISO Time Stamp.
+ */
+export function createISOTimeStamp(timeMs = Date.now()) {
+  return new Date(timeMs).toISOString().replace(/\.\d+Z$/, 'Z');
+}

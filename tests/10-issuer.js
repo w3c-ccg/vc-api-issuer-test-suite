@@ -7,7 +7,7 @@ import {
   shouldThrowInvalidInput
 } from './assertions.js';
 import chai from 'chai';
-import {createRequestBody} from './mock.data.js';
+import {createISOTimeStamp, createRequestBody} from './mock.data.js';
 import {filterByTag} from 'vc-api-test-suite-implementations';
 
 const should = chai.should();
@@ -185,9 +185,8 @@ describe('Issue Credential - Data Integrity', function() {
         };
         const body = createRequestBody({issuer});
         // expires in a year
-        const oneYear = Date.now() + 365 * 24 * 60 * 60 * 1000;
-        body.credential.expirationDate = new Date(oneYear).toISOString()
-          .replace(/\.\d+Z$/, 'Z');
+        const oneYearLater = Date.now() + 365 * 24 * 60 * 60 * 1000;
+        body.credential.expirationDate = createISOTimeStamp(oneYearLater);
         const {result, error} = await issuer.post({json: body});
         shouldReturnResult({result, error});
         result.status.should.equal(201, 'Expected statusCode 201.');
