@@ -21,19 +21,34 @@ export function shouldReturnResult({result, error}) {
 }
 
 export function testIssuedVc({issuedVc}) {
-  issuedVc.should.be.an('object');
+  issuedVc.should.be.an(
+    'object',
+    'Expected the issued Vc to be an object.'
+  );
   issuedVc.should.have.property('@context');
   issuedVc.should.have.property('type');
   issuedVc.type.should.contain('VerifiableCredential');
   issuedVc.should.have.property('id');
-  issuedVc.id.should.be.a('string');
+  issuedVc.id.should.be.a(
+    'string',
+    'Expected Vc id to be a string.'
+  );
   issuedVc.should.have.property('credentialSubject');
-  issuedVc.credentialSubject.should.be.an('object');
+  issuedVc.credentialSubject.should.be.oneOf(
+    ['object', 'array'],
+    'Expected credentialSubject to be either an object or an array'
+  );
   issuedVc.should.have.property('issuer');
   const issuerType = typeof(issuedVc.issuer);
-  issuerType.should.be.oneOf(['string', 'object']),
+  issuerType.should.be.oneOf(
+    ['string', 'object'],
+    'Expected issuer to be a string or an object.'
+  ),
   issuedVc.should.have.property('proof');
-  issuedVc.proof.should.be.an('object');
+  issuedVc.proof.should.be.an(
+    'object',
+    'Expected Vc proof to be an object.'
+  );
   if(issuerType === 'object') {
     should.exist(issuedVc.issuer.id,
       'Expected issuer object to have property id');
