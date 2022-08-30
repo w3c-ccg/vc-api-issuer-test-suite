@@ -2,9 +2,9 @@
  * Copyright (c) 2022 Digital Bazaar, Inc. All rights reserved.
  */
 import {
+  shouldBeIssuedVc,
   shouldReturnResult,
-  shouldThrowInvalidInput,
-  shouldBeIssuedVc
+  shouldThrowInvalidInput
 } from './assertions.js';
 import chai from 'chai';
 import {createRequestBody} from './mock.data.js';

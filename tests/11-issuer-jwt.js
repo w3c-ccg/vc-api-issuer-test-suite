@@ -1,7 +1,7 @@
 /*!
  * Copyright (c) 2022 Digital Bazaar, Inc. All rights reserved.
  */
-import {shouldThrowInvalidInput, shouldBeIssuedVc} from './assertions.js';
+import {shouldBeIssuedVc, shouldThrowInvalidInput} from './assertions.js';
 import chai from 'chai';
 import {createRequestBody} from './mock.data.js';
 import {filterByTag} from 'vc-api-test-suite-implementations';
