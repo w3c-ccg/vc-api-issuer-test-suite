@@ -68,5 +68,8 @@ function _shouldBeCredentialSubject({credentialSubject}) {
     }
     return;
   }
-  credentialSubject.should.be.an('object');
+  credentialSubject.should.be.an(
+    'object',
+    'Expected credentialSubject to be an object.'
+  );
 }
