@@ -45,7 +45,7 @@ export function shouldBeIssuedVc({issuedVc}) {
   const issuerType = typeof(issuedVc.issuer);
   issuerType.should.be.oneOf(
     ['string', 'object'],
-    'Expected issuer to be a string or an object.'
+    'Expected `issuer` to be a string or an object.'
   );
   issuedVc.should.have.property('proof');
   issuedVc.proof.should.be.an(
