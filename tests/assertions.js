@@ -29,7 +29,7 @@ export function shouldBeIssuedVc({issuedVc}) {
   issuedVc.should.have.property('type');
   issuedVc.type.should.contain(
     'VerifiableCredential',
-    'Expected Vc type to contain "VerifiableCredential."'
+    'Expected `type` to contain "VerifiableCredential".'
   );
   issuedVc.should.have.property('id');
   issuedVc.id.should.be.a(
