@@ -37,7 +37,8 @@ export function shouldBeIssuedVc({issuedVc}) {
     'Expected `id` to be a string.'
   );
   issuedVc.should.have.property('credentialSubject');
-  _shouldBeValidCredentialSubject({credentialSubject: issuedVc.credentialSubject});
+  _shouldBeValidCredentialSubject(
+    {credentialSubject: issuedVc.credentialSubject});
   issuedVc.should.have.property('issuer');
   const issuerType = typeof(issuedVc.issuer);
   issuerType.should.be.oneOf(
@@ -58,22 +59,27 @@ export function shouldBeIssuedVc({issuedVc}) {
 function _shouldBeValidCredentialSubject({credentialSubject}) {
   // credentialSubject should not be null or undefined
   should.exist(credentialSubject, 'Expected credentialSubject to exist.');
-  // a credentialSubject can be an Array of objects
-  if(Array.isArray(credentialSubject)) {
-    credentialSubject.length.should.be.gt(
-      0,
-      'Expected credentialSubject to make a claim on at least one subject.'
-    );
-    for(const subject of credentialSubject) {
-      subject.should.be.an(
-        'object',
-        'Expected credentialSubject to be an object.'
-      );
-    }
-    return;
+  // if only one claims is being made just check it
+  if(!Array.isArray(credentialSubject)) {
+    return _shouldHaveClaims({subject: credentialSubject});
   }
-  credentialSubject.should.be.an(
+  // a credentialSubject can be an Array of objects
+  credentialSubject.length.should.be.gt(
+    0,
+    'Expected credentialSubject to make a claim on at least one subject.'
+  );
+  for(const subject of credentialSubject) {
+    _shouldHaveClaims({subject});
+  }
+}
+
+function _shouldHaveClaims({subject}) {
+  subject.should.be.an(
     'object',
     'Expected credentialSubject to be an object.'
+  );
+  Object.keys(subject).length.should.be.gt(
+    0,
+    'Expected at least one claim in subject.'
   );
 }
