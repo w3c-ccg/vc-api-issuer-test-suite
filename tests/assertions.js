@@ -60,6 +60,10 @@ function _shouldBeCredentialSubject({credentialSubject}) {
   should.exist(credentialSubject, 'Expected credentialSubject to exist.');
   // a credentialSubject can be an Array of objects
   if(Array.isArray(credentialSubject)) {
+    credentialSubject.length.should.be.gt(
+      0,
+      'Expected credentialSubject to make a claim on at least one subject.'
+    );
     for(const subject of credentialSubject) {
       subject.should.be.an(
         'object',
