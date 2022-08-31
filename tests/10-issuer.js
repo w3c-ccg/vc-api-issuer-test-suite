@@ -159,7 +159,7 @@ describe('Issue Credential - Data Integrity', function() {
           rowId: this.test.title
         };
         const body = createRequestBody({issuer});
-        const invalidCredentialSubjectTypes = 
+        const invalidCredentialSubjectTypes =
           [null, true, 4, [], 'did:example:1234'];
         for(const invalidCredentialSubjectType of
           invalidCredentialSubjectTypes) {
