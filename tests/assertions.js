@@ -23,7 +23,7 @@ export function shouldReturnResult({result, error}) {
 export function shouldBeIssuedVc({issuedVc}) {
   issuedVc.should.be.an(
     'object',
-    'Expected the issued Vc to be an object.'
+    'Expected the issued Verifiable Credential to be an object.'
   );
   issuedVc.should.have.property('@context');
   issuedVc.should.have.property('type');
