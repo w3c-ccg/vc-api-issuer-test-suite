@@ -50,7 +50,7 @@ export function shouldBeIssuedVc({issuedVc}) {
   issuedVc.should.have.property('proof');
   issuedVc.proof.should.be.an(
     'object',
-    'Expected Vc proof to be an object.'
+    'Expected `proof` to be an object.'
   );
   if(issuerType === 'object') {
     should.exist(issuedVc.issuer.id,
