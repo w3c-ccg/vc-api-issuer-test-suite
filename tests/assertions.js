@@ -37,10 +37,7 @@ export function shouldBeIssuedVc({issuedVc}) {
     'Expected `id` to be a string.'
   );
   issuedVc.should.have.property('credentialSubject');
-  issuedVc.credentialSubject.should.be.an(
-    'object',
-    'Expected credentialSubject to be an object.'
-  );
+  _shouldBeCredentialSubject({credentialSubject: issuedVc.credentialSubject});
   issuedVc.should.have.property('issuer');
   const issuerType = typeof(issuedVc.issuer);
   issuerType.should.be.oneOf(
@@ -56,4 +53,20 @@ export function shouldBeIssuedVc({issuedVc}) {
     should.exist(issuedVc.issuer.id,
       'Expected issuer object to have property id');
   }
+}
+
+function _shouldBeCredentialSubject({credentialSubject}) {
+  // credentialSubject should not be null or undefined
+  should.exist(credentialSubject, 'Expected credentialSubject to exist.');
+  // a credentialSubject can be an Array of objects
+  if(Array.isArray(credentialSubject)) {
+    for(const subject of credentialSubject) {
+      subject.should.be.an(
+        'object',
+        'Expected credentialSubject to be an object.'
+      );
+    }
+    return;
+  }
+  credentialSubject.should.be.an('object');
 }
