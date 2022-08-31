@@ -34,7 +34,7 @@ export function shouldBeIssuedVc({issuedVc}) {
   issuedVc.should.have.property('id');
   issuedVc.id.should.be.a(
     'string',
-    'Expected Vc id to be a string.'
+    'Expected `id` to be a string.'
   );
   issuedVc.should.have.property('credentialSubject');
   issuedVc.credentialSubject.should.be.an(
