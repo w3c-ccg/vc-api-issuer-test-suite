@@ -55,7 +55,7 @@ export function shouldBeIssuedVc({issuedVc}) {
   }
 }
 
-function _shouldBeCredentialSubject({credentialSubject}) {
+function _shouldBeValidCredentialSubject({credentialSubject}) {
   // credentialSubject should not be null or undefined
   should.exist(credentialSubject, 'Expected credentialSubject to exist.');
   // a credentialSubject can be an Array of objects
