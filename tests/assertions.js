@@ -37,7 +37,7 @@ export function shouldBeIssuedVc({issuedVc}) {
     'Expected `id` to be a string.'
   );
   issuedVc.should.have.property('credentialSubject');
-  _shouldBeCredentialSubject({credentialSubject: issuedVc.credentialSubject});
+  _shouldBeValidCredentialSubject({credentialSubject: issuedVc.credentialSubject});
   issuedVc.should.have.property('issuer');
   const issuerType = typeof(issuedVc.issuer);
   issuerType.should.be.oneOf(
