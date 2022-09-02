@@ -80,6 +80,6 @@ function _shouldHaveClaims({subject}) {
   );
   Object.keys(subject).length.should.be.gt(
     0,
-    'Expected at least one claim in subject.'
+    'Expected credentialSubject to have at least one claim.'
   );
 }
