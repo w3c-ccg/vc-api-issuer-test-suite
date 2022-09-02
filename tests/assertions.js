@@ -59,7 +59,7 @@ export function shouldBeIssuedVc({issuedVc}) {
 function _shouldBeValidCredentialSubject({credentialSubject}) {
   // credentialSubject should not be null or undefined
   should.exist(credentialSubject, 'Expected credentialSubject to exist.');
-  // if only one claims is being made just check it
+  // if only one claim is being made just check it
   if(!Array.isArray(credentialSubject)) {
     return _shouldHaveClaims({subject: credentialSubject});
   }
