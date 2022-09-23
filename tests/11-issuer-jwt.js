@@ -26,7 +26,7 @@ describe('Issue Credential - JWT', function() {
   this.reportData = reportData;
   for(const [name, implementation] of match) {
     const issuer = implementation.issuers.find(issuer =>
-      issuer.tags.has('VC-API') && issuer.tags.has('JWT'));
+      issuer.tags.has('vc-api') && issuer.tags.has('JWT'));
     describe(name, function() {
       it('MUST successfully issue a credential.', async function() {
         this.test.cell = {

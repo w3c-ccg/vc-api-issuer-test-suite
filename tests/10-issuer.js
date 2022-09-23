@@ -11,7 +11,7 @@ import chai from 'chai';
 import {filterByTag} from 'vc-api-test-suite-implementations';
 
 const should = chai.should();
-const tag = 'VC-API';
+const tag = 'vc-api';
 const {match, nonMatch} = filterByTag({property: 'issuers', tags: [tag]});
 
 describe('Issue Credential - Data Integrity', function() {
