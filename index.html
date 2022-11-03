@@ -80,19 +80,19 @@
     <section class="informative" id="conformance-testing-results">
       <h2> Conformance Testing Results </h2>
       <p>
-      Tests passed 67/91 73%
+      Tests passed 90/104 86%
       </p>
       <p>
-      Tests failed 24/91 27%
+      Tests failed 14/104 14%
       </p>
       <p>
-      Tests skipped 7
+      Tests skipped 8
       </p>
       <p>
-      Total tests 98
+      Total tests 112
       </p>
       <p>
-        These tests were run on <time>30 October 2022 at 5:18 am UTC</time>
+        These tests were run on <time>3 November 2022 at 9:28 pm UTC</time>
       </p>
       <section class="informative" id="Key">
         <h3>Key</h3>
@@ -191,6 +191,7 @@
                     <th class="no-wrap small-font">API Catalog</th>
                     <th class="no-wrap small-font">Danube Tech</th>
                     <th class="no-wrap small-font">Digital Bazaar</th>
+                    <th class="no-wrap small-font">EWF</th>
                     <th class="no-wrap small-font">LearnCard</th>
                     <th class="no-wrap small-font">Mavennet</th>
                     <th class="no-wrap small-font">mesur.io</th>
@@ -215,17 +216,11 @@
                   <td class="passed not-optional highlight-on-hover">
                     <div class= "highlight-on-hover">✓</div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">❌</div>
-                      <span class="err hide no-space-around">
-                        <pre>{
-          "type": "system",
-          "errno": "ENOTFOUND",
-          "code": "ENOTFOUND",
-          "erroredSysCall": "getaddrinfo",
-          "requestUrl": "https://api-staging.refiner.neoflow.energy/v1/auth"
-        }</pre>
-                      </span>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
                   </td>
                   <td class="passed not-optional highlight-on-hover">
                     <div class= "highlight-on-hover">✓</div>
@@ -239,7 +234,7 @@
           "showDiff": false,
           "actual": "did:key:z6MkhTNL7i2etLerDK8Acz5t528giE5KA4p75T6ka1E1D74r",
           "operator": "strictEqual",
-          "stack": "AssertionError: Expected credentialSubject to be an object.: expected 'did:key:z6MkhTNL7i2etLerDK8Acz5t528gi…' to be an object\n    at _shouldHaveClaims (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:77:21)\n    at _shouldBeValidCredentialSubject (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:64:12)\n    at shouldBeIssuedVc (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:40:3)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:45:9)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+          "stack": "AssertionError: Expected credentialSubject to be an object.: expected 'did:key:z6MkhTNL7i2etLerDK8Acz5t528gi…' to be an object\n    at _shouldHaveClaims (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:77:21)\n    at _shouldBeValidCredentialSubject (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:64:12)\n    at shouldBeIssuedVc (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:40:3)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:45:9)\n    at runMicrotasks (<anonymous>)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
         }</pre>
                       </span>
                   </td>
@@ -263,20 +258,25 @@
                   <td class="passed not-optional highlight-on-hover">
                     <div class= "highlight-on-hover">✓</div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">✓</div>
-                  </td>
                   <td class="failed not-optional highlight-on-hover">
                     <div class= "highlight-on-hover">❌</div>
                       <span class="err hide no-space-around">
                         <pre>{
-          "type": "system",
-          "errno": "ENOTFOUND",
-          "code": "ENOTFOUND",
-          "erroredSysCall": "getaddrinfo",
-          "requestUrl": "https://api-staging.refiner.neoflow.energy/v1/auth"
+          "name": "AssertionError",
+          "message": "Expected status code 400 invalid input!: expected 500 to equal 400",
+          "showDiff": true,
+          "actual": "500",
+          "expected": "400",
+          "operator": "strictEqual",
+          "stack": "AssertionError: Expected status code 400 invalid input!: expected 500 to equal 400\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:14:23)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:56:9)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
         }</pre>
                       </span>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
                   </td>
                   <td class="passed not-optional highlight-on-hover">
                     <div class= "highlight-on-hover">✓</div>
@@ -307,17 +307,11 @@
                   <td class="passed not-optional highlight-on-hover">
                     <div class= "highlight-on-hover">✓</div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">❌</div>
-                      <span class="err hide no-space-around">
-                        <pre>{
-          "type": "system",
-          "errno": "ENOTFOUND",
-          "code": "ENOTFOUND",
-          "erroredSysCall": "getaddrinfo",
-          "requestUrl": "https://api-staging.refiner.neoflow.energy/v1/auth"
-        }</pre>
-                      </span>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
                   </td>
                   <td class="passed not-optional highlight-on-hover">
                     <div class= "highlight-on-hover">✓</div>
@@ -348,17 +342,11 @@
                   <td class="passed not-optional highlight-on-hover">
                     <div class= "highlight-on-hover">✓</div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">❌</div>
-                      <span class="err hide no-space-around">
-                        <pre>{
-          "type": "system",
-          "errno": "ENOTFOUND",
-          "code": "ENOTFOUND",
-          "erroredSysCall": "getaddrinfo",
-          "requestUrl": "https://api-staging.refiner.neoflow.energy/v1/auth"
-        }</pre>
-                      </span>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
                   </td>
                   <td class="passed not-optional highlight-on-hover">
                     <div class= "highlight-on-hover">✓</div>
@@ -389,17 +377,11 @@
                   <td class="passed not-optional highlight-on-hover">
                     <div class= "highlight-on-hover">✓</div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">❌</div>
-                      <span class="err hide no-space-around">
-                        <pre>{
-          "type": "system",
-          "errno": "ENOTFOUND",
-          "code": "ENOTFOUND",
-          "erroredSysCall": "getaddrinfo",
-          "requestUrl": "https://api-staging.refiner.neoflow.energy/v1/auth"
-        }</pre>
-                      </span>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
                   </td>
                   <td class="passed not-optional highlight-on-hover">
                     <div class= "highlight-on-hover">✓</div>
@@ -441,17 +423,11 @@
                   <td class="passed not-optional highlight-on-hover">
                     <div class= "highlight-on-hover">✓</div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">❌</div>
-                      <span class="err hide no-space-around">
-                        <pre>{
-          "type": "system",
-          "errno": "ENOTFOUND",
-          "code": "ENOTFOUND",
-          "erroredSysCall": "getaddrinfo",
-          "requestUrl": "https://api-staging.refiner.neoflow.energy/v1/auth"
-        }</pre>
-                      </span>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
                   </td>
                   <td class="passed not-optional highlight-on-hover">
                     <div class= "highlight-on-hover">✓</div>
@@ -493,17 +469,11 @@
                   <td class="passed not-optional highlight-on-hover">
                     <div class= "highlight-on-hover">✓</div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">❌</div>
-                      <span class="err hide no-space-around">
-                        <pre>{
-          "type": "system",
-          "errno": "ENOTFOUND",
-          "code": "ENOTFOUND",
-          "erroredSysCall": "getaddrinfo",
-          "requestUrl": "https://api-staging.refiner.neoflow.energy/v1/auth"
-        }</pre>
-                      </span>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
                   </td>
                   <td class="passed not-optional highlight-on-hover">
                     <div class= "highlight-on-hover">✓</div>
@@ -545,17 +515,11 @@
                   <td class="passed not-optional highlight-on-hover">
                     <div class= "highlight-on-hover">✓</div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">❌</div>
-                      <span class="err hide no-space-around">
-                        <pre>{
-          "type": "system",
-          "errno": "ENOTFOUND",
-          "code": "ENOTFOUND",
-          "erroredSysCall": "getaddrinfo",
-          "requestUrl": "https://api-staging.refiner.neoflow.energy/v1/auth"
-        }</pre>
-                      </span>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
                   </td>
                   <td class="passed not-optional highlight-on-hover">
                     <div class= "highlight-on-hover">✓</div>
@@ -598,17 +562,11 @@
                   <td class="passed not-optional highlight-on-hover">
                     <div class= "highlight-on-hover">✓</div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">❌</div>
-                      <span class="err hide no-space-around">
-                        <pre>{
-          "type": "system",
-          "errno": "ENOTFOUND",
-          "code": "ENOTFOUND",
-          "erroredSysCall": "getaddrinfo",
-          "requestUrl": "https://api-staging.refiner.neoflow.energy/v1/auth"
-        }</pre>
-                      </span>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
                   </td>
                   <td class="passed not-optional highlight-on-hover">
                     <div class= "highlight-on-hover">✓</div>
@@ -662,15 +620,21 @@
                   <td class="passed not-optional highlight-on-hover">
                     <div class= "highlight-on-hover">✓</div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
+                  </td>
                   <td class="failed not-optional highlight-on-hover">
                     <div class= "highlight-on-hover">❌</div>
                       <span class="err hide no-space-around">
                         <pre>{
-          "type": "system",
-          "errno": "ENOTFOUND",
-          "code": "ENOTFOUND",
-          "erroredSysCall": "getaddrinfo",
-          "requestUrl": "https://api-staging.refiner.neoflow.energy/v1/auth"
+          "name": "AssertionError",
+          "message": "Expected no result from issuer.: expected Response{ size: +0, data: { …(7) }, …(2) } to not exist",
+          "showDiff": false,
+          "actual": {
+            "size": 0
+          },
+          "operator": "notStrictEqual",
+          "stack": "AssertionError: Expected no result from issuer.: expected Response{ size: +0, data: { …(7) }, …(2) } to not exist\n    at Object.should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:9:14)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:144:11)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
         }</pre>
                       </span>
                   </td>
@@ -714,17 +678,11 @@
                   <td class="passed not-optional highlight-on-hover">
                     <div class= "highlight-on-hover">✓</div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">❌</div>
-                      <span class="err hide no-space-around">
-                        <pre>{
-          "type": "system",
-          "errno": "ENOTFOUND",
-          "code": "ENOTFOUND",
-          "erroredSysCall": "getaddrinfo",
-          "requestUrl": "https://api-staging.refiner.neoflow.energy/v1/auth"
-        }</pre>
-                      </span>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
                   </td>
                   <td class="passed not-optional highlight-on-hover">
                     <div class= "highlight-on-hover">✓</div>
@@ -778,15 +736,21 @@
                   <td class="passed not-optional highlight-on-hover">
                     <div class= "highlight-on-hover">✓</div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
+                  </td>
                   <td class="failed not-optional highlight-on-hover">
                     <div class= "highlight-on-hover">❌</div>
                       <span class="err hide no-space-around">
                         <pre>{
-          "type": "system",
-          "errno": "ENOTFOUND",
-          "code": "ENOTFOUND",
-          "erroredSysCall": "getaddrinfo",
-          "requestUrl": "https://api-staging.refiner.neoflow.energy/v1/auth"
+          "name": "AssertionError",
+          "message": "Expected no result from issuer.: expected Response{ size: +0, data: { …(7) }, …(2) } to not exist",
+          "showDiff": false,
+          "actual": {
+            "size": 0
+          },
+          "operator": "notStrictEqual",
+          "stack": "AssertionError: Expected no result from issuer.: expected Response{ size: +0, data: { …(7) }, …(2) } to not exist\n    at Object.should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:9:14)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:169:11)\n    at runMicrotasks (<anonymous>)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
         }</pre>
                       </span>
                   </td>
@@ -804,7 +768,7 @@
             "size": 0
           },
           "operator": "notStrictEqual",
-          "stack": "AssertionError: Expected no result from issuer.: expected Response{ size: +0, data: { …(7) }, …(2) } to not exist\n    at Object.should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:9:14)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:169:11)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+          "stack": "AssertionError: Expected no result from issuer.: expected Response{ size: +0, data: { …(7) }, …(2) } to not exist\n    at Object.should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:9:14)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:169:11)\n    at runMicrotasks (<anonymous>)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
         }</pre>
                       </span>
                   </td>
@@ -831,17 +795,11 @@
                   <td class="passed not-optional highlight-on-hover">
                     <div class= "highlight-on-hover">✓</div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">❌</div>
-                      <span class="err hide no-space-around">
-                        <pre>{
-          "type": "system",
-          "errno": "ENOTFOUND",
-          "code": "ENOTFOUND",
-          "erroredSysCall": "getaddrinfo",
-          "requestUrl": "https://api-staging.refiner.neoflow.energy/v1/auth"
-        }</pre>
-                      </span>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
                   </td>
                   <td class="passed not-optional highlight-on-hover">
                     <div class= "highlight-on-hover">✓</div>
@@ -944,6 +902,7 @@
                     <th class="no-wrap small-font">API Catalog</th>
                     <th class="no-wrap small-font">Danube Tech</th>
                     <th class="no-wrap small-font">Digital Bazaar</th>
+                    <th class="no-wrap small-font">EWF</th>
                     <th class="no-wrap small-font">LearnCard</th>
                     <th class="no-wrap small-font">MATTR</th>
                     <th class="no-wrap small-font">Mavennet</th>
