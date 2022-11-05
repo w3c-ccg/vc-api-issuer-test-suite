@@ -36,5 +36,5 @@ export const invalidIssuerTypes = new Map([
   ['null', null],
   ['a boolean', true],
   ['a number', 4],
-  ['an empty list', []]
+  ['an empty Array', []]
 ]);

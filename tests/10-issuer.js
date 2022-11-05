@@ -147,6 +147,32 @@ describe('Issue Credential - Data Integrity', function() {
           shouldThrowInvalidInput({result, error});
         });
       }
+      it('"credential.issuer" MAY be a string', async function() {
+        this.test.cell = {
+          columnId: name,
+          rowId: this.test.title
+        };
+        const body = createRequestBody({issuer});
+        const {result, data: issuedVc, error} = await issuer.post({json: body});
+        shouldReturnResult({result, error});
+        should.exist(issuedVc, 'Expected result to have data.');
+        result.status.should.equal(201, 'Expected statusCode 201.');
+        shouldBeIssuedVc({issuedVc});
+      });
+      it('"credential.issuer" MAY be an object', async function() {
+        this.test.cell = {
+          columnId: name,
+          rowId: this.test.title
+        };
+        const body = createRequestBody({issuer});
+        // set the issuer to an object with the id equal to the issuer
+        body.credential.issuer = {id: body.credential.issuer};
+        const {result, data: issuedVc, error} = await issuer.post({json: body});
+        shouldReturnResult({result, error});
+        should.exist(issuedVc, 'Expected result to have data.');
+        result.status.should.equal(201, 'Expected statusCode 201.');
+        shouldBeIssuedVc({issuedVc});
+      });
       it('credential MUST have property "credentialSubject"', async function() {
         this.test.cell = {
           columnId: name,
