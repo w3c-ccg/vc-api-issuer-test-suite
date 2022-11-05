@@ -36,7 +36,7 @@ export const invalidCredentialSubjectTypes = new Map([
   ['null', null],
   ['a boolean', true],
   ['a number', 4],
-  ['an empty list', []],
+  ['an empty Array', []],
   ['a string', 'a string']
 ]);
 
