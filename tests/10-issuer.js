@@ -1,7 +1,11 @@
 /*!
  * Copyright (c) 2022 Digital Bazaar, Inc. All rights reserved.
  */
-import {createISOTimeStamp, createRequestBody} from './mock.data.js';
+import {
+  createISOTimeStamp,
+  createRequestBody,
+  invalidCredentialSubjectTypes
+} from './mock.data.js';
 import {
   shouldBeIssuedVc,
   shouldReturnResult,
@@ -154,24 +158,22 @@ describe('Issue Credential - Data Integrity', function() {
         const {result, error} = await issuer.post({json: body});
         shouldThrowInvalidInput({result, error});
       });
-      it('"credential.credentialSubject" MUST be an object', async function() {
-        this.test.cell = {
-          columnId: name,
-          rowId: this.test.title
-        };
-        const body = createRequestBody({issuer});
-        const invalidCredentialSubjectTypes =
-          [null, true, 4, [], 'did:example:1234'];
-        for(const invalidCredentialSubjectType of
-          invalidCredentialSubjectTypes) {
-          body.credential.credentialSubject = invalidCredentialSubjectType;
-          const {result, error} = await issuer.post({json: {...body}});
-          shouldThrowInvalidInput({result, error});
-        }
-      });
-      // this test is probably redudant as the vc-data-model spec
+      for(const [title, invalidSubject] of invalidCredentialSubjectTypes) {
+        it(`"credential.credentialSubject" MUST NOT be ${title}`,
+          async function() {
+            this.test.cell = {
+              columnId: name,
+              rowId: this.test.title
+            };
+            const body = createRequestBody({issuer});
+            body.credential.credentialSubject = invalidSubject;
+            const {result, error} = await issuer.post({json: {...body}});
+            shouldThrowInvalidInput({result, error});
+          });
+      }
+      // this test is probably redundant as the vc-data-model spec
       // requires issuanceDate
-      it.skip('credential MAY have property "issuanceDate"', async function() {
+      it.skip('credential MUST have property "issuanceDate"', async function() {
         this.test.cell = {
           columnId: name,
           rowId: this.test.title
