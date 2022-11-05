@@ -1,7 +1,11 @@
 /*!
  * Copyright (c) 2022 Digital Bazaar, Inc. All rights reserved.
  */
-import {createISOTimeStamp, createRequestBody} from './mock.data.js';
+import {
+  createISOTimeStamp,
+  createRequestBody,
+  invalidCredentialTypes
+} from './mock.data.js';
 import {
   shouldBeIssuedVc,
   shouldReturnResult,
@@ -88,7 +92,7 @@ describe('Issue Credential - Data Integrity', function() {
           shouldThrowInvalidInput({result, error});
         }
       });
-      it('credential MUST have property "type"', async function() {
+      it('credential MUST have property "type".', async function() {
         this.test.cell = {
           columnId: name,
           rowId: this.test.title
@@ -108,19 +112,30 @@ describe('Issue Credential - Data Integrity', function() {
         const {result, error} = await issuer.post({json: body});
         shouldThrowInvalidInput({result, error});
       });
-      it('"credential.type" items MUST be strings', async function() {
+      it('"credential.type" items MUST be strings.', async function() {
         this.test.cell = {
           columnId: name,
           rowId: this.test.title
         };
         const body = createRequestBody({issuer});
-        const invalidCredentialTypes = [null, true, 4, []];
-        for(const invalidCredentialType of invalidCredentialTypes) {
-          body.credential.type = invalidCredentialType;
+        const {result, data: issuedVc, error} = await issuer.post({json: body});
+        shouldReturnResult({result, error});
+        should.exist(issuedVc, 'Expected result to have data.');
+        result.status.should.equal(201, 'Expected statusCode 201.');
+        shouldBeIssuedVc({issuedVc});
+      });
+      for(const [title, invalidType] of invalidCredentialTypes) {
+        it(`"credential.type" items MUST NOT be ${title}.`, async function() {
+          this.test.cell = {
+            columnId: name,
+            rowId: this.test.title
+          };
+          const body = createRequestBody({issuer});
+          body.credential.type = invalidType;
           const {result, error} = await issuer.post({json: {...body}});
           shouldThrowInvalidInput({result, error});
-        }
-      });
+        });
+      }
       it('credential MUST have property "issuer"', async function() {
         this.test.cell = {
           columnId: name,
