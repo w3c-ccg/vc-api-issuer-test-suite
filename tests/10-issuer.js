@@ -1,7 +1,11 @@
 /*!
  * Copyright (c) 2022 Digital Bazaar, Inc. All rights reserved.
  */
-import {createISOTimeStamp, createRequestBody} from './mock.data.js';
+import {
+  createISOTimeStamp,
+  createRequestBody,
+  invalidIssuerTypes
+} from './mock.data.js';
 import {
   shouldBeIssuedVc,
   shouldReturnResult,
@@ -131,19 +135,18 @@ describe('Issue Credential - Data Integrity', function() {
         const {result, error} = await issuer.post({json: body});
         shouldThrowInvalidInput({result, error});
       });
-      it('"credential.issuer" MUST be a string or an object', async function() {
-        this.test.cell = {
-          columnId: name,
-          rowId: this.test.title
-        };
-        const body = createRequestBody({issuer});
-        const invalidIssuerTypes = [null, true, 4, []];
-        for(const invalidIssuerType of invalidIssuerTypes) {
-          body.credential.issuer = invalidIssuerType;
+      for(const [title, invalidIssuer] of invalidIssuerTypes) {
+        it(`"credential.issuer" MUST NOT be ${title}`, async function() {
+          this.test.cell = {
+            columnId: name,
+            rowId: this.test.title
+          };
+          const body = createRequestBody({issuer});
+          body.credential.issuer = invalidIssuer;
           const {result, error} = await issuer.post({json: {...body}});
           shouldThrowInvalidInput({result, error});
-        }
-      });
+        });
+      }
       it('credential MUST have property "credentialSubject"', async function() {
         this.test.cell = {
           columnId: name,
