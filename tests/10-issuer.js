@@ -121,7 +121,7 @@ describe('Issue Credential - Data Integrity', function() {
           shouldBeIssuedVc({issuedVc});
         });
       for(const [title, invalidContext] of invalidContextTypes) {
-        it(`credential "@context" items MUST NOT be ${title}`,
+        it(`credential "@context" items MUST NOT be ${title}.`,
           async function() {
             this.test.cell = {
               columnId: name,
