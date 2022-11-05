@@ -1,7 +1,11 @@
 /*!
  * Copyright (c) 2022 Digital Bazaar, Inc. All rights reserved.
  */
-import {createISOTimeStamp, createRequestBody} from './mock.data.js';
+import {
+  createISOTimeStamp,
+  createRequestBody,
+  invalidContextTypes
+} from './mock.data.js';
 import {
   shouldBeIssuedVc,
   shouldReturnResult,
@@ -75,19 +79,60 @@ describe('Issue Credential - Data Integrity', function() {
         const {result, error} = await issuer.post({json: body});
         shouldThrowInvalidInput({result, error});
       });
-      it('credential "@context" items MUST be strings.', async function() {
-        this.test.cell = {
-          columnId: name,
-          rowId: this.test.title
-        };
-        const body = createRequestBody({issuer});
-        const invalidContextTypes = [{foo: true}, 4, false, null];
-        for(const invalidContextType of invalidContextTypes) {
-          body.credential['@context'] = invalidContextType;
-          const {result, error} = await issuer.post({json: {...body}});
+      it('credential "@context" first item MUST be credentials context URI.',
+        async function() {
+          this.test.cell = {
+            columnId: name,
+            rowId: this.test.title
+          };
+          const body = createRequestBody({issuer});
+          body.credential['@context'] = [
+            'https://www.w3.org/2018/credentials/examples/v1',
+            'https://www.w3.org/2018/credentials/v1'
+          ];
+          const {result, error} = await issuer.post({json: body});
           shouldThrowInvalidInput({result, error});
-        }
-      });
+        });
+      it('credential "@context" subsequent items MAY be context objects.',
+        async function() {
+          this.test.cell = {
+            columnId: name,
+            rowId: this.test.title
+          };
+          const body = createRequestBody({issuer});
+          body.credential['@context'] = [
+            'https://www.w3.org/2018/credentials/v1',
+            {
+              '@context': {
+                id: '@id',
+                type: '@type',
+                vcTestContext: 'https://w3id.org/vc-test-context#',
+              }
+            }
+          ];
+          const {
+            result,
+            data: issuedVc,
+            error
+          } = await issuer.post({json: body});
+          shouldReturnResult({result, error});
+          should.exist(issuedVc, 'Expected result to have data.');
+          result.status.should.equal(201, 'Expected statusCode 201.');
+          shouldBeIssuedVc({issuedVc});
+        });
+      for(const [title, invalidContext] of invalidContextTypes) {
+        it(`credential "@context" items MUST NOT be ${title}`,
+          async function() {
+            this.test.cell = {
+              columnId: name,
+              rowId: this.test.title
+            };
+            const body = createRequestBody({issuer});
+            body.credential['@context'] = invalidContext;
+            const {result, error} = await issuer.post({json: {...body}});
+            shouldThrowInvalidInput({result, error});
+          });
+      }
       it('credential MUST have property "type"', async function() {
         this.test.cell = {
           columnId: name,

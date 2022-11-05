@@ -31,3 +31,10 @@ export const createRequestBody = ({issuer, vc = validVc}) => {
 export function createISOTimeStamp(timeMs = Date.now()) {
   return new Date(timeMs).toISOString().replace(/\.\d+Z$/, 'Z');
 }
+
+export const invalidContextTypes = new Map([
+  ['empty', []],
+  ['a number', [4]],
+  ['a boolean', [false]],
+  ['null', [null]]
+]);
