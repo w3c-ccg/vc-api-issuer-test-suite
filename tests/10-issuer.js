@@ -159,7 +159,7 @@ describe('Issue Credential - Data Integrity', function() {
         shouldThrowInvalidInput({result, error});
       });
       for(const [title, invalidSubject] of invalidCredentialSubjectTypes) {
-        it(`"credential.credentialSubject" MUST NOT be ${title}`,
+        it(`issuer errors when "credential.credentialSubject" is ${title}`,
           async function() {
             this.test.cell = {
               columnId: name,
