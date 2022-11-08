@@ -136,16 +136,17 @@ describe('Issue Credential - Data Integrity', function() {
         shouldThrowInvalidInput({result, error});
       });
       for(const [title, invalidIssuer] of invalidIssuerTypes) {
-        it(`"credential.issuer" MUST NOT be ${title}`, async function() {
-          this.test.cell = {
-            columnId: name,
-            rowId: this.test.title
-          };
-          const body = createRequestBody({issuer});
-          body.credential.issuer = invalidIssuer;
-          const {result, error} = await issuer.post({json: {...body}});
-          shouldThrowInvalidInput({result, error});
-        });
+        it(`issuer errors when "credential.issuer" is ${title}`,
+          async function() {
+            this.test.cell = {
+              columnId: name,
+              rowId: this.test.title
+            };
+            const body = createRequestBody({issuer});
+            body.credential.issuer = invalidIssuer;
+            const {result, error} = await issuer.post({json: {...body}});
+            shouldThrowInvalidInput({result, error});
+          });
       }
       it('"credential.issuer" MAY be a string', async function() {
         this.test.cell = {
