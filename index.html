@@ -80,19 +80,19 @@
     <section class="informative" id="conformance-testing-results">
       <h2> Conformance Testing Results </h2>
       <p>
-      Tests passed 90/104 86%
+      Tests passed 90/117 76%
       </p>
       <p>
-      Tests failed 14/104 14%
+      Tests failed 27/117 24%
       </p>
       <p>
-      Tests skipped 8
+      Tests skipped 9
       </p>
       <p>
-      Total tests 112
+      Total tests 126
       </p>
       <p>
-        These tests were run on <time>27 November 2022 at 5:08 am UTC</time>
+        These tests were run on <time>30 November 2022 at 4:18 pm UTC</time>
       </p>
       <section class="informative" id="Key">
         <h3>Key</h3>
@@ -182,6 +182,7 @@
                     <th class="no-wrap small-font">Danube Tech</th>
                     <th class="no-wrap small-font">Digital Bazaar</th>
                     <th class="no-wrap small-font">EWF</th>
+                    <th class="no-wrap small-font">GS1 US</th>
                     <th class="no-wrap small-font">LearnCard</th>
                     <th class="no-wrap small-font">Mavennet</th>
                     <th class="no-wrap small-font">mesur.io</th>
@@ -320,6 +321,45 @@
                          margin-left: 1rem;
                        }
                       </style>
+                    </div>
+                  </td>
+                  <td class="failed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <style>
+                       .hide {
+                         display: none;
+                       }
+                       .err {
+                         position: relative;
+                         z-index: 1;
+                         width: 50rem;
+                         right: calc(0% + 15rem);
+                         background: rgba(0, 0, 0, 0.0);
+                       }
+                       .no-space-around {
+                         margin: 0;
+                         padding: 0;
+                       }
+                       pre {
+                         width: 75%;
+                         white-space: pre-line;
+                         word-break: break-all;
+                         margin: 0;
+                         padding: 0;
+                         background: white;
+                       }
+                       code > span.hljs-attr {
+                         margin-left: 1rem;
+                       }
+                      </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "AssertionError",
+                      "message": "Expected no error, got Unauthorized. Access token is missing or invalid.: expected HTTPError: Unauthorized. Access token is … { …(6) } to not exist",
+                      "stack": "AssertionError: Expected no error, got Unauthorized. Access token is missing or invalid.: expected HTTPError: Unauthorized. Access token is … { …(6) } to not exist\n    at Object.should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)\n    at shouldReturnResult (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:19:14)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:42:9)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover">
@@ -661,6 +701,45 @@
                       </span>
                     </div>
                   </td>
+                  <td class="failed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <style>
+                       .hide {
+                         display: none;
+                       }
+                       .err {
+                         position: relative;
+                         z-index: 1;
+                         width: 50rem;
+                         right: calc(0% + 15rem);
+                         background: rgba(0, 0, 0, 0.0);
+                       }
+                       .no-space-around {
+                         margin: 0;
+                         padding: 0;
+                       }
+                       pre {
+                         width: 75%;
+                         white-space: pre-line;
+                         word-break: break-all;
+                         margin: 0;
+                         padding: 0;
+                         background: white;
+                       }
+                       code > span.hljs-attr {
+                         margin-left: 1rem;
+                       }
+                      </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "AssertionError",
+                      "message": "Should not get an Authorization Error.: expected 401 to not equal 401",
+                      "stack": "AssertionError: Should not get an Authorization Error.: expected 401 to not equal 401\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:12:27)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:56:9)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+                    }</pre>
+                      </span>
+                    </div>
+                  </td>
                   <td class="passed not-optional highlight-on-hover">
                     <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
@@ -984,6 +1063,45 @@
                          margin-left: 1rem;
                        }
                       </style>
+                    </div>
+                  </td>
+                  <td class="failed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <style>
+                       .hide {
+                         display: none;
+                       }
+                       .err {
+                         position: relative;
+                         z-index: 1;
+                         width: 50rem;
+                         right: calc(0% + 15rem);
+                         background: rgba(0, 0, 0, 0.0);
+                       }
+                       .no-space-around {
+                         margin: 0;
+                         padding: 0;
+                       }
+                       pre {
+                         width: 75%;
+                         white-space: pre-line;
+                         word-break: break-all;
+                         margin: 0;
+                         padding: 0;
+                         background: white;
+                       }
+                       code > span.hljs-attr {
+                         margin-left: 1rem;
+                       }
+                      </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "AssertionError",
+                      "message": "Should not get an Authorization Error.: expected 401 to not equal 401",
+                      "stack": "AssertionError: Should not get an Authorization Error.: expected 401 to not equal 401\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:12:27)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:66:9)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover">
@@ -1311,6 +1429,45 @@
                       </style>
                     </div>
                   </td>
+                  <td class="failed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <style>
+                       .hide {
+                         display: none;
+                       }
+                       .err {
+                         position: relative;
+                         z-index: 1;
+                         width: 50rem;
+                         right: calc(0% + 15rem);
+                         background: rgba(0, 0, 0, 0.0);
+                       }
+                       .no-space-around {
+                         margin: 0;
+                         padding: 0;
+                       }
+                       pre {
+                         width: 75%;
+                         white-space: pre-line;
+                         word-break: break-all;
+                         margin: 0;
+                         padding: 0;
+                         background: white;
+                       }
+                       code > span.hljs-attr {
+                         margin-left: 1rem;
+                       }
+                      </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "AssertionError",
+                      "message": "Should not get an Authorization Error.: expected 401 to not equal 401",
+                      "stack": "AssertionError: Should not get an Authorization Error.: expected 401 to not equal 401\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:12:27)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:76:9)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+                    }</pre>
+                      </span>
+                    </div>
+                  </td>
                   <td class="passed not-optional highlight-on-hover">
                     <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
@@ -1634,6 +1791,45 @@
                          margin-left: 1rem;
                        }
                       </style>
+                    </div>
+                  </td>
+                  <td class="failed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <style>
+                       .hide {
+                         display: none;
+                       }
+                       .err {
+                         position: relative;
+                         z-index: 1;
+                         width: 50rem;
+                         right: calc(0% + 15rem);
+                         background: rgba(0, 0, 0, 0.0);
+                       }
+                       .no-space-around {
+                         margin: 0;
+                         padding: 0;
+                       }
+                       pre {
+                         width: 75%;
+                         white-space: pre-line;
+                         word-break: break-all;
+                         margin: 0;
+                         padding: 0;
+                         background: white;
+                       }
+                       code > span.hljs-attr {
+                         margin-left: 1rem;
+                       }
+                      </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "AssertionError",
+                      "message": "Should not get an Authorization Error.: expected 401 to not equal 401",
+                      "stack": "AssertionError: Should not get an Authorization Error.: expected 401 to not equal 401\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:12:27)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:88:11)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover">
@@ -1968,6 +2164,45 @@
                       </style>
                     </div>
                   </td>
+                  <td class="failed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <style>
+                       .hide {
+                         display: none;
+                       }
+                       .err {
+                         position: relative;
+                         z-index: 1;
+                         width: 50rem;
+                         right: calc(0% + 15rem);
+                         background: rgba(0, 0, 0, 0.0);
+                       }
+                       .no-space-around {
+                         margin: 0;
+                         padding: 0;
+                       }
+                       pre {
+                         width: 75%;
+                         white-space: pre-line;
+                         word-break: break-all;
+                         margin: 0;
+                         padding: 0;
+                         background: white;
+                       }
+                       code > span.hljs-attr {
+                         margin-left: 1rem;
+                       }
+                      </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "AssertionError",
+                      "message": "Should not get an Authorization Error.: expected 401 to not equal 401",
+                      "stack": "AssertionError: Should not get an Authorization Error.: expected 401 to not equal 401\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:12:27)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:99:9)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+                    }</pre>
+                      </span>
+                    </div>
+                  </td>
                   <td class="passed not-optional highlight-on-hover">
                     <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
@@ -2298,6 +2533,45 @@
                          margin-left: 1rem;
                        }
                       </style>
+                    </div>
+                  </td>
+                  <td class="failed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <style>
+                       .hide {
+                         display: none;
+                       }
+                       .err {
+                         position: relative;
+                         z-index: 1;
+                         width: 50rem;
+                         right: calc(0% + 15rem);
+                         background: rgba(0, 0, 0, 0.0);
+                       }
+                       .no-space-around {
+                         margin: 0;
+                         padding: 0;
+                       }
+                       pre {
+                         width: 75%;
+                         white-space: pre-line;
+                         word-break: break-all;
+                         margin: 0;
+                         padding: 0;
+                         background: white;
+                       }
+                       code > span.hljs-attr {
+                         margin-left: 1rem;
+                       }
+                      </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "AssertionError",
+                      "message": "Should not get an Authorization Error.: expected 401 to not equal 401",
+                      "stack": "AssertionError: Should not get an Authorization Error.: expected 401 to not equal 401\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:12:27)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:109:9)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover">
@@ -2632,6 +2906,45 @@
                       </style>
                     </div>
                   </td>
+                  <td class="failed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <style>
+                       .hide {
+                         display: none;
+                       }
+                       .err {
+                         position: relative;
+                         z-index: 1;
+                         width: 50rem;
+                         right: calc(0% + 15rem);
+                         background: rgba(0, 0, 0, 0.0);
+                       }
+                       .no-space-around {
+                         margin: 0;
+                         padding: 0;
+                       }
+                       pre {
+                         width: 75%;
+                         white-space: pre-line;
+                         word-break: break-all;
+                         margin: 0;
+                         padding: 0;
+                         background: white;
+                       }
+                       code > span.hljs-attr {
+                         margin-left: 1rem;
+                       }
+                      </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "AssertionError",
+                      "message": "Should not get an Authorization Error.: expected 401 to not equal 401",
+                      "stack": "AssertionError: Should not get an Authorization Error.: expected 401 to not equal 401\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:12:27)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:121:11)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+                    }</pre>
+                      </span>
+                    </div>
+                  </td>
                   <td class="passed not-optional highlight-on-hover">
                     <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
@@ -2962,6 +3275,45 @@
                          margin-left: 1rem;
                        }
                       </style>
+                    </div>
+                  </td>
+                  <td class="failed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <style>
+                       .hide {
+                         display: none;
+                       }
+                       .err {
+                         position: relative;
+                         z-index: 1;
+                         width: 50rem;
+                         right: calc(0% + 15rem);
+                         background: rgba(0, 0, 0, 0.0);
+                       }
+                       .no-space-around {
+                         margin: 0;
+                         padding: 0;
+                       }
+                       pre {
+                         width: 75%;
+                         white-space: pre-line;
+                         word-break: break-all;
+                         margin: 0;
+                         padding: 0;
+                         background: white;
+                       }
+                       code > span.hljs-attr {
+                         margin-left: 1rem;
+                       }
+                      </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "AssertionError",
+                      "message": "Should not get an Authorization Error.: expected 401 to not equal 401",
+                      "stack": "AssertionError: Should not get an Authorization Error.: expected 401 to not equal 401\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:12:27)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:132:9)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover">
@@ -3303,6 +3655,45 @@
                       </style>
                     </div>
                   </td>
+                  <td class="failed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <style>
+                       .hide {
+                         display: none;
+                       }
+                       .err {
+                         position: relative;
+                         z-index: 1;
+                         width: 50rem;
+                         right: calc(0% + 15rem);
+                         background: rgba(0, 0, 0, 0.0);
+                       }
+                       .no-space-around {
+                         margin: 0;
+                         padding: 0;
+                       }
+                       pre {
+                         width: 75%;
+                         white-space: pre-line;
+                         word-break: break-all;
+                         margin: 0;
+                         padding: 0;
+                         background: white;
+                       }
+                       code > span.hljs-attr {
+                         margin-left: 1rem;
+                       }
+                      </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "AssertionError",
+                      "message": "Should not get an Authorization Error.: expected 401 to not equal 401",
+                      "stack": "AssertionError: Should not get an Authorization Error.: expected 401 to not equal 401\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:12:27)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:144:11)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+                    }</pre>
+                      </span>
+                    </div>
+                  </td>
                   <td class="passed not-optional highlight-on-hover">
                     <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
@@ -3369,7 +3760,7 @@
                         <pre>{
                       "name": "AssertionError",
                       "message": "Expected no result from issuer.: expected Response{ size: +0, data: { …(7) }, …(2) } to not exist",
-                      "stack": "AssertionError: Expected no result from issuer.: expected Response{ size: +0, data: { …(7) }, …(2) } to not exist\n    at Object.should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:9:14)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:144:11)\n    at runMicrotasks (<anonymous>)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+                      "stack": "AssertionError: Expected no result from issuer.: expected Response{ size: +0, data: { …(7) }, …(2) } to not exist\n    at Object.should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:9:14)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:144:11)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
                     }</pre>
                       </span>
                     </div>
@@ -3640,6 +4031,45 @@
                          margin-left: 1rem;
                        }
                       </style>
+                    </div>
+                  </td>
+                  <td class="failed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <style>
+                       .hide {
+                         display: none;
+                       }
+                       .err {
+                         position: relative;
+                         z-index: 1;
+                         width: 50rem;
+                         right: calc(0% + 15rem);
+                         background: rgba(0, 0, 0, 0.0);
+                       }
+                       .no-space-around {
+                         margin: 0;
+                         padding: 0;
+                       }
+                       pre {
+                         width: 75%;
+                         white-space: pre-line;
+                         word-break: break-all;
+                         margin: 0;
+                         padding: 0;
+                         background: white;
+                       }
+                       code > span.hljs-attr {
+                         margin-left: 1rem;
+                       }
+                      </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "AssertionError",
+                      "message": "Should not get an Authorization Error.: expected 401 to not equal 401",
+                      "stack": "AssertionError: Should not get an Authorization Error.: expected 401 to not equal 401\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:12:27)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:155:9)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover">
@@ -3981,6 +4411,45 @@
                       </style>
                     </div>
                   </td>
+                  <td class="failed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <style>
+                       .hide {
+                         display: none;
+                       }
+                       .err {
+                         position: relative;
+                         z-index: 1;
+                         width: 50rem;
+                         right: calc(0% + 15rem);
+                         background: rgba(0, 0, 0, 0.0);
+                       }
+                       .no-space-around {
+                         margin: 0;
+                         padding: 0;
+                       }
+                       pre {
+                         width: 75%;
+                         white-space: pre-line;
+                         word-break: break-all;
+                         margin: 0;
+                         padding: 0;
+                         background: white;
+                       }
+                       code > span.hljs-attr {
+                         margin-left: 1rem;
+                       }
+                      </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "AssertionError",
+                      "message": "Should not get an Authorization Error.: expected 401 to not equal 401",
+                      "stack": "AssertionError: Should not get an Authorization Error.: expected 401 to not equal 401\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:12:27)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:169:11)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+                    }</pre>
+                      </span>
+                    </div>
+                  </td>
                   <td class="passed not-optional highlight-on-hover">
                     <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
@@ -4047,7 +4516,7 @@
                         <pre>{
                       "name": "AssertionError",
                       "message": "Expected no result from issuer.: expected Response{ size: +0, data: { …(7) }, …(2) } to not exist",
-                      "stack": "AssertionError: Expected no result from issuer.: expected Response{ size: +0, data: { …(7) }, …(2) } to not exist\n    at Object.should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:9:14)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:169:11)\n    at runMicrotasks (<anonymous>)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+                      "stack": "AssertionError: Expected no result from issuer.: expected Response{ size: +0, data: { …(7) }, …(2) } to not exist\n    at Object.should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:9:14)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:169:11)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
                     }</pre>
                       </span>
                     </div>
@@ -4318,6 +4787,45 @@
                          margin-left: 1rem;
                        }
                       </style>
+                    </div>
+                  </td>
+                  <td class="failed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <style>
+                       .hide {
+                         display: none;
+                       }
+                       .err {
+                         position: relative;
+                         z-index: 1;
+                         width: 50rem;
+                         right: calc(0% + 15rem);
+                         background: rgba(0, 0, 0, 0.0);
+                       }
+                       .no-space-around {
+                         margin: 0;
+                         padding: 0;
+                       }
+                       pre {
+                         width: 75%;
+                         white-space: pre-line;
+                         word-break: break-all;
+                         margin: 0;
+                         padding: 0;
+                         background: white;
+                       }
+                       code > span.hljs-attr {
+                         margin-left: 1rem;
+                       }
+                      </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "AssertionError",
+                      "message": "Expected no error, got Unauthorized. Access token is missing or invalid.: expected HTTPError: Unauthorized. Access token is … { …(6) } to not exist",
+                      "stack": "AssertionError: Expected no error, got Unauthorized. Access token is missing or invalid.: expected HTTPError: Unauthorized. Access token is … { …(6) } to not exist\n    at Object.should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)\n    at shouldReturnResult (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:19:14)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:194:9)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover">
@@ -4592,6 +5100,7 @@
                     <th class="no-wrap small-font">Danube Tech</th>
                     <th class="no-wrap small-font">Digital Bazaar</th>
                     <th class="no-wrap small-font">EWF</th>
+                    <th class="no-wrap small-font">GS1 US</th>
                     <th class="no-wrap small-font">LearnCard</th>
                     <th class="no-wrap small-font">MATTR</th>
                     <th class="no-wrap small-font">Mavennet</th>
