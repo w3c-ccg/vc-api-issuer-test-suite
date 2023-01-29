@@ -80,10 +80,10 @@
     <section class="informative" id="conformance-testing-results">
       <h2> Conformance Testing Results </h2>
       <p>
-      Tests passed 103/117 88%
+      Tests passed 101/117 86%
       </p>
       <p>
-      Tests failed 14/117 12%
+      Tests failed 16/117 14%
       </p>
       <p>
       Tests skipped 9
@@ -92,7 +92,7 @@
       Total tests 126
       </p>
       <p>
-        These tests were run on <time>22 January 2023 at 5:07 am UTC</time>
+        These tests were run on <time>29 January 2023 at 5:07 am UTC</time>
       </p>
       <section class="informative" id="Key">
         <h3>Key</h3>
@@ -419,8 +419,8 @@
                       </style>
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -449,6 +449,13 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "AssertionError",
+                      "message": "Expected no error, got Bad Request: Your request body does not conform to the required schema: expected HTTPError: Bad Request: Your request body… { …(6) } to not exist",
+                      "stack": "AssertionError: Expected no error, got Bad Request: Your request body does not conform to the required schema: expected HTTPError: Bad Request: Your request body… { …(6) } to not exist\n    at Object.should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)\n    at shouldReturnResult (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:19:14)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:42:9)\n    at runMicrotasks (<anonymous>)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
                   <td class="failed not-optional highlight-on-hover">
@@ -4801,8 +4808,8 @@
                       </style>
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -4831,6 +4838,13 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "AssertionError",
+                      "message": "Expected no error, got Bad Request: Your request body does not conform to the required schema: expected HTTPError: Bad Request: Your request body… { …(6) } to not exist",
+                      "stack": "AssertionError: Expected no error, got Bad Request: Your request body does not conform to the required schema: expected HTTPError: Bad Request: Your request body… { …(6) } to not exist\n    at Object.should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)\n    at shouldReturnResult (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:19:14)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:194:9)\n    at runMicrotasks (<anonymous>)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover">
