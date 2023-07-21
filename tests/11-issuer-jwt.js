@@ -8,7 +8,7 @@ import {filterByTag} from 'vc-api-test-suite-implementations';
 
 const should = chai.should();
 
-const {match, nonMatch} = filterByTag({property: 'issuers', tags: ['JWT']});
+const {match} = filterByTag({property: 'issuers', tags: ['JWT']});
 
 describe('Issue Credential - JWT', function() {
   const summaries = new Set();
@@ -19,7 +19,6 @@ describe('Issue Credential - JWT', function() {
   this.matrix = true;
   this.report = true;
   this.implemented = [...match.keys()];
-  this.notImplemented = [...nonMatch.keys()];
   this.rowLabel = 'Test Name';
   this.columnLabel = 'Issuer';
   // the reportData will be displayed under the test title

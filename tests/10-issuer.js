@@ -12,7 +12,7 @@ import {filterByTag} from 'vc-api-test-suite-implementations';
 
 const should = chai.should();
 const tag = 'vc-api';
-const {match, nonMatch} = filterByTag({property: 'issuers', tags: [tag]});
+const {match} = filterByTag({property: 'issuers', tags: [tag]});
 
 describe('Issue Credential - Data Integrity', function() {
   const summaries = new Set();
@@ -23,7 +23,6 @@ describe('Issue Credential - Data Integrity', function() {
   this.matrix = true;
   this.report = true;
   this.implemented = [...match.keys()];
-  this.notImplemented = [...nonMatch.keys()];
   this.rowLabel = 'Test Name';
   this.columnLabel = 'Issuer';
   // the reportData will be displayed under the test title
