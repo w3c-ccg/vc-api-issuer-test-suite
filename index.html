@@ -81,13 +81,13 @@
     <section class="informative" id="conformance-testing-results">
       <h2> Conformance Testing Results </h2>
       <p>
-      Tests passed 129/144 89%
+      Tests passed 130/144 90%
       </p>
       <p>
-      Tests failed 15/144 11%
+      Tests failed 14/144 10%
       </p>
       <p>
-      Failures 15
+      Failures 14
       </p>
       <p>
       Tests skipped 10
@@ -96,7 +96,7 @@
       Total tests 154
       </p>
       <p>
-        These tests were run on <time>25 July 2023 at 4:44 pm UTC</time>
+        These tests were run on <time>30 July 2023 at 5:06 am UTC</time>
       </p>
       <section class="informative" id="Key">
         <h3>Key</h3>
@@ -420,8 +420,8 @@
                       <span class="err hide no-space-around">
                         <pre>{
                       "name": "AssertionError",
-                      "message": "Expected the issued Verifiable Credential to be an object.: expected [ { '@context': [ …(2) ], …(6) } ] to be an object",
-                      "stack": "AssertionError: Expected the issued Verifiable Credential to be an object.: expected [ { '@context': [ …(2) ], …(6) } ] to be an object\n    at shouldBeIssuedVc (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:24:22)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:44:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
+                      "message": "Expected no error, got [\"options must be an object\",\"options should not be empty\"]: expected HTTPError: [\"options must be an object\",\"… { …(6) } to not exist",
+                      "stack": "AssertionError: Expected no error, got [\"options must be an object\",\"options should not be empty\"]: expected HTTPError: [\"options must be an object\",\"… { …(6) } to not exist\n    at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)\n    at shouldReturnResult (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:19:14)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:41:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
                     }</pre>
                       </span>
                     </div>
@@ -3375,8 +3375,8 @@
                       </style>
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -3405,13 +3405,6 @@
                          margin-left: 1rem;
                        }
                       </style>
-                      <span class="err hide no-space-around">
-                        <pre>{
-                      "name": "AssertionError",
-                      "message": "Expected no result from issuer.: expected Response{ data: [ { …(7) } ], …(3) } to not exist",
-                      "stack": "AssertionError: Expected no result from issuer.: expected Response{ data: [ { …(7) } ], …(3) } to not exist\n    at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:9:14)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:143:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
-                    }</pre>
-                      </span>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -4053,8 +4046,8 @@
                       </style>
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -4083,13 +4076,6 @@
                          margin-left: 1rem;
                        }
                       </style>
-                      <span class="err hide no-space-around">
-                        <pre>{
-                      "name": "AssertionError",
-                      "message": "Expected no result from issuer.: expected Response{ data: [ { …(7) } ], …(3) } to not exist",
-                      "stack": "AssertionError: Expected no result from issuer.: expected Response{ data: [ { …(7) } ], …(3) } to not exist\n    at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:9:14)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:168:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
-                    }</pre>
-                      </span>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -4392,8 +4378,8 @@
                       </style>
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -4422,6 +4408,13 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "AssertionError",
+                      "message": "Expected no error, got [\"options must be an object\",\"options should not be empty\"]: expected HTTPError: [\"options must be an object\",\"… { …(6) } to not exist",
+                      "stack": "AssertionError: Expected no error, got [\"options must be an object\",\"options should not be empty\"]: expected HTTPError: [\"options must be an object\",\"… { …(6) } to not exist\n    at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)\n    at shouldReturnResult (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:19:14)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:193:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
