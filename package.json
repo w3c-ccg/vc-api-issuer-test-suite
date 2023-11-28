@@ -26,7 +26,7 @@
     "url": "https://digitalbazaar.com/"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=18"
   },
   "bugs": {
     "url": "https://github.com/w3c-ccg/vc-api-issuer-test-suite/issues"
