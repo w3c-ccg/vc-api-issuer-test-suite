@@ -4,7 +4,7 @@
 import {shouldBeIssuedVc, shouldThrowInvalidInput} from './assertions.js';
 import chai from 'chai';
 import {createRequestBody} from './mock.data.js';
-import {filterByTag} from 'vc-api-test-suite-implementations';
+import {filterByTag} from 'vc-test-suite-implementations';
 
 const should = chai.should();
 
