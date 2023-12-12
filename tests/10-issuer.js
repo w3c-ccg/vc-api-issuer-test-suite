@@ -8,7 +8,7 @@ import {
   shouldThrowInvalidInput
 } from './assertions.js';
 import chai from 'chai';
-import {filterByTag} from 'vc-api-test-suite-implementations';
+import {filterByTag} from 'vc-test-suite-implementations';
 
 const should = chai.should();
 const tag = 'vc-api';
