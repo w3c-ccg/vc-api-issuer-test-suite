@@ -81,13 +81,13 @@
     <section class="informative" id="conformance-testing-results">
       <h2> Conformance Testing Results </h2>
       <p>
-      Tests passed 134/157 85%
+      Tests passed 145/157 92%
       </p>
       <p>
-      Tests failed 23/157 15%
+      Tests failed 12/157 8%
       </p>
       <p>
-      Failures 23
+      Failures 12
       </p>
       <p>
       Tests skipped 11
@@ -96,7 +96,7 @@
       Total tests 168
       </p>
       <p>
-        These tests were run on <time>19 May 2024 at 5:09 am UTC</time>
+        These tests were run on <time>26 May 2024 at 5:07 am UTC</time>
       </p>
       <section class="informative" id="Key">
         <h3>Key</h3>
@@ -485,8 +485,8 @@
                       <span class="err hide no-space-around">
                         <pre>{
                       "name": "AssertionError",
-                      "message": "Expected no error, got fetch failed: expected TypeError: fetch failed { …(2) } to not exist",
-                      "stack": "AssertionError: Expected no error, got fetch failed: expected TypeError: fetch failed { …(2) } to not exist\n    at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)\n    at shouldReturnResult (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:19:14)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:41:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
+                      "message": "Expected credentialSubject to be an object.: expected 'did:key:z6MkhTNL7i2etLerDK8Acz5t528gi…' to be an object",
+                      "stack": "AssertionError: Expected credentialSubject to be an object.: expected 'did:key:z6MkhTNL7i2etLerDK8Acz5t528gi…' to be an object\n    at _shouldHaveClaims (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:77:21)\n    at _shouldBeValidCredentialSubject (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:64:12)\n    at shouldBeIssuedVc (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:40:3)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:44:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
                     }</pre>
                       </span>
                     </div>
@@ -816,8 +816,8 @@
                       </style>
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -846,13 +846,6 @@
                          margin-left: 1rem;
                        }
                       </style>
-                      <span class="err hide no-space-around">
-                        <pre>{
-                      "name": "AssertionError",
-                      "message": "Expected an HTTP error response code.: expected undefined to exist",
-                      "stack": "AssertionError: Expected an HTTP error response code.: expected undefined to exist\n    at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:11:10)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:55:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
-                    }</pre>
-                      </span>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1180,8 +1173,8 @@
                       </style>
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -1210,13 +1203,6 @@
                          margin-left: 1rem;
                        }
                       </style>
-                      <span class="err hide no-space-around">
-                        <pre>{
-                      "name": "AssertionError",
-                      "message": "Expected an HTTP error response code.: expected undefined to exist",
-                      "stack": "AssertionError: Expected an HTTP error response code.: expected undefined to exist\n    at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:11:10)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:65:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
-                    }</pre>
-                      </span>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1544,8 +1530,8 @@
                       </style>
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -1574,13 +1560,6 @@
                          margin-left: 1rem;
                        }
                       </style>
-                      <span class="err hide no-space-around">
-                        <pre>{
-                      "name": "AssertionError",
-                      "message": "Expected an HTTP error response code.: expected undefined to exist",
-                      "stack": "AssertionError: Expected an HTTP error response code.: expected undefined to exist\n    at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:11:10)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:75:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
-                    }</pre>
-                      </span>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1908,8 +1887,8 @@
                       </style>
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -1938,13 +1917,6 @@
                          margin-left: 1rem;
                        }
                       </style>
-                      <span class="err hide no-space-around">
-                        <pre>{
-                      "name": "AssertionError",
-                      "message": "Expected an HTTP error response code.: expected undefined to exist",
-                      "stack": "AssertionError: Expected an HTTP error response code.: expected undefined to exist\n    at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:11:10)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:87:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
-                    }</pre>
-                      </span>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -2279,8 +2251,8 @@
                       </style>
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -2309,13 +2281,6 @@
                          margin-left: 1rem;
                        }
                       </style>
-                      <span class="err hide no-space-around">
-                        <pre>{
-                      "name": "AssertionError",
-                      "message": "Expected an HTTP error response code.: expected undefined to exist",
-                      "stack": "AssertionError: Expected an HTTP error response code.: expected undefined to exist\n    at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:11:10)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:98:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
-                    }</pre>
-                      </span>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -2650,8 +2615,8 @@
                       </style>
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -2680,13 +2645,6 @@
                          margin-left: 1rem;
                        }
                       </style>
-                      <span class="err hide no-space-around">
-                        <pre>{
-                      "name": "AssertionError",
-                      "message": "Expected an HTTP error response code.: expected undefined to exist",
-                      "stack": "AssertionError: Expected an HTTP error response code.: expected undefined to exist\n    at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:11:10)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:108:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
-                    }</pre>
-                      </span>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -3021,8 +2979,8 @@
                       </style>
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -3051,13 +3009,6 @@
                          margin-left: 1rem;
                        }
                       </style>
-                      <span class="err hide no-space-around">
-                        <pre>{
-                      "name": "AssertionError",
-                      "message": "Expected an HTTP error response code.: expected undefined to exist",
-                      "stack": "AssertionError: Expected an HTTP error response code.: expected undefined to exist\n    at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:11:10)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:120:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
-                    }</pre>
-                      </span>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -3226,8 +3177,8 @@
                       <span class="err hide no-space-around">
                         <pre>{
                       "name": "AssertionError",
-                      "message": "Expected no result from issuer.: expected Response { status: 201, statusText: 'Created', headers: Headers { 'access-control-allow-origin': '*', 'alt-svc': 'h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000', authorization: '** SANITIZED TO PREVENT EXPOSING OF SECRETS ***', 'cache-control': 'no-cache, no-store, must-revalidate', 'content-length': '748', 'content-type': 'application/json; charset=utf-8', date: 'Sun, 19 May 2024 05:08:52 GMT', etag: 'W/\"2ec-WgXSDG13c7YIkMi4Tq9nHqKzna4\"', expires: '0', pragma: 'no-cache', server: 'Google Frontend', vary: 'X-HTTP-Method-Override, Accept-Encoding', via: '1.1 google', 'x-cloud-trace-context': '1b7f98c8e012c1ed69b140adc6ad71c6' }, body: ReadableStream { locked: false, state: 'readable', supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: 'default', url: '' } to not exist",
-                      "stack": "AssertionError: Expected no result from issuer.: expected Response { status: 201, statusText: 'Created', headers: Headers { 'access-control-allow-origin': '*', 'alt-svc': 'h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000', authorization: '** SANITIZED TO PREVENT EXPOSING OF SECRETS ***', 'cache-control': 'no-cache, no-store, must-revalidate', 'content-length': '748', 'content-type': 'application/json; charset=utf-8', date: 'Sun, 19 May 2024 05:08:52 GMT', etag: 'W/\"2ec-WgXSDG13c7YIkMi4Tq9nHqKzna4\"', expires: '0', pragma: 'no-cache', server: 'Google Frontend', vary: 'X-HTTP-Method-Override, Accept-Encoding', via: '1.1 google', 'x-cloud-trace-context': '1b7f98c8e012c1ed69b140adc6ad71c6' }, body: ReadableStream { locked: false, state: 'readable', supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: 'default', url: '' } to not exist\n    at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:9:14)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:131:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
+                      "message": "Expected no result from issuer.: expected Response { status: 201, statusText: 'Created', headers: Headers { 'access-control-allow-origin': '*', 'alt-svc': 'h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000', authorization: '** SANITIZED TO PREVENT EXPOSING OF SECRETS ***', 'cache-control': 'no-cache, no-store, must-revalidate', 'content-length': '747', 'content-type': 'application/json; charset=utf-8', date: 'Sun, 26 May 2024 05:07:38 GMT', etag: 'W/\"2eb-fEtAkq4th3cP7zDiKnPo/St9Ato\"', expires: '0', pragma: 'no-cache', server: 'Google Frontend', vary: 'X-HTTP-Method-Override, Accept-Encoding', via: '1.1 google', 'x-cloud-trace-context': '1546df6b12fbc186a6b277ef73641168' }, body: ReadableStream { locked: false, state: 'readable', supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: 'default', url: '' } to not exist",
+                      "stack": "AssertionError: Expected no result from issuer.: expected Response { status: 201, statusText: 'Created', headers: Headers { 'access-control-allow-origin': '*', 'alt-svc': 'h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000', authorization: '** SANITIZED TO PREVENT EXPOSING OF SECRETS ***', 'cache-control': 'no-cache, no-store, must-revalidate', 'content-length': '747', 'content-type': 'application/json; charset=utf-8', date: 'Sun, 26 May 2024 05:07:38 GMT', etag: 'W/\"2eb-fEtAkq4th3cP7zDiKnPo/St9Ato\"', expires: '0', pragma: 'no-cache', server: 'Google Frontend', vary: 'X-HTTP-Method-Override, Accept-Encoding', via: '1.1 google', 'x-cloud-trace-context': '1546df6b12fbc186a6b277ef73641168' }, body: ReadableStream { locked: false, state: 'readable', supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: 'default', url: '' } to not exist\n    at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:9:14)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:131:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
                     }</pre>
                       </span>
                     </div>
@@ -3392,8 +3343,8 @@
                       </style>
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -3422,13 +3373,6 @@
                          margin-left: 1rem;
                        }
                       </style>
-                      <span class="err hide no-space-around">
-                        <pre>{
-                      "name": "AssertionError",
-                      "message": "Expected an HTTP error response code.: expected undefined to exist",
-                      "stack": "AssertionError: Expected an HTTP error response code.: expected undefined to exist\n    at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:11:10)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:131:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
-                    }</pre>
-                      </span>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -3604,8 +3548,8 @@
                       <span class="err hide no-space-around">
                         <pre>{
                       "name": "AssertionError",
-                      "message": "Expected no result from issuer.: expected Response { status: 201, statusText: 'Created', headers: Headers { 'access-control-allow-origin': '*', 'alt-svc': 'h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000', authorization: '** SANITIZED TO PREVENT EXPOSING OF SECRETS ***', 'cache-control': 'no-cache, no-store, must-revalidate', 'content-length': '755', 'content-type': 'application/json; charset=utf-8', date: 'Sun, 19 May 2024 05:08:52 GMT', etag: 'W/\"2f3-boojUeqJrRHb14RDjqRWfxLXD40\"', expires: '0', pragma: 'no-cache', server: 'Google Frontend', vary: 'X-HTTP-Method-Override, Accept-Encoding', via: '1.1 google', 'x-cloud-trace-context': '53c42451d3d19df9d7444af4cf9ba555' }, body: ReadableStream { locked: false, state: 'readable', supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: 'default', url: '' } to not exist",
-                      "stack": "AssertionError: Expected no result from issuer.: expected Response { status: 201, statusText: 'Created', headers: Headers { 'access-control-allow-origin': '*', 'alt-svc': 'h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000', authorization: '** SANITIZED TO PREVENT EXPOSING OF SECRETS ***', 'cache-control': 'no-cache, no-store, must-revalidate', 'content-length': '755', 'content-type': 'application/json; charset=utf-8', date: 'Sun, 19 May 2024 05:08:52 GMT', etag: 'W/\"2f3-boojUeqJrRHb14RDjqRWfxLXD40\"', expires: '0', pragma: 'no-cache', server: 'Google Frontend', vary: 'X-HTTP-Method-Override, Accept-Encoding', via: '1.1 google', 'x-cloud-trace-context': '53c42451d3d19df9d7444af4cf9ba555' }, body: ReadableStream { locked: false, state: 'readable', supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: 'default', url: '' } to not exist\n    at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:9:14)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:143:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
+                      "message": "Expected no result from issuer.: expected Response { status: 201, statusText: 'Created', headers: Headers { 'access-control-allow-origin': '*', 'alt-svc': 'h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000', authorization: '** SANITIZED TO PREVENT EXPOSING OF SECRETS ***', 'cache-control': 'no-cache, no-store, must-revalidate', 'content-length': '755', 'content-type': 'application/json; charset=utf-8', date: 'Sun, 26 May 2024 05:07:39 GMT', etag: 'W/\"2f3-W0QFeFS/Akfi5qtUsWRIUlb+FU4\"', expires: '0', pragma: 'no-cache', server: 'Google Frontend', vary: 'X-HTTP-Method-Override, Accept-Encoding', via: '1.1 google', 'x-cloud-trace-context': '5522d0680954ee124ff08de0862cf2f2' }, body: ReadableStream { locked: false, state: 'readable', supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: 'default', url: '' } to not exist",
+                      "stack": "AssertionError: Expected no result from issuer.: expected Response { status: 201, statusText: 'Created', headers: Headers { 'access-control-allow-origin': '*', 'alt-svc': 'h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000', authorization: '** SANITIZED TO PREVENT EXPOSING OF SECRETS ***', 'cache-control': 'no-cache, no-store, must-revalidate', 'content-length': '755', 'content-type': 'application/json; charset=utf-8', date: 'Sun, 26 May 2024 05:07:39 GMT', etag: 'W/\"2f3-W0QFeFS/Akfi5qtUsWRIUlb+FU4\"', expires: '0', pragma: 'no-cache', server: 'Google Frontend', vary: 'X-HTTP-Method-Override, Accept-Encoding', via: '1.1 google', 'x-cloud-trace-context': '5522d0680954ee124ff08de0862cf2f2' }, body: ReadableStream { locked: false, state: 'readable', supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: 'default', url: '' } to not exist\n    at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:9:14)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:143:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
                     }</pre>
                       </span>
                     </div>
@@ -3771,14 +3715,14 @@
                       <span class="err hide no-space-around">
                         <pre>{
                       "name": "AssertionError",
-                      "message": "Expected no result from issuer.: expected Response { status: 201, statusText: 'Created', headers: Headers { 'access-control-allow-origin': '*', 'access-control-expose-headers': 'Content-Disposition', authorization: '** SANITIZED TO PREVENT EXPOSING OF SECRETS ***', connection: 'keep-alive', 'content-length': '620', 'content-security-policy': \"default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests\", 'content-type': 'application/json; charset=utf-8', 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', date: 'Sun, 19 May 2024 05:09:06 GMT', etag: 'W/\"26c-8nYh/eGFoogSEavXOCH5HFWvVFI\"', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=15552000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0' }, body: ReadableStream { locked: false, state: 'readable', supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: 'default', url: '' } to not exist",
-                      "stack": "AssertionError: Expected no result from issuer.: expected Response { status: 201, statusText: 'Created', headers: Headers { 'access-control-allow-origin': '*', 'access-control-expose-headers': 'Content-Disposition', authorization: '** SANITIZED TO PREVENT EXPOSING OF SECRETS ***', connection: 'keep-alive', 'content-length': '620', 'content-security-policy': \"default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests\", 'content-type': 'application/json; charset=utf-8', 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', date: 'Sun, 19 May 2024 05:09:06 GMT', etag: 'W/\"26c-8nYh/eGFoogSEavXOCH5HFWvVFI\"', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=15552000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0' }, body: ReadableStream { locked: false, state: 'readable', supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: 'default', url: '' } to not exist\n    at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:9:14)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:143:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
+                      "message": "Expected no result from issuer.: expected Response { status: 201, statusText: 'Created', headers: Headers { 'access-control-allow-origin': '*', 'access-control-expose-headers': 'Content-Disposition', authorization: '** SANITIZED TO PREVENT EXPOSING OF SECRETS ***', connection: 'keep-alive', 'content-length': '620', 'content-security-policy': \"default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests\", 'content-type': 'application/json; charset=utf-8', 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', date: 'Sun, 26 May 2024 05:07:52 GMT', etag: 'W/\"26c-U/xXgvJ/nbWlpYFHUAAM0RhF174\"', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=15552000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0' }, body: ReadableStream { locked: false, state: 'readable', supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: 'default', url: '' } to not exist",
+                      "stack": "AssertionError: Expected no result from issuer.: expected Response { status: 201, statusText: 'Created', headers: Headers { 'access-control-allow-origin': '*', 'access-control-expose-headers': 'Content-Disposition', authorization: '** SANITIZED TO PREVENT EXPOSING OF SECRETS ***', connection: 'keep-alive', 'content-length': '620', 'content-security-policy': \"default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests\", 'content-type': 'application/json; charset=utf-8', 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', date: 'Sun, 26 May 2024 05:07:52 GMT', etag: 'W/\"26c-U/xXgvJ/nbWlpYFHUAAM0RhF174\"', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=15552000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0' }, body: ReadableStream { locked: false, state: 'readable', supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: 'default', url: '' } to not exist\n    at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:9:14)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:143:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
                     }</pre>
                       </span>
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -3807,13 +3751,6 @@
                          margin-left: 1rem;
                        }
                       </style>
-                      <span class="err hide no-space-around">
-                        <pre>{
-                      "name": "AssertionError",
-                      "message": "Expected an HTTP error response code.: expected undefined to exist",
-                      "stack": "AssertionError: Expected an HTTP error response code.: expected undefined to exist\n    at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:11:10)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:143:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
-                    }</pre>
-                      </span>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -4148,8 +4085,8 @@
                       </style>
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -4178,13 +4115,6 @@
                          margin-left: 1rem;
                        }
                       </style>
-                      <span class="err hide no-space-around">
-                        <pre>{
-                      "name": "AssertionError",
-                      "message": "Expected an HTTP error response code.: expected undefined to exist",
-                      "stack": "AssertionError: Expected an HTTP error response code.: expected undefined to exist\n    at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:11:10)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:154:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
-                    }</pre>
-                      </span>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -4289,8 +4219,8 @@
                       <span class="err hide no-space-around">
                         <pre>{
                       "name": "AssertionError",
-                      "message": "Expected no result from issuer.: expected Response { status: 201, statusText: 'Created', headers: Headers { authorization: '** SANITIZED TO PREVENT EXPOSING OF SECRETS ***', 'content-length': '680', 'content-type': 'application/ld+json', date: 'Sun, 19 May 2024 05:08:47 GMT', server: 'Google Frontend', 'x-cloud-trace-context': '8b07d2d2d1607b917f94c5f0f549f387' }, body: ReadableStream { locked: false, state: 'readable', supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: 'default', url: '' } to not exist",
-                      "stack": "AssertionError: Expected no result from issuer.: expected Response { status: 201, statusText: 'Created', headers: Headers { authorization: '** SANITIZED TO PREVENT EXPOSING OF SECRETS ***', 'content-length': '680', 'content-type': 'application/ld+json', date: 'Sun, 19 May 2024 05:08:47 GMT', server: 'Google Frontend', 'x-cloud-trace-context': '8b07d2d2d1607b917f94c5f0f549f387' }, body: ReadableStream { locked: false, state: 'readable', supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: 'default', url: '' } to not exist\n    at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:9:14)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:168:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
+                      "message": "Expected no result from issuer.: expected Response { status: 201, statusText: 'Created', headers: Headers { authorization: '** SANITIZED TO PREVENT EXPOSING OF SECRETS ***', 'content-length': '681', 'content-type': 'application/ld+json', date: 'Sun, 26 May 2024 05:07:34 GMT', server: 'Google Frontend', 'x-cloud-trace-context': '367899a40f747135dba0d6907325989e' }, body: ReadableStream { locked: false, state: 'readable', supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: 'default', url: '' } to not exist",
+                      "stack": "AssertionError: Expected no result from issuer.: expected Response { status: 201, statusText: 'Created', headers: Headers { authorization: '** SANITIZED TO PREVENT EXPOSING OF SECRETS ***', 'content-length': '681', 'content-type': 'application/ld+json', date: 'Sun, 26 May 2024 05:07:34 GMT', server: 'Google Frontend', 'x-cloud-trace-context': '367899a40f747135dba0d6907325989e' }, body: ReadableStream { locked: false, state: 'readable', supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: 'default', url: '' } to not exist\n    at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:9:14)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:168:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
                     }</pre>
                       </span>
                     </div>
@@ -4559,8 +4489,8 @@
                       <span class="err hide no-space-around">
                         <pre>{
                       "name": "AssertionError",
-                      "message": "Expected an HTTP error response code.: expected undefined to exist",
-                      "stack": "AssertionError: Expected an HTTP error response code.: expected undefined to exist\n    at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:11:10)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:168:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
+                      "message": "Expected no result from issuer.: expected Response { status: 201, statusText: 'Created', headers: Headers { authorization: '** SANITIZED TO PREVENT EXPOSING OF SECRETS ***', connection: 'keep-alive', 'content-length': '666', 'content-type': 'application/json', date: 'Sun, 26 May 2024 05:07:54 GMT', vary: 'Origin' }, body: ReadableStream { locked: false, state: 'readable', supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: 'default', url: '' } to not exist",
+                      "stack": "AssertionError: Expected no result from issuer.: expected Response { status: 201, statusText: 'Created', headers: Headers { authorization: '** SANITIZED TO PREVENT EXPOSING OF SECRETS ***', connection: 'keep-alive', 'content-length': '666', 'content-type': 'application/json', date: 'Sun, 26 May 2024 05:07:54 GMT', vary: 'Origin' }, body: ReadableStream { locked: false, state: 'readable', supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: 'default', url: '' } to not exist\n    at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)\n    at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:9:14)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:168:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
                     }</pre>
                       </span>
                     </div>
@@ -4890,8 +4820,8 @@
                       </style>
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -4920,13 +4850,6 @@
                          margin-left: 1rem;
                        }
                       </style>
-                      <span class="err hide no-space-around">
-                        <pre>{
-                      "name": "AssertionError",
-                      "message": "Expected no error, got fetch failed: expected TypeError: fetch failed { …(2) } to not exist",
-                      "stack": "AssertionError: Expected no error, got fetch failed: expected TypeError: fetch failed { …(2) } to not exist\n    at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)\n    at shouldReturnResult (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:19:14)\n    at Context.<anonymous> (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:193:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
-                    }</pre>
-                      </span>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
