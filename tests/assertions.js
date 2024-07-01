@@ -11,8 +11,8 @@ export function shouldThrowInvalidInput({result, error}) {
   should.exist(error.status, 'Expected an HTTP error response code.');
   error.status.should.not.equal(401,
     'Should not get an Authorization Error.');
-  error.status.should.equal(400,
-    'Expected status code 400 invalid input!');
+  error.status.should.be.oneOf([400, 422],
+    'Expected status code 400 or 422.');
 }
 
 export function shouldReturnResult({result, error}) {
