@@ -169,7 +169,7 @@
     <section class="informative" id="conformance-testing-results">
       <h2> Conformance Testing Results </h2>
       <p>
-        These tests were run on <time>21 September 2025 at 5:11 am UTC</time>
+        These tests were run on <time>28 September 2025 at 5:11 am UTC</time>
       </p>
       <section class="informative" id="Key">
         <h3>Key</h3>
@@ -291,17 +291,9 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Expected no error, got fetch failed: expected TypeError: fetch failed { …(2) } to not exist</summary>
-                        <pre>AssertionError: Expected no error, got fetch failed: expected TypeError: fetch failed { …(2) } to not exist
-                        at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
-                        at shouldReturnResult (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:19:14)
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:41:9)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
-                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -349,17 +341,12 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Request failed with status code 443</summary>
-                        <pre>HTTPError: Request failed with status code 443
-                        at fn (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async _handleResponse (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)
-                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:49:14)
-                        at async _requestAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:97:41)
-                        at async _getNewAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:81:9)
-                        at async constructOAuthHeader (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:27:25)
-                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:46:29)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:40:49)</pre>
+                        <summary>Expected no error, got Cannot POST /credentials/issue: expected HTTPError: Cannot POST /credentials/issue { …(6) } to not exist</summary>
+                        <pre>AssertionError: Expected no error, got Cannot POST /credentials/issue: expected HTTPError: Cannot POST /credentials/issue { …(6) } to not exist
+                        at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
+                        at shouldReturnResult (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:19:14)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:41:9)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
                       </details>
                     </div>
                   </td>
@@ -380,8 +367,8 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected no error, got Request failed with status code 400 Bad Request: expected HTTPError: Request failed with status cod… { …(6) } to not exist</summary>
-                        <pre>AssertionError: Expected no error, got Request failed with status code 400 Bad Request: expected HTTPError: Request failed with status cod… { …(6) } to not exist
+                        <summary>Expected no error, got Request failed with status code 503 Service Unavailable: expected HTTPError: Request failed with status cod… { …(5) } to not exist</summary>
+                        <pre>AssertionError: Expected no error, got Request failed with status code 503 Service Unavailable: expected HTTPError: Request failed with status cod… { …(5) } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at shouldReturnResult (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:19:14)
                         at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:41:9)
@@ -452,17 +439,9 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Expected an HTTP error response code.: expected undefined to exist</summary>
-                        <pre>AssertionError: Expected an HTTP error response code.: expected undefined to exist
-                        at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)
-                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:11:10)
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:55:9)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
-                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -510,17 +489,11 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Request failed with status code 443</summary>
-                        <pre>HTTPError: Request failed with status code 443
-                        at fn (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async _handleResponse (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)
-                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:49:14)
-                        at async _requestAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:97:41)
-                        at async _getNewAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:81:9)
-                        at async constructOAuthHeader (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:27:25)
-                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:46:29)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:54:33)</pre>
+                        <summary>Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]</summary>
+                        <pre>AssertionError: Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]
+                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:14:26)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:55:9)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
                       </details>
                     </div>
                   </td>
@@ -537,9 +510,16 @@
                       </details>
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Expected status code 400 or 422.: expected 503 to be one of [ 400, 422 ]</summary>
+                        <pre>AssertionError: Expected status code 400 or 422.: expected 503 to be one of [ 400, 422 ]
+                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:14:26)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:55:9)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -556,8 +536,8 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 21 Sep 2025 05:10:59 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;24&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;%2FQ3ERu730b2QRpAjunMIm3HSHTrb5QrF%2F1IsqYw0UwEfgx1gQZy3uLoSn6wbHAhwH5hIdkGzjs9%2BFPBWfvOp8QSVya98h2BBRHqd9DNyz5Bq4O7SyGahzZK4ymlVVyNiG2uh33T2jESBhW4HcAgG&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;98270f2f1c96826e-IAD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;5403&amp;min_rtt&#x3D;5107&amp;rtt_var&#x3D;1433&amp;sent&#x3D;9&amp;recv&#x3D;8&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;5693&amp;recv_bytes&#x3D;1914&amp;delivery_rate&#x3D;855986&amp;cwnd&#x3D;255&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;15e16d0347431d3b&amp;ts&#x3D;302&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
-                        <pre>AssertionError: Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 21 Sep 2025 05:10:59 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;24&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;%2FQ3ERu730b2QRpAjunMIm3HSHTrb5QrF%2F1IsqYw0UwEfgx1gQZy3uLoSn6wbHAhwH5hIdkGzjs9%2BFPBWfvOp8QSVya98h2BBRHqd9DNyz5Bq4O7SyGahzZK4ymlVVyNiG2uh33T2jESBhW4HcAgG&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;98270f2f1c96826e-IAD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;5403&amp;min_rtt&#x3D;5107&amp;rtt_var&#x3D;1433&amp;sent&#x3D;9&amp;recv&#x3D;8&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;5693&amp;recv_bytes&#x3D;1914&amp;delivery_rate&#x3D;855986&amp;cwnd&#x3D;255&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;15e16d0347431d3b&amp;ts&#x3D;302&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        <summary>Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 28 Sep 2025 05:10:58 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;25&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;aUtdPaXqpGORmD7fo529OiVSl1k%2BcLSJW5VBch0DAHkbseMh7WAr09ZLw00M1xXZN9LuGUWDpNvFCPD8sKDsrFGeMtv%2BE7yaKv5QPJwj1myUlGuy%2F%2BkUCHaL4TZ3BkzBZfAPNtO%2BGm1Ec00s3c49&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;9860bcc6afd9a9c6-ORD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;14974&amp;min_rtt&#x3D;14953&amp;rtt_var&#x3D;3189&amp;sent&#x3D;9&amp;recv&#x3D;8&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;5694&amp;recv_bytes&#x3D;1914&amp;delivery_rate&#x3D;377927&amp;cwnd&#x3D;255&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;f62da8af60a63826&amp;ts&#x3D;350&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
+                        <pre>AssertionError: Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 28 Sep 2025 05:10:58 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;25&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;aUtdPaXqpGORmD7fo529OiVSl1k%2BcLSJW5VBch0DAHkbseMh7WAr09ZLw00M1xXZN9LuGUWDpNvFCPD8sKDsrFGeMtv%2BE7yaKv5QPJwj1myUlGuy%2F%2BkUCHaL4TZ3BkzBZfAPNtO%2BGm1Ec00s3c49&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;9860bcc6afd9a9c6-ORD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;14974&amp;min_rtt&#x3D;14953&amp;rtt_var&#x3D;3189&amp;sent&#x3D;9&amp;recv&#x3D;8&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;5694&amp;recv_bytes&#x3D;1914&amp;delivery_rate&#x3D;377927&amp;cwnd&#x3D;255&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;f62da8af60a63826&amp;ts&#x3D;350&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:9:14)
                         at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:55:9)
@@ -599,17 +579,9 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Expected an HTTP error response code.: expected undefined to exist</summary>
-                        <pre>AssertionError: Expected an HTTP error response code.: expected undefined to exist
-                        at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)
-                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:11:10)
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:65:9)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
-                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -657,17 +629,11 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Request failed with status code 443</summary>
-                        <pre>HTTPError: Request failed with status code 443
-                        at fn (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async _handleResponse (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)
-                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:49:14)
-                        at async _requestAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:97:41)
-                        at async _getNewAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:81:9)
-                        at async constructOAuthHeader (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:27:25)
-                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:46:29)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:64:33)</pre>
+                        <summary>Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]</summary>
+                        <pre>AssertionError: Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]
+                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:14:26)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:65:9)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
                       </details>
                     </div>
                   </td>
@@ -676,9 +642,16 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Expected status code 400 or 422.: expected 503 to be one of [ 400, 422 ]</summary>
+                        <pre>AssertionError: Expected status code 400 or 422.: expected 503 to be one of [ 400, 422 ]
+                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:14:26)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:65:9)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -695,8 +668,8 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 21 Sep 2025 05:10:59 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;11&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;iovEHX7giXBjul2%2F8FwTuUPalFNZcv0%2B4tJ7CcOr5nuqOzpHEFOfTs%2FbMnr13ms8JWQ9SQ9TxLbpLfy6gqRs%2FI2UJ1oSy%2BZWHrx1F1uhef%2BTEIyz2TYrYMEMepkyMpQ%2F0qHG3I77208uG%2BHgyZFA&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;98270f2f7ce7826e-IAD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;5548&amp;min_rtt&#x3D;5107&amp;rtt_var&#x3D;1090&amp;sent&#x3D;14&amp;recv&#x3D;11&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;8442&amp;recv_bytes&#x3D;2571&amp;delivery_rate&#x3D;859335&amp;cwnd&#x3D;257&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;15e16d0347431d3b&amp;ts&#x3D;347&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
-                        <pre>AssertionError: Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 21 Sep 2025 05:10:59 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;11&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;iovEHX7giXBjul2%2F8FwTuUPalFNZcv0%2B4tJ7CcOr5nuqOzpHEFOfTs%2FbMnr13ms8JWQ9SQ9TxLbpLfy6gqRs%2FI2UJ1oSy%2BZWHrx1F1uhef%2BTEIyz2TYrYMEMepkyMpQ%2F0qHG3I77208uG%2BHgyZFA&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;98270f2f7ce7826e-IAD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;5548&amp;min_rtt&#x3D;5107&amp;rtt_var&#x3D;1090&amp;sent&#x3D;14&amp;recv&#x3D;11&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;8442&amp;recv_bytes&#x3D;2571&amp;delivery_rate&#x3D;859335&amp;cwnd&#x3D;257&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;15e16d0347431d3b&amp;ts&#x3D;347&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        <summary>Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 28 Sep 2025 05:10:58 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;13&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;B6tH4TLlCZsc9oo1S1JzHdJcea3sHNEnmySVv9W4HMWshoE%2F7oP%2B9xL%2BSWGYpoLacHRzkibTJMJ1Scwwx0tMQpd2KEjra3NPmBGK8RMCiOQkl3mgnlQh9dIyOF%2FSdUaGYcR3TctLgQScIUqWoNyh&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;9860bcc728e4a9c6-ORD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;15270&amp;min_rtt&#x3D;14913&amp;rtt_var&#x3D;2369&amp;sent&#x3D;13&amp;recv&#x3D;10&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;8449&amp;recv_bytes&#x3D;2571&amp;delivery_rate&#x3D;377927&amp;cwnd&#x3D;257&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;f62da8af60a63826&amp;ts&#x3D;414&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
+                        <pre>AssertionError: Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 28 Sep 2025 05:10:58 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;13&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;B6tH4TLlCZsc9oo1S1JzHdJcea3sHNEnmySVv9W4HMWshoE%2F7oP%2B9xL%2BSWGYpoLacHRzkibTJMJ1Scwwx0tMQpd2KEjra3NPmBGK8RMCiOQkl3mgnlQh9dIyOF%2FSdUaGYcR3TctLgQScIUqWoNyh&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;9860bcc728e4a9c6-ORD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;15270&amp;min_rtt&#x3D;14913&amp;rtt_var&#x3D;2369&amp;sent&#x3D;13&amp;recv&#x3D;10&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;8449&amp;recv_bytes&#x3D;2571&amp;delivery_rate&#x3D;377927&amp;cwnd&#x3D;257&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;f62da8af60a63826&amp;ts&#x3D;414&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:9:14)
                         at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:65:9)
@@ -738,17 +711,9 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Expected an HTTP error response code.: expected undefined to exist</summary>
-                        <pre>AssertionError: Expected an HTTP error response code.: expected undefined to exist
-                        at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)
-                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:11:10)
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:75:9)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
-                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -796,17 +761,11 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Request failed with status code 443</summary>
-                        <pre>HTTPError: Request failed with status code 443
-                        at fn (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async _handleResponse (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)
-                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:49:14)
-                        at async _requestAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:97:41)
-                        at async _getNewAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:81:9)
-                        at async constructOAuthHeader (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:27:25)
-                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:46:29)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:74:33)</pre>
+                        <summary>Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]</summary>
+                        <pre>AssertionError: Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]
+                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:14:26)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:75:9)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
                       </details>
                     </div>
                   </td>
@@ -815,9 +774,16 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Expected status code 400 or 422.: expected 503 to be one of [ 400, 422 ]</summary>
+                        <pre>AssertionError: Expected status code 400 or 422.: expected 503 to be one of [ 400, 422 ]
+                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:14:26)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:75:9)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -834,8 +800,8 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 21 Sep 2025 05:10:59 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;10&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;m1tPLzj7UoTkCJ7B9XPC%2BcwSajHz83R%2Fi3xSQDNfOnu9XoMPaPUDgURy4M%2F60E3rCc807UxHnJPJFldol09ZzpGHP0zeM6E4iFBD1wqh3egZ1mg4pW49Em%2FPpiK0z9mKyryRjdRh7JVdAOxh48vw&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;98270f2fcd12826e-IAD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;5618&amp;min_rtt&#x3D;5090&amp;rtt_var&#x3D;824&amp;sent&#x3D;18&amp;recv&#x3D;14&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;11230&amp;recv_bytes&#x3D;3241&amp;delivery_rate&#x3D;869009&amp;cwnd&#x3D;257&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;15e16d0347431d3b&amp;ts&#x3D;385&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
-                        <pre>AssertionError: Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 21 Sep 2025 05:10:59 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;10&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;m1tPLzj7UoTkCJ7B9XPC%2BcwSajHz83R%2Fi3xSQDNfOnu9XoMPaPUDgURy4M%2F60E3rCc807UxHnJPJFldol09ZzpGHP0zeM6E4iFBD1wqh3egZ1mg4pW49Em%2FPpiK0z9mKyryRjdRh7JVdAOxh48vw&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;98270f2fcd12826e-IAD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;5618&amp;min_rtt&#x3D;5090&amp;rtt_var&#x3D;824&amp;sent&#x3D;18&amp;recv&#x3D;14&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;11230&amp;recv_bytes&#x3D;3241&amp;delivery_rate&#x3D;869009&amp;cwnd&#x3D;257&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;15e16d0347431d3b&amp;ts&#x3D;385&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        <summary>Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 28 Sep 2025 05:10:58 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;12&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;cUYsodmcNftVPo8HvU3qIOr%2B6ljLxqYbVSF%2BKZC3du8rvnNUP3Y4Hrsar0aD5ItvfPvx9X5ZVy2VD%2BFwGZTQpMDgeFR5zjHrrPAvDWQVG3sGh8CLV6nQBYJITFklE62NqHG0E3fGgS1%2F4K%2FpOwsP&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;9860bcc78989a9c6-ORD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;15247&amp;min_rtt&#x3D;14894&amp;rtt_var&#x3D;1823&amp;sent&#x3D;16&amp;recv&#x3D;12&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;11211&amp;recv_bytes&#x3D;3241&amp;delivery_rate&#x3D;377927&amp;cwnd&#x3D;257&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;f62da8af60a63826&amp;ts&#x3D;480&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
+                        <pre>AssertionError: Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 28 Sep 2025 05:10:58 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;12&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;cUYsodmcNftVPo8HvU3qIOr%2B6ljLxqYbVSF%2BKZC3du8rvnNUP3Y4Hrsar0aD5ItvfPvx9X5ZVy2VD%2BFwGZTQpMDgeFR5zjHrrPAvDWQVG3sGh8CLV6nQBYJITFklE62NqHG0E3fGgS1%2F4K%2FpOwsP&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;9860bcc78989a9c6-ORD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;15247&amp;min_rtt&#x3D;14894&amp;rtt_var&#x3D;1823&amp;sent&#x3D;16&amp;recv&#x3D;12&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;11211&amp;recv_bytes&#x3D;3241&amp;delivery_rate&#x3D;377927&amp;cwnd&#x3D;257&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;f62da8af60a63826&amp;ts&#x3D;480&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:9:14)
                         at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:75:9)
@@ -877,17 +843,9 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Expected an HTTP error response code.: expected undefined to exist</summary>
-                        <pre>AssertionError: Expected an HTTP error response code.: expected undefined to exist
-                        at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)
-                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:11:10)
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:87:11)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
-                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -935,17 +893,11 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Request failed with status code 443</summary>
-                        <pre>HTTPError: Request failed with status code 443
-                        at fn (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async _handleResponse (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)
-                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:49:14)
-                        at async _requestAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:97:41)
-                        at async _getNewAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:81:9)
-                        at async constructOAuthHeader (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:27:25)
-                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:46:29)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:86:35)</pre>
+                        <summary>Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]</summary>
+                        <pre>AssertionError: Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]
+                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:14:26)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:87:11)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
                       </details>
                     </div>
                   </td>
@@ -954,9 +906,16 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Expected status code 400 or 422.: expected 503 to be one of [ 400, 422 ]</summary>
+                        <pre>AssertionError: Expected status code 400 or 422.: expected 503 to be one of [ 400, 422 ]
+                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:14:26)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:87:11)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -973,8 +932,8 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 21 Sep 2025 05:10:59 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;10&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;J4NGEF7U1gthZGSpeMwkOW%2FDmUbYeHZ%2BDF6KG7pzesNoT98YErUQ7Ziohi5uDKN1gT%2FYFYtIqoMxLOzYyx74r4XJ5p76GcLnNYpKYv7blqRe2uBlfkpp5RtBDihwQt26u%2Fxi3v%2BVlzvgETFj03TO&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;98270f2ffd38826e-IAD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;5722&amp;min_rtt&#x3D;5090&amp;rtt_var&#x3D;826&amp;sent&#x3D;22&amp;recv&#x3D;16&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;13983&amp;recv_bytes&#x3D;3922&amp;delivery_rate&#x3D;885444&amp;cwnd&#x3D;257&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;15e16d0347431d3b&amp;ts&#x3D;420&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
-                        <pre>AssertionError: Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 21 Sep 2025 05:10:59 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;10&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;J4NGEF7U1gthZGSpeMwkOW%2FDmUbYeHZ%2BDF6KG7pzesNoT98YErUQ7Ziohi5uDKN1gT%2FYFYtIqoMxLOzYyx74r4XJ5p76GcLnNYpKYv7blqRe2uBlfkpp5RtBDihwQt26u%2Fxi3v%2BVlzvgETFj03TO&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;98270f2ffd38826e-IAD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;5722&amp;min_rtt&#x3D;5090&amp;rtt_var&#x3D;826&amp;sent&#x3D;22&amp;recv&#x3D;16&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;13983&amp;recv_bytes&#x3D;3922&amp;delivery_rate&#x3D;885444&amp;cwnd&#x3D;257&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;15e16d0347431d3b&amp;ts&#x3D;420&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        <summary>Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 28 Sep 2025 05:10:58 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;15&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;ra8gH3bM4If5wlcSjfrDU4LsOA6%2FvlcE1iAuouWHDRLpg1I98qBUohMnYN4%2FjMEFF%2Fn4rUIE76ev63MTEgQV2pE12rFRjCy%2BG28PJMuks%2B7quuVGpEBc9nuMAnFsMGpgj6XoUro27gAdS67k0hO0&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;9860bcc7fa48a9c6-ORD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;15328&amp;min_rtt&#x3D;14894&amp;rtt_var&#x3D;1237&amp;sent&#x3D;21&amp;recv&#x3D;15&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;13976&amp;recv_bytes&#x3D;3922&amp;delivery_rate&#x3D;377927&amp;cwnd&#x3D;257&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;f62da8af60a63826&amp;ts&#x3D;545&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
+                        <pre>AssertionError: Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 28 Sep 2025 05:10:58 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;15&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;ra8gH3bM4If5wlcSjfrDU4LsOA6%2FvlcE1iAuouWHDRLpg1I98qBUohMnYN4%2FjMEFF%2Fn4rUIE76ev63MTEgQV2pE12rFRjCy%2BG28PJMuks%2B7quuVGpEBc9nuMAnFsMGpgj6XoUro27gAdS67k0hO0&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;9860bcc7fa48a9c6-ORD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;15328&amp;min_rtt&#x3D;14894&amp;rtt_var&#x3D;1237&amp;sent&#x3D;21&amp;recv&#x3D;15&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;13976&amp;recv_bytes&#x3D;3922&amp;delivery_rate&#x3D;377927&amp;cwnd&#x3D;257&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;f62da8af60a63826&amp;ts&#x3D;545&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:9:14)
                         at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:87:11)
@@ -1016,17 +975,9 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Expected an HTTP error response code.: expected undefined to exist</summary>
-                        <pre>AssertionError: Expected an HTTP error response code.: expected undefined to exist
-                        at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)
-                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:11:10)
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:98:9)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
-                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1074,17 +1025,11 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Request failed with status code 443</summary>
-                        <pre>HTTPError: Request failed with status code 443
-                        at fn (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async _handleResponse (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)
-                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:49:14)
-                        at async _requestAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:97:41)
-                        at async _getNewAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:81:9)
-                        at async constructOAuthHeader (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:27:25)
-                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:46:29)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:97:33)</pre>
+                        <summary>Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]</summary>
+                        <pre>AssertionError: Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]
+                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:14:26)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:98:9)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
                       </details>
                     </div>
                   </td>
@@ -1093,9 +1038,16 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Expected status code 400 or 422.: expected 503 to be one of [ 400, 422 ]</summary>
+                        <pre>AssertionError: Expected status code 400 or 422.: expected 503 to be one of [ 400, 422 ]
+                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:14:26)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:98:9)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1112,8 +1064,8 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 21 Sep 2025 05:10:59 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;9&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;2vzMwcUeBBc%2FvZ0iPQtJLxFV%2FkdEHWT5dPFcTsQBrW8FfowyqouRhBNGWsB3ikHvm6ZMO%2BY9cYITacrPXZmVuAYWF2Cge%2BsI9WMhBnUd6WBtKxXGiSW%2FFh6iWLvBx7zkfwA5amC3qzQgidVboMGx&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;98270f303d53826e-IAD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;5797&amp;min_rtt&#x3D;5090&amp;rtt_var&#x3D;769&amp;sent&#x3D;27&amp;recv&#x3D;18&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;16765&amp;recv_bytes&#x3D;4601&amp;delivery_rate&#x3D;1129389&amp;cwnd&#x3D;257&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;15e16d0347431d3b&amp;ts&#x3D;457&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
-                        <pre>AssertionError: Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 21 Sep 2025 05:10:59 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;9&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;2vzMwcUeBBc%2FvZ0iPQtJLxFV%2FkdEHWT5dPFcTsQBrW8FfowyqouRhBNGWsB3ikHvm6ZMO%2BY9cYITacrPXZmVuAYWF2Cge%2BsI9WMhBnUd6WBtKxXGiSW%2FFh6iWLvBx7zkfwA5amC3qzQgidVboMGx&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;98270f303d53826e-IAD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;5797&amp;min_rtt&#x3D;5090&amp;rtt_var&#x3D;769&amp;sent&#x3D;27&amp;recv&#x3D;18&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;16765&amp;recv_bytes&#x3D;4601&amp;delivery_rate&#x3D;1129389&amp;cwnd&#x3D;257&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;15e16d0347431d3b&amp;ts&#x3D;457&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        <summary>Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 28 Sep 2025 05:10:58 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;12&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;PFVqjIUy7ZT%2FJLn%2BoBZNZRcnVhQAdhHeiCpZVPxkzxnpIRgIhxBpsHi96sPUNTcwVSO9%2FMkchsaEM6ITEEII2BAehq%2FTZfI2eKOFt0kqfOzwrwQcbVAo550cPz%2BABQNcJczVdb3ViMKPJRT%2FLrvP&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;9860bcc86af2a9c6-ORD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;15450&amp;min_rtt&#x3D;14894&amp;rtt_var&#x3D;1172&amp;sent&#x3D;27&amp;recv&#x3D;17&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;16761&amp;recv_bytes&#x3D;4601&amp;delivery_rate&#x3D;437875&amp;cwnd&#x3D;257&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;f62da8af60a63826&amp;ts&#x3D;609&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
+                        <pre>AssertionError: Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 28 Sep 2025 05:10:58 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;12&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;PFVqjIUy7ZT%2FJLn%2BoBZNZRcnVhQAdhHeiCpZVPxkzxnpIRgIhxBpsHi96sPUNTcwVSO9%2FMkchsaEM6ITEEII2BAehq%2FTZfI2eKOFt0kqfOzwrwQcbVAo550cPz%2BABQNcJczVdb3ViMKPJRT%2FLrvP&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;9860bcc86af2a9c6-ORD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;15450&amp;min_rtt&#x3D;14894&amp;rtt_var&#x3D;1172&amp;sent&#x3D;27&amp;recv&#x3D;17&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;16761&amp;recv_bytes&#x3D;4601&amp;delivery_rate&#x3D;437875&amp;cwnd&#x3D;257&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;f62da8af60a63826&amp;ts&#x3D;609&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:9:14)
                         at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:98:9)
@@ -1155,17 +1107,9 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Expected an HTTP error response code.: expected undefined to exist</summary>
-                        <pre>AssertionError: Expected an HTTP error response code.: expected undefined to exist
-                        at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)
-                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:11:10)
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:108:9)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
-                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1213,17 +1157,11 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Request failed with status code 443</summary>
-                        <pre>HTTPError: Request failed with status code 443
-                        at fn (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async _handleResponse (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)
-                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:49:14)
-                        at async _requestAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:97:41)
-                        at async _getNewAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:81:9)
-                        at async constructOAuthHeader (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:27:25)
-                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:46:29)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:107:33)</pre>
+                        <summary>Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]</summary>
+                        <pre>AssertionError: Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]
+                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:14:26)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:108:9)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
                       </details>
                     </div>
                   </td>
@@ -1232,9 +1170,16 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Expected status code 400 or 422.: expected 503 to be one of [ 400, 422 ]</summary>
+                        <pre>AssertionError: Expected status code 400 or 422.: expected 503 to be one of [ 400, 422 ]
+                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:14:26)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:108:9)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1251,8 +1196,8 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 21 Sep 2025 05:10:59 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;10&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;KQ%2BRuHFKEAsqhzCwuS1xlGyKmDxJ8ZWmgUOZqrUyRs2AM%2FavFk%2BLRFNNETm0o5lVl4g6lp9ex5ZDNScarJGJ9ETkLzkjimQtglyc%2FHZGHSQv5KD5FZX%2FAoXnANdOovUj%2B4PbzSehNNjS8fxhkXCY&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;98270f306d7e826e-IAD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;5887&amp;min_rtt&#x3D;5090&amp;rtt_var&#x3D;756&amp;sent&#x3D;31&amp;recv&#x3D;20&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;19520&amp;recv_bytes&#x3D;5289&amp;delivery_rate&#x3D;1129389&amp;cwnd&#x3D;257&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;15e16d0347431d3b&amp;ts&#x3D;497&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
-                        <pre>AssertionError: Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 21 Sep 2025 05:10:59 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;10&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;KQ%2BRuHFKEAsqhzCwuS1xlGyKmDxJ8ZWmgUOZqrUyRs2AM%2FavFk%2BLRFNNETm0o5lVl4g6lp9ex5ZDNScarJGJ9ETkLzkjimQtglyc%2FHZGHSQv5KD5FZX%2FAoXnANdOovUj%2B4PbzSehNNjS8fxhkXCY&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;98270f306d7e826e-IAD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;5887&amp;min_rtt&#x3D;5090&amp;rtt_var&#x3D;756&amp;sent&#x3D;31&amp;recv&#x3D;20&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;19520&amp;recv_bytes&#x3D;5289&amp;delivery_rate&#x3D;1129389&amp;cwnd&#x3D;257&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;15e16d0347431d3b&amp;ts&#x3D;497&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        <summary>Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 28 Sep 2025 05:10:58 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;12&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;7ShHKPUb9XUZ85tJUqsDoavLCLlLnkaYufRDYkb4SJKhsdMggBnIkA%2FI20XCQEserL%2FUzrQuGluWULti9EWuhCCPC4Il3%2B3isON4V%2FHzLtkUeyw5%2BglemlZJ%2FTnKBoT%2BZcV9Fv0oyMYYgQ%2FC0ITd&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;9860bcc8cbc3a9c6-ORD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;15679&amp;min_rtt&#x3D;14894&amp;rtt_var&#x3D;1322&amp;sent&#x3D;31&amp;recv&#x3D;19&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;19521&amp;recv_bytes&#x3D;5289&amp;delivery_rate&#x3D;437875&amp;cwnd&#x3D;257&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;f62da8af60a63826&amp;ts&#x3D;672&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
+                        <pre>AssertionError: Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 28 Sep 2025 05:10:58 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;12&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;7ShHKPUb9XUZ85tJUqsDoavLCLlLnkaYufRDYkb4SJKhsdMggBnIkA%2FI20XCQEserL%2FUzrQuGluWULti9EWuhCCPC4Il3%2B3isON4V%2FHzLtkUeyw5%2BglemlZJ%2FTnKBoT%2BZcV9Fv0oyMYYgQ%2FC0ITd&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;9860bcc8cbc3a9c6-ORD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;15679&amp;min_rtt&#x3D;14894&amp;rtt_var&#x3D;1322&amp;sent&#x3D;31&amp;recv&#x3D;19&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;19521&amp;recv_bytes&#x3D;5289&amp;delivery_rate&#x3D;437875&amp;cwnd&#x3D;257&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;f62da8af60a63826&amp;ts&#x3D;672&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:9:14)
                         at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:108:9)
@@ -1294,17 +1239,9 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Expected an HTTP error response code.: expected undefined to exist</summary>
-                        <pre>AssertionError: Expected an HTTP error response code.: expected undefined to exist
-                        at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)
-                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:11:10)
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:120:11)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
-                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1352,17 +1289,11 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Request failed with status code 443</summary>
-                        <pre>HTTPError: Request failed with status code 443
-                        at fn (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async _handleResponse (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)
-                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:49:14)
-                        at async _requestAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:97:41)
-                        at async _getNewAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:81:9)
-                        at async constructOAuthHeader (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:27:25)
-                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:46:29)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:119:35)</pre>
+                        <summary>Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]</summary>
+                        <pre>AssertionError: Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]
+                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:14:26)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:120:11)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
                       </details>
                     </div>
                   </td>
@@ -1371,9 +1302,16 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Expected status code 400 or 422.: expected 503 to be one of [ 400, 422 ]</summary>
+                        <pre>AssertionError: Expected status code 400 or 422.: expected 503 to be one of [ 400, 422 ]
+                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:14:26)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:120:11)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1390,8 +1328,8 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 21 Sep 2025 05:10:59 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;14&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;EfCCGdGd%2BrUrcHailcgjPNWrA06FGN8UpvIV8qpEztmVzPnbW8UG1XSRtfRWh1%2BD8L%2BG62P9i%2FpLFxwB1WtB7e5j2JkC3YCLusN1Hd2dakwaY1U%2FaSWTfsEkw9Z66wbTXeX1VsXrMvEc4X23mNvN&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;98270f30adb3826e-IAD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;6026&amp;min_rtt&#x3D;5090&amp;rtt_var&#x3D;1016&amp;sent&#x3D;34&amp;recv&#x3D;22&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;22278&amp;recv_bytes&#x3D;5980&amp;delivery_rate&#x3D;1129389&amp;cwnd&#x3D;257&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;15e16d0347431d3b&amp;ts&#x3D;540&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
-                        <pre>AssertionError: Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 21 Sep 2025 05:10:59 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;14&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;EfCCGdGd%2BrUrcHailcgjPNWrA06FGN8UpvIV8qpEztmVzPnbW8UG1XSRtfRWh1%2BD8L%2BG62P9i%2FpLFxwB1WtB7e5j2JkC3YCLusN1Hd2dakwaY1U%2FaSWTfsEkw9Z66wbTXeX1VsXrMvEc4X23mNvN&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;98270f30adb3826e-IAD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;6026&amp;min_rtt&#x3D;5090&amp;rtt_var&#x3D;1016&amp;sent&#x3D;34&amp;recv&#x3D;22&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;22278&amp;recv_bytes&#x3D;5980&amp;delivery_rate&#x3D;1129389&amp;cwnd&#x3D;257&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;15e16d0347431d3b&amp;ts&#x3D;540&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        <summary>Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 28 Sep 2025 05:10:58 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;10&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;IC8C%2BQRSoBmI2OGta%2FdXMvfi2Jx6z0DJc9%2B%2Fok0TzjiOkmv3cL%2FzVYfJN57zezUk7M53FX61JyoCaVfCTBhwNX35vvyAB26zHtfbWZ08i%2Bcha%2BuNSQQWXWTOTD3EXtfkxwRbFPrS3aja8cCAeFwf&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;9860bcc92c82a9c6-ORD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;15732&amp;min_rtt&#x3D;14894&amp;rtt_var&#x3D;1097&amp;sent&#x3D;36&amp;recv&#x3D;21&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;22285&amp;recv_bytes&#x3D;5980&amp;delivery_rate&#x3D;437875&amp;cwnd&#x3D;257&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;f62da8af60a63826&amp;ts&#x3D;736&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
+                        <pre>AssertionError: Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 28 Sep 2025 05:10:58 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;10&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;IC8C%2BQRSoBmI2OGta%2FdXMvfi2Jx6z0DJc9%2B%2Fok0TzjiOkmv3cL%2FzVYfJN57zezUk7M53FX61JyoCaVfCTBhwNX35vvyAB26zHtfbWZ08i%2Bcha%2BuNSQQWXWTOTD3EXtfkxwRbFPrS3aja8cCAeFwf&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;9860bcc92c82a9c6-ORD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;15732&amp;min_rtt&#x3D;14894&amp;rtt_var&#x3D;1097&amp;sent&#x3D;36&amp;recv&#x3D;21&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;22285&amp;recv_bytes&#x3D;5980&amp;delivery_rate&#x3D;437875&amp;cwnd&#x3D;257&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;f62da8af60a63826&amp;ts&#x3D;736&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:9:14)
                         at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:120:11)
@@ -1432,8 +1370,8 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected no result from issuer.: expected Response { status: 201, statusText: &#x27;Created&#x27;, headers: Headers { &#x27;cache-control&#x27;: &#x27;no-cache, no-store, must-revalidate&#x27;, pragma: &#x27;no-cache&#x27;, expires: &#x27;0&#x27;, vary: &#x27;X-HTTP-Method-Override, Accept-Encoding&#x27;, &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, etag: &#x27;W/&quot;2ec-k814loeZXpzDBjvMsI7YLWl2bqQ&quot;&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;b9e5151534a8865d471bd4f839aa463a&#x27;, date: &#x27;Sun, 21 Sep 2025 05:10:12 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;content-length&#x27;: &#x27;748&#x27;, via: &#x27;1.1 google&#x27;, &#x27;alt-svc&#x27;: &#x27;h3&#x3D;&quot;:443&quot;; ma&#x3D;2592000,h3-29&#x3D;&quot;:443&quot;; ma&#x3D;2592000&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
-                        <pre>AssertionError: Expected no result from issuer.: expected Response { status: 201, statusText: &#x27;Created&#x27;, headers: Headers { &#x27;cache-control&#x27;: &#x27;no-cache, no-store, must-revalidate&#x27;, pragma: &#x27;no-cache&#x27;, expires: &#x27;0&#x27;, vary: &#x27;X-HTTP-Method-Override, Accept-Encoding&#x27;, &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, etag: &#x27;W/&quot;2ec-k814loeZXpzDBjvMsI7YLWl2bqQ&quot;&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;b9e5151534a8865d471bd4f839aa463a&#x27;, date: &#x27;Sun, 21 Sep 2025 05:10:12 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;content-length&#x27;: &#x27;748&#x27;, via: &#x27;1.1 google&#x27;, &#x27;alt-svc&#x27;: &#x27;h3&#x3D;&quot;:443&quot;; ma&#x3D;2592000,h3-29&#x3D;&quot;:443&quot;; ma&#x3D;2592000&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        <summary>Expected no result from issuer.: expected Response { status: 201, statusText: &#x27;Created&#x27;, headers: Headers { &#x27;cache-control&#x27;: &#x27;no-cache, no-store, must-revalidate&#x27;, pragma: &#x27;no-cache&#x27;, expires: &#x27;0&#x27;, vary: &#x27;X-HTTP-Method-Override, Accept-Encoding&#x27;, &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, etag: &#x27;W/&quot;2ec-kW/87Yjv4GEu4PYfJRwOZaRKt6E&quot;&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;ab075bcf95fee86743b51ecff5564c75&#x27;, date: &#x27;Sun, 28 Sep 2025 05:10:12 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;content-length&#x27;: &#x27;748&#x27;, via: &#x27;1.1 google&#x27;, &#x27;alt-svc&#x27;: &#x27;h3&#x3D;&quot;:443&quot;; ma&#x3D;2592000,h3-29&#x3D;&quot;:443&quot;; ma&#x3D;2592000&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
+                        <pre>AssertionError: Expected no result from issuer.: expected Response { status: 201, statusText: &#x27;Created&#x27;, headers: Headers { &#x27;cache-control&#x27;: &#x27;no-cache, no-store, must-revalidate&#x27;, pragma: &#x27;no-cache&#x27;, expires: &#x27;0&#x27;, vary: &#x27;X-HTTP-Method-Override, Accept-Encoding&#x27;, &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, etag: &#x27;W/&quot;2ec-kW/87Yjv4GEu4PYfJRwOZaRKt6E&quot;&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;ab075bcf95fee86743b51ecff5564c75&#x27;, date: &#x27;Sun, 28 Sep 2025 05:10:12 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;content-length&#x27;: &#x27;748&#x27;, via: &#x27;1.1 google&#x27;, &#x27;alt-svc&#x27;: &#x27;h3&#x3D;&quot;:443&quot;; ma&#x3D;2592000,h3-29&#x3D;&quot;:443&quot;; ma&#x3D;2592000&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:9:14)
                         at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:131:9)
@@ -1441,17 +1379,9 @@
                       </details>
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Expected an HTTP error response code.: expected undefined to exist</summary>
-                        <pre>AssertionError: Expected an HTTP error response code.: expected undefined to exist
-                        at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)
-                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:11:10)
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:131:9)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
-                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1499,17 +1429,11 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Request failed with status code 443</summary>
-                        <pre>HTTPError: Request failed with status code 443
-                        at fn (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async _handleResponse (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)
-                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:49:14)
-                        at async _requestAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:97:41)
-                        at async _getNewAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:81:9)
-                        at async constructOAuthHeader (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:27:25)
-                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:46:29)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:130:33)</pre>
+                        <summary>Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]</summary>
+                        <pre>AssertionError: Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]
+                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:14:26)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:131:9)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
                       </details>
                     </div>
                   </td>
@@ -1518,9 +1442,16 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Expected status code 400 or 422.: expected 503 to be one of [ 400, 422 ]</summary>
+                        <pre>AssertionError: Expected status code 400 or 422.: expected 503 to be one of [ 400, 422 ]
+                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:14:26)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:131:9)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1537,8 +1468,8 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 21 Sep 2025 05:11:00 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;10&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;HzyFdmmkhW20GEexxwUooH3rzZHqy%2B2EZ35e7IboirPGc5H1Kzwg283VChqarStiUQkamex3RnpyhXQ6mPxr5h9jVKtR1uMOO0AQ33aw0mzCXJsjSv%2FXm%2F4JSaNcTX%2F%2BVhee%2F2O5A7oVL2mRCYI7&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;98270f30fdce826e-IAD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;6025&amp;min_rtt&#x3D;5090&amp;rtt_var&#x3D;765&amp;sent&#x3D;38&amp;recv&#x3D;24&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;25035&amp;recv_bytes&#x3D;6623&amp;delivery_rate&#x3D;1129389&amp;cwnd&#x3D;257&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;15e16d0347431d3b&amp;ts&#x3D;576&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
-                        <pre>AssertionError: Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 21 Sep 2025 05:11:00 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;10&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;HzyFdmmkhW20GEexxwUooH3rzZHqy%2B2EZ35e7IboirPGc5H1Kzwg283VChqarStiUQkamex3RnpyhXQ6mPxr5h9jVKtR1uMOO0AQ33aw0mzCXJsjSv%2FXm%2F4JSaNcTX%2F%2BVhee%2F2O5A7oVL2mRCYI7&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;98270f30fdce826e-IAD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;6025&amp;min_rtt&#x3D;5090&amp;rtt_var&#x3D;765&amp;sent&#x3D;38&amp;recv&#x3D;24&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;25035&amp;recv_bytes&#x3D;6623&amp;delivery_rate&#x3D;1129389&amp;cwnd&#x3D;257&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;15e16d0347431d3b&amp;ts&#x3D;576&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        <summary>Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 28 Sep 2025 05:10:58 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;11&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;Joofuapnz33SRCbeyTU%2FaXoJVIYuPqyBk%2Fdid6PvGHE9gZSzvwe3yQ9BFDn95GQ94xs3Vom3lrJ4uhml7V1ZjVq5B3ae2peG62%2BdkFIz4x7ZXnD%2ByQUg82Tn1%2FpcAaG4NUgW7OSyjELJBteMfOds&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;9860bcc99d5ba9c6-ORD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;15845&amp;min_rtt&#x3D;14894&amp;rtt_var&#x3D;1164&amp;sent&#x3D;40&amp;recv&#x3D;23&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;25047&amp;recv_bytes&#x3D;6623&amp;delivery_rate&#x3D;437875&amp;cwnd&#x3D;257&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;f62da8af60a63826&amp;ts&#x3D;809&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
+                        <pre>AssertionError: Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 28 Sep 2025 05:10:58 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;11&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;Joofuapnz33SRCbeyTU%2FaXoJVIYuPqyBk%2Fdid6PvGHE9gZSzvwe3yQ9BFDn95GQ94xs3Vom3lrJ4uhml7V1ZjVq5B3ae2peG62%2BdkFIz4x7ZXnD%2ByQUg82Tn1%2FpcAaG4NUgW7OSyjELJBteMfOds&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;9860bcc99d5ba9c6-ORD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;15845&amp;min_rtt&#x3D;14894&amp;rtt_var&#x3D;1164&amp;sent&#x3D;40&amp;recv&#x3D;23&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;25047&amp;recv_bytes&#x3D;6623&amp;delivery_rate&#x3D;437875&amp;cwnd&#x3D;257&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;f62da8af60a63826&amp;ts&#x3D;809&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:9:14)
                         at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:131:9)
@@ -1586,8 +1517,8 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected no result from issuer.: expected Response { status: 201, statusText: &#x27;Created&#x27;, headers: Headers { &#x27;cache-control&#x27;: &#x27;no-cache, no-store, must-revalidate&#x27;, pragma: &#x27;no-cache&#x27;, expires: &#x27;0&#x27;, vary: &#x27;X-HTTP-Method-Override, Accept-Encoding&#x27;, &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, etag: &#x27;W/&quot;2f2-5U9Nglyx4ChhwEuXYqVtO2MV8cQ&quot;&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;fb87c9771e756800471bd4f839aa47bd&#x27;, date: &#x27;Sun, 21 Sep 2025 05:10:13 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;content-length&#x27;: &#x27;754&#x27;, via: &#x27;1.1 google&#x27;, &#x27;alt-svc&#x27;: &#x27;h3&#x3D;&quot;:443&quot;; ma&#x3D;2592000,h3-29&#x3D;&quot;:443&quot;; ma&#x3D;2592000&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
-                        <pre>AssertionError: Expected no result from issuer.: expected Response { status: 201, statusText: &#x27;Created&#x27;, headers: Headers { &#x27;cache-control&#x27;: &#x27;no-cache, no-store, must-revalidate&#x27;, pragma: &#x27;no-cache&#x27;, expires: &#x27;0&#x27;, vary: &#x27;X-HTTP-Method-Override, Accept-Encoding&#x27;, &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, etag: &#x27;W/&quot;2f2-5U9Nglyx4ChhwEuXYqVtO2MV8cQ&quot;&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;fb87c9771e756800471bd4f839aa47bd&#x27;, date: &#x27;Sun, 21 Sep 2025 05:10:13 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;content-length&#x27;: &#x27;754&#x27;, via: &#x27;1.1 google&#x27;, &#x27;alt-svc&#x27;: &#x27;h3&#x3D;&quot;:443&quot;; ma&#x3D;2592000,h3-29&#x3D;&quot;:443&quot;; ma&#x3D;2592000&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        <summary>Expected no result from issuer.: expected Response { status: 201, statusText: &#x27;Created&#x27;, headers: Headers { &#x27;cache-control&#x27;: &#x27;no-cache, no-store, must-revalidate&#x27;, pragma: &#x27;no-cache&#x27;, expires: &#x27;0&#x27;, vary: &#x27;X-HTTP-Method-Override, Accept-Encoding&#x27;, &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, etag: &#x27;W/&quot;2f3-ZKgLKywDvaaqW/NwfqDPtvJC3EY&quot;&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;dc8eb1d58753c52d43b51ecff5564631&#x27;, date: &#x27;Sun, 28 Sep 2025 05:10:12 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;content-length&#x27;: &#x27;755&#x27;, via: &#x27;1.1 google&#x27;, &#x27;alt-svc&#x27;: &#x27;h3&#x3D;&quot;:443&quot;; ma&#x3D;2592000,h3-29&#x3D;&quot;:443&quot;; ma&#x3D;2592000&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
+                        <pre>AssertionError: Expected no result from issuer.: expected Response { status: 201, statusText: &#x27;Created&#x27;, headers: Headers { &#x27;cache-control&#x27;: &#x27;no-cache, no-store, must-revalidate&#x27;, pragma: &#x27;no-cache&#x27;, expires: &#x27;0&#x27;, vary: &#x27;X-HTTP-Method-Override, Accept-Encoding&#x27;, &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, etag: &#x27;W/&quot;2f3-ZKgLKywDvaaqW/NwfqDPtvJC3EY&quot;&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;dc8eb1d58753c52d43b51ecff5564631&#x27;, date: &#x27;Sun, 28 Sep 2025 05:10:12 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;content-length&#x27;: &#x27;755&#x27;, via: &#x27;1.1 google&#x27;, &#x27;alt-svc&#x27;: &#x27;h3&#x3D;&quot;:443&quot;; ma&#x3D;2592000,h3-29&#x3D;&quot;:443&quot;; ma&#x3D;2592000&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:9:14)
                         at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:143:11)
@@ -1595,17 +1526,9 @@
                       </details>
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Expected an HTTP error response code.: expected undefined to exist</summary>
-                        <pre>AssertionError: Expected an HTTP error response code.: expected undefined to exist
-                        at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)
-                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:11:10)
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:143:11)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
-                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1653,17 +1576,11 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Request failed with status code 443</summary>
-                        <pre>HTTPError: Request failed with status code 443
-                        at fn (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async _handleResponse (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)
-                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:49:14)
-                        at async _requestAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:97:41)
-                        at async _getNewAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:81:9)
-                        at async constructOAuthHeader (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:27:25)
-                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:46:29)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:142:35)</pre>
+                        <summary>Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]</summary>
+                        <pre>AssertionError: Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]
+                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:14:26)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:143:11)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
                       </details>
                     </div>
                   </td>
@@ -1672,9 +1589,16 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Expected status code 400 or 422.: expected 503 to be one of [ 400, 422 ]</summary>
+                        <pre>AssertionError: Expected status code 400 or 422.: expected 503 to be one of [ 400, 422 ]
+                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:14:26)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:143:11)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1691,8 +1615,8 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 21 Sep 2025 05:11:00 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;9&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;NQ71gLHpliYetpxHIf5WG%2Bgp4wj0myp2QdYsDeVgfvxngynsIPPE4BVeXvEbgLQfq9%2B53NNZW4aClj%2Fj4TMQRV7ODtX%2FoJD8LecJqQoRn8M3n%2BpNRwhWsvZCkw9reBtVT%2FyI7x0Fnse5D%2Fo2HHmP&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;98270f312def826e-IAD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;6122&amp;min_rtt&#x3D;5090&amp;rtt_var&#x3D;767&amp;sent&#x3D;42&amp;recv&#x3D;26&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;27820&amp;recv_bytes&#x3D;7280&amp;delivery_rate&#x3D;1129389&amp;cwnd&#x3D;257&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;15e16d0347431d3b&amp;ts&#x3D;612&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
-                        <pre>AssertionError: Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 21 Sep 2025 05:11:00 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;9&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;NQ71gLHpliYetpxHIf5WG%2Bgp4wj0myp2QdYsDeVgfvxngynsIPPE4BVeXvEbgLQfq9%2B53NNZW4aClj%2Fj4TMQRV7ODtX%2FoJD8LecJqQoRn8M3n%2BpNRwhWsvZCkw9reBtVT%2FyI7x0Fnse5D%2Fo2HHmP&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;98270f312def826e-IAD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;6122&amp;min_rtt&#x3D;5090&amp;rtt_var&#x3D;767&amp;sent&#x3D;42&amp;recv&#x3D;26&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;27820&amp;recv_bytes&#x3D;7280&amp;delivery_rate&#x3D;1129389&amp;cwnd&#x3D;257&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;15e16d0347431d3b&amp;ts&#x3D;612&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        <summary>Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 28 Sep 2025 05:10:58 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;10&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;ajIPsoVhJ1mioXXCheIcnPrDkojWmnVQavK54Ik3l%2BhfMu1wE6Mj7uuaqjf8yQc4SqtzLMXxLgJh2E3AU3tGkhhdg9tP0TYjY7uidvQDQtOdJ4iBwI3v4ZOj1SiO7FW80cX4LyyY%2FEAa966aEvnR&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;9860bcca0ea6a9c6-ORD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;16012&amp;min_rtt&#x3D;14894&amp;rtt_var&#x3D;1325&amp;sent&#x3D;44&amp;recv&#x3D;25&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;27805&amp;recv_bytes&#x3D;7280&amp;delivery_rate&#x3D;437875&amp;cwnd&#x3D;257&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;f62da8af60a63826&amp;ts&#x3D;870&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
+                        <pre>AssertionError: Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 28 Sep 2025 05:10:58 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;10&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;ajIPsoVhJ1mioXXCheIcnPrDkojWmnVQavK54Ik3l%2BhfMu1wE6Mj7uuaqjf8yQc4SqtzLMXxLgJh2E3AU3tGkhhdg9tP0TYjY7uidvQDQtOdJ4iBwI3v4ZOj1SiO7FW80cX4LyyY%2FEAa966aEvnR&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;9860bcca0ea6a9c6-ORD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;16012&amp;min_rtt&#x3D;14894&amp;rtt_var&#x3D;1325&amp;sent&#x3D;44&amp;recv&#x3D;25&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;27805&amp;recv_bytes&#x3D;7280&amp;delivery_rate&#x3D;437875&amp;cwnd&#x3D;257&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;f62da8af60a63826&amp;ts&#x3D;870&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:9:14)
                         at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:143:11)
@@ -1734,17 +1658,9 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Expected an HTTP error response code.: expected undefined to exist</summary>
-                        <pre>AssertionError: Expected an HTTP error response code.: expected undefined to exist
-                        at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)
-                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:11:10)
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:154:9)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
-                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1792,17 +1708,11 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Request failed with status code 443</summary>
-                        <pre>HTTPError: Request failed with status code 443
-                        at fn (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async _handleResponse (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)
-                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:49:14)
-                        at async _requestAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:97:41)
-                        at async _getNewAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:81:9)
-                        at async constructOAuthHeader (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:27:25)
-                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:46:29)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:153:33)</pre>
+                        <summary>Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]</summary>
+                        <pre>AssertionError: Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]
+                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:14:26)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:154:9)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
                       </details>
                     </div>
                   </td>
@@ -1811,9 +1721,16 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Expected status code 400 or 422.: expected 503 to be one of [ 400, 422 ]</summary>
+                        <pre>AssertionError: Expected status code 400 or 422.: expected 503 to be one of [ 400, 422 ]
+                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:14:26)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:154:9)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1830,8 +1747,8 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 21 Sep 2025 05:11:00 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;11&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;rrKMYKVL8gc59GXR32FOFdu8Nl7IN3%2Bpn%2FLWTO6yXTyhV0ayIpLyCi1DB9nrz%2BHMpmKrK59q6%2BtUFOIzIaot8i3q6%2B%2FvgXZzT6NnybjnsGDbQuI%2FQ2Q97AUM2BuqPt4Fr15idfx6snUIpmLzmYmO&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;98270f316e16826e-IAD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;6202&amp;min_rtt&#x3D;5090&amp;rtt_var&#x3D;735&amp;sent&#x3D;46&amp;recv&#x3D;28&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;30606&amp;recv_bytes&#x3D;7905&amp;delivery_rate&#x3D;1129389&amp;cwnd&#x3D;257&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;15e16d0347431d3b&amp;ts&#x3D;657&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
-                        <pre>AssertionError: Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 21 Sep 2025 05:11:00 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;11&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;rrKMYKVL8gc59GXR32FOFdu8Nl7IN3%2Bpn%2FLWTO6yXTyhV0ayIpLyCi1DB9nrz%2BHMpmKrK59q6%2BtUFOIzIaot8i3q6%2B%2FvgXZzT6NnybjnsGDbQuI%2FQ2Q97AUM2BuqPt4Fr15idfx6snUIpmLzmYmO&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;98270f316e16826e-IAD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;6202&amp;min_rtt&#x3D;5090&amp;rtt_var&#x3D;735&amp;sent&#x3D;46&amp;recv&#x3D;28&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;30606&amp;recv_bytes&#x3D;7905&amp;delivery_rate&#x3D;1129389&amp;cwnd&#x3D;257&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;15e16d0347431d3b&amp;ts&#x3D;657&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        <summary>Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 28 Sep 2025 05:10:58 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;10&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;LX8TyQqCNb0DLGPUN9Akw%2FhITfL%2FBi3yoy9Np%2B52WNeVdDQamPzXcLY7DLF%2B%2FAxhgTQ%2B88%2B%2B3ryl6uptUXh%2FQ5eHYNSm4DOAaO5LHUablpSeDifnqEflwH8kdP04ZX7lDoN51a6MP6IXf8sTQarT&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;9860bcca6f8ca9c6-ORD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;16028&amp;min_rtt&#x3D;14894&amp;rtt_var&#x3D;1027&amp;sent&#x3D;48&amp;recv&#x3D;27&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;30557&amp;recv_bytes&#x3D;7905&amp;delivery_rate&#x3D;437875&amp;cwnd&#x3D;257&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;f62da8af60a63826&amp;ts&#x3D;932&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
+                        <pre>AssertionError: Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 28 Sep 2025 05:10:58 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;10&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;LX8TyQqCNb0DLGPUN9Akw%2FhITfL%2FBi3yoy9Np%2B52WNeVdDQamPzXcLY7DLF%2B%2FAxhgTQ%2B88%2B%2B3ryl6uptUXh%2FQ5eHYNSm4DOAaO5LHUablpSeDifnqEflwH8kdP04ZX7lDoN51a6MP6IXf8sTQarT&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;9860bcca6f8ca9c6-ORD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;16028&amp;min_rtt&#x3D;14894&amp;rtt_var&#x3D;1027&amp;sent&#x3D;48&amp;recv&#x3D;27&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;30557&amp;recv_bytes&#x3D;7905&amp;delivery_rate&#x3D;437875&amp;cwnd&#x3D;257&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;f62da8af60a63826&amp;ts&#x3D;932&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:9:14)
                         at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:154:9)
@@ -1873,17 +1790,9 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Expected an HTTP error response code.: expected undefined to exist</summary>
-                        <pre>AssertionError: Expected an HTTP error response code.: expected undefined to exist
-                        at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)
-                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:11:10)
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:168:11)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
-                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1931,17 +1840,11 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Request failed with status code 443</summary>
-                        <pre>HTTPError: Request failed with status code 443
-                        at fn (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async _handleResponse (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)
-                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:49:14)
-                        at async _requestAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:97:41)
-                        at async _getNewAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:81:9)
-                        at async constructOAuthHeader (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:27:25)
-                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:46:29)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:167:35)</pre>
+                        <summary>Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]</summary>
+                        <pre>AssertionError: Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]
+                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:14:26)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:168:11)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
                       </details>
                     </div>
                   </td>
@@ -1950,9 +1853,16 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Expected status code 400 or 422.: expected 503 to be one of [ 400, 422 ]</summary>
+                        <pre>AssertionError: Expected status code 400 or 422.: expected 503 to be one of [ 400, 422 ]
+                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:14:26)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:168:11)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1969,8 +1879,8 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 21 Sep 2025 05:11:00 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;10&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;adDgip5RqyUOZwkoEiE6Ehr%2F%2FAEjOgnX5uMq7aC%2Fj1YGttzgDh%2Fr8IJ14KQtE6lNKSPy66di2s%2FiN6klt%2BVdpJBsakwbOQ7KSerCvGz5rk5E5uJ12cP2uw7naeVrHj1wlZ5wx%2BaIyQInZlK6rwOe&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;98270f31be4a826e-IAD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;6263&amp;min_rtt&#x3D;5090&amp;rtt_var&#x3D;673&amp;sent&#x3D;50&amp;recv&#x3D;30&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;33344&amp;recv_bytes&#x3D;8555&amp;delivery_rate&#x3D;1129389&amp;cwnd&#x3D;257&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;15e16d0347431d3b&amp;ts&#x3D;700&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
-                        <pre>AssertionError: Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 21 Sep 2025 05:11:00 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;10&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;adDgip5RqyUOZwkoEiE6Ehr%2F%2FAEjOgnX5uMq7aC%2Fj1YGttzgDh%2Fr8IJ14KQtE6lNKSPy66di2s%2FiN6klt%2BVdpJBsakwbOQ7KSerCvGz5rk5E5uJ12cP2uw7naeVrHj1wlZ5wx%2BaIyQInZlK6rwOe&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;98270f31be4a826e-IAD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;6263&amp;min_rtt&#x3D;5090&amp;rtt_var&#x3D;673&amp;sent&#x3D;50&amp;recv&#x3D;30&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;33344&amp;recv_bytes&#x3D;8555&amp;delivery_rate&#x3D;1129389&amp;cwnd&#x3D;257&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;15e16d0347431d3b&amp;ts&#x3D;700&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        <summary>Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 28 Sep 2025 05:10:59 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;10&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;aLkGe%2BJfOr%2BbK3d24fjU1Z%2FbtJ36lZs15wpqpXNqaSOE%2Bbha4HKP8Peip15kmiexkZGP3X1X2bxkOpOYBwkVA7j3bKEkkcWGQfwc2KOxILfio561czCMMpDiGsCwErWzuOj0iUWFnZV0pybjaq%2Fy&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;9860bccac84aa9c6-ORD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;16032&amp;min_rtt&#x3D;14894&amp;rtt_var&#x3D;778&amp;sent&#x3D;53&amp;recv&#x3D;29&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;33328&amp;recv_bytes&#x3D;8555&amp;delivery_rate&#x3D;437875&amp;cwnd&#x3D;257&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;f62da8af60a63826&amp;ts&#x3D;994&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
+                        <pre>AssertionError: Expected no result from issuer.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 28 Sep 2025 05:10:59 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;10&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;aLkGe%2BJfOr%2BbK3d24fjU1Z%2FbtJ36lZs15wpqpXNqaSOE%2Bbha4HKP8Peip15kmiexkZGP3X1X2bxkOpOYBwkVA7j3bKEkkcWGQfwc2KOxILfio561czCMMpDiGsCwErWzuOj0iUWFnZV0pybjaq%2Fy&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;9860bccac84aa9c6-ORD&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;16032&amp;min_rtt&#x3D;14894&amp;rtt_var&#x3D;778&amp;sent&#x3D;53&amp;recv&#x3D;29&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;33328&amp;recv_bytes&#x3D;8555&amp;delivery_rate&#x3D;437875&amp;cwnd&#x3D;257&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;f62da8af60a63826&amp;ts&#x3D;994&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:9:14)
                         at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:168:11)
@@ -2021,17 +1931,9 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Expected no error, got fetch failed: expected TypeError: fetch failed { …(2) } to not exist</summary>
-                        <pre>AssertionError: Expected no error, got fetch failed: expected TypeError: fetch failed { …(2) } to not exist
-                        at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
-                        at shouldReturnResult (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:19:14)
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:193:9)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
-                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -2079,17 +1981,12 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Request failed with status code 443</summary>
-                        <pre>HTTPError: Request failed with status code 443
-                        at fn (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async _handleResponse (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)
-                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:49:14)
-                        at async _requestAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:97:41)
-                        at async _getNewAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:81:9)
-                        at async constructOAuthHeader (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:27:25)
-                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:46:29)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:192:33)</pre>
+                        <summary>Expected no error, got Cannot POST /credentials/issue: expected HTTPError: Cannot POST /credentials/issue { …(6) } to not exist</summary>
+                        <pre>AssertionError: Expected no error, got Cannot POST /credentials/issue: expected HTTPError: Cannot POST /credentials/issue { …(6) } to not exist
+                        at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
+                        at shouldReturnResult (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:19:14)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:193:9)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
                       </details>
                     </div>
                   </td>
@@ -2102,8 +1999,8 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected no error, got Request failed with status code 400 Bad Request: expected HTTPError: Request failed with status cod… { …(6) } to not exist</summary>
-                        <pre>AssertionError: Expected no error, got Request failed with status code 400 Bad Request: expected HTTPError: Request failed with status cod… { …(6) } to not exist
+                        <summary>Expected no error, got Request failed with status code 503 Service Unavailable: expected HTTPError: Request failed with status cod… { …(5) } to not exist</summary>
+                        <pre>AssertionError: Expected no error, got Request failed with status code 503 Service Unavailable: expected HTTPError: Request failed with status cod… { …(5) } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at shouldReturnResult (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:19:14)
                         at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:193:9)
