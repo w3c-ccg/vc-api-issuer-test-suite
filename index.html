@@ -169,7 +169,7 @@
     <section class="informative" id="conformance-testing-results">
       <h2> Conformance Testing Results </h2>
       <p>
-        These tests were run on <time>19 July 2026 at 7:27 am UTC</time>
+        These tests were run on <time>26 July 2026 at 7:35 am UTC</time>
       </p>
       <section class="informative" id="Key">
         <h3>Key</h3>
@@ -353,26 +353,23 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected no error, got Cannot POST /credentials/issue: expected HTTPError: Cannot POST /credentials/issue { …(6) } to not exist</summary>
-                        <pre>AssertionError: Expected no error, got Cannot POST /credentials/issue: expected HTTPError: Cannot POST /credentials/issue { …(6) } to not exist
-                        at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
-                        at shouldReturnResult (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:19:14)
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:41:9)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
+                        <summary>Request failed with status code 403 Forbidden</summary>
+                        <pre>HTTPError: Request failed with status code 403 Forbidden
+                        at fn (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async _handleResponse (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)
+                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:49:14)
+                        at async _requestAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:97:41)
+                        at async _getNewAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:81:9)
+                        at async constructOAuthHeader (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:27:25)
+                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:46:29)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:40:49)</pre>
                       </details>
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Expected no error, got Request to &quot;https://w3c-test-suite.vc-api-owf.dev/v1/vc-api/credentials/issue&quot; timed out.: expected TimeoutError: Request to &quot;https://w3c-tes… { …(2) } to not exist</summary>
-                        <pre>AssertionError: Expected no error, got Request to &quot;https://w3c-test-suite.vc-api-owf.dev/v1/vc-api/credentials/issue&quot; timed out.: expected TimeoutError: Request to &quot;https://w3c-tes… { …(2) } to not exist
-                        at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
-                        at shouldReturnResult (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:19:14)
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:41:9)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
-                      </details>
                     </div>
                   </td>
                   <td class="failed not-optional highlight-on-hover text-center">
@@ -523,11 +520,17 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]</summary>
-                        <pre>AssertionError: Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]
-                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:14:26)
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:55:9)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
+                        <summary>Request failed with status code 403 Forbidden</summary>
+                        <pre>HTTPError: Request failed with status code 403 Forbidden
+                        at fn (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async _handleResponse (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)
+                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:49:14)
+                        at async _requestAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:97:41)
+                        at async _getNewAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:81:9)
+                        at async constructOAuthHeader (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:27:25)
+                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:46:29)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:54:33)</pre>
                       </details>
                     </div>
                   </td>
@@ -668,11 +671,17 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]</summary>
-                        <pre>AssertionError: Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]
-                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:14:26)
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:65:9)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
+                        <summary>Request failed with status code 403 Forbidden</summary>
+                        <pre>HTTPError: Request failed with status code 403 Forbidden
+                        at fn (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async _handleResponse (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)
+                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:49:14)
+                        at async _requestAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:97:41)
+                        at async _getNewAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:81:9)
+                        at async constructOAuthHeader (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:27:25)
+                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:46:29)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:64:33)</pre>
                       </details>
                     </div>
                   </td>
@@ -813,11 +822,17 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]</summary>
-                        <pre>AssertionError: Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]
-                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:14:26)
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:75:9)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
+                        <summary>Request failed with status code 403 Forbidden</summary>
+                        <pre>HTTPError: Request failed with status code 403 Forbidden
+                        at fn (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async _handleResponse (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)
+                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:49:14)
+                        at async _requestAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:97:41)
+                        at async _getNewAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:81:9)
+                        at async constructOAuthHeader (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:27:25)
+                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:46:29)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:74:33)</pre>
                       </details>
                     </div>
                   </td>
@@ -958,11 +973,17 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]</summary>
-                        <pre>AssertionError: Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]
-                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:14:26)
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:87:11)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
+                        <summary>Request failed with status code 403 Forbidden</summary>
+                        <pre>HTTPError: Request failed with status code 403 Forbidden
+                        at fn (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async _handleResponse (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)
+                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:49:14)
+                        at async _requestAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:97:41)
+                        at async _getNewAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:81:9)
+                        at async constructOAuthHeader (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:27:25)
+                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:46:29)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:86:35)</pre>
                       </details>
                     </div>
                   </td>
@@ -1096,11 +1117,17 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]</summary>
-                        <pre>AssertionError: Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]
-                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:14:26)
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:98:9)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
+                        <summary>Request failed with status code 403 Forbidden</summary>
+                        <pre>HTTPError: Request failed with status code 403 Forbidden
+                        at fn (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async _handleResponse (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)
+                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:49:14)
+                        at async _requestAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:97:41)
+                        at async _getNewAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:81:9)
+                        at async constructOAuthHeader (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:27:25)
+                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:46:29)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:97:33)</pre>
                       </details>
                     </div>
                   </td>
@@ -1234,11 +1261,17 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]</summary>
-                        <pre>AssertionError: Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]
-                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:14:26)
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:108:9)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
+                        <summary>Request failed with status code 403 Forbidden</summary>
+                        <pre>HTTPError: Request failed with status code 403 Forbidden
+                        at fn (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async _handleResponse (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)
+                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:49:14)
+                        at async _requestAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:97:41)
+                        at async _getNewAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:81:9)
+                        at async constructOAuthHeader (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:27:25)
+                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:46:29)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:107:33)</pre>
                       </details>
                     </div>
                   </td>
@@ -1372,11 +1405,17 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]</summary>
-                        <pre>AssertionError: Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]
-                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:14:26)
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:120:11)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
+                        <summary>Request failed with status code 403 Forbidden</summary>
+                        <pre>HTTPError: Request failed with status code 403 Forbidden
+                        at fn (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async _handleResponse (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)
+                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:49:14)
+                        at async _requestAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:97:41)
+                        at async _getNewAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:81:9)
+                        at async constructOAuthHeader (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:27:25)
+                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:46:29)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:119:35)</pre>
                       </details>
                     </div>
                   </td>
@@ -1510,11 +1549,17 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]</summary>
-                        <pre>AssertionError: Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]
-                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:14:26)
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:131:9)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
+                        <summary>Request failed with status code 403 Forbidden</summary>
+                        <pre>HTTPError: Request failed with status code 403 Forbidden
+                        at fn (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async _handleResponse (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)
+                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:49:14)
+                        at async _requestAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:97:41)
+                        at async _getNewAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:81:9)
+                        at async constructOAuthHeader (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:27:25)
+                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:46:29)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:130:33)</pre>
                       </details>
                     </div>
                   </td>
@@ -1648,11 +1693,17 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]</summary>
-                        <pre>AssertionError: Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]
-                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:14:26)
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:143:11)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
+                        <summary>Request failed with status code 403 Forbidden</summary>
+                        <pre>HTTPError: Request failed with status code 403 Forbidden
+                        at fn (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async _handleResponse (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)
+                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:49:14)
+                        at async _requestAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:97:41)
+                        at async _getNewAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:81:9)
+                        at async constructOAuthHeader (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:27:25)
+                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:46:29)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:142:35)</pre>
                       </details>
                     </div>
                   </td>
@@ -1786,11 +1837,17 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]</summary>
-                        <pre>AssertionError: Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]
-                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:14:26)
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:154:9)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
+                        <summary>Request failed with status code 403 Forbidden</summary>
+                        <pre>HTTPError: Request failed with status code 403 Forbidden
+                        at fn (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async _handleResponse (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)
+                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:49:14)
+                        at async _requestAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:97:41)
+                        at async _getNewAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:81:9)
+                        at async constructOAuthHeader (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:27:25)
+                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:46:29)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:153:33)</pre>
                       </details>
                     </div>
                   </td>
@@ -1924,11 +1981,17 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]</summary>
-                        <pre>AssertionError: Expected status code 400 or 422.: expected 404 to be one of [ 400, 422 ]
-                        at shouldThrowInvalidInput (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:14:26)
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:168:11)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
+                        <summary>Request failed with status code 403 Forbidden</summary>
+                        <pre>HTTPError: Request failed with status code 403 Forbidden
+                        at fn (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async _handleResponse (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)
+                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:49:14)
+                        at async _requestAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:97:41)
+                        at async _getNewAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:81:9)
+                        at async constructOAuthHeader (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:27:25)
+                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:46:29)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:167:35)</pre>
                       </details>
                     </div>
                   </td>
@@ -2078,12 +2141,17 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected no error, got Cannot POST /credentials/issue: expected HTTPError: Cannot POST /credentials/issue { …(6) } to not exist</summary>
-                        <pre>AssertionError: Expected no error, got Cannot POST /credentials/issue: expected HTTPError: Cannot POST /credentials/issue { …(6) } to not exist
-                        at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
-                        at shouldReturnResult (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/assertions.js:19:14)
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:193:9)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
+                        <summary>Request failed with status code 403 Forbidden</summary>
+                        <pre>HTTPError: Request failed with status code 403 Forbidden
+                        at fn (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async _handleResponse (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)
+                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:49:14)
+                        at async _requestAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:97:41)
+                        at async _getNewAccessToken (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:81:9)
+                        at async constructOAuthHeader (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/oauth2.js:27:25)
+                        at async makeHttpsRequest (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:46:29)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-api-issuer-test-suite/vc-api-issuer-test-suite/tests/10-issuer.js:192:33)</pre>
                       </details>
                     </div>
                   </td>
